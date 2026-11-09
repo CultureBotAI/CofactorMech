@@ -29,6 +29,8 @@ jobs:
         run: uv tool install rust-just==1.46.0
       - name: Install locked dependencies
         run: uv sync --locked
+      - name: Verify immutable review event boundary
+        run: just check-review-event-base
       - name: Native checks
         run: just check
       - name: Canonical governance
