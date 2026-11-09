@@ -1,6 +1,6 @@
 # Scaffold validation
 
-Native gate: `just check` passes with 125 tests passed and three skipped.
+Native gate: `just check` passes with 145 tests passed and three skipped.
 The skips are the governed skill-frontmatter command-file parameterizations;
 this scaffold defines no project-local slash commands. There are zero scientific
 seed records. `just check-vendored` verifies 22 exact governed artifacts at
@@ -38,3 +38,19 @@ failed when the new guard was reverted in a fresh pytest process; restored
 code passes, and a separate case preserves valid empty scaffold directories.
 The complete native gate and all 22 governed artifact checks passed after the
 fix. Independent re-review of the published fix remains a separate gate.
+
+Further independent review found issue #9: the native writer accepted an
+internal directory symlink even though inventory validation rejected the
+resulting layout. Before any staging or transaction-journal creation, native
+history authoring now checks the shared inventory-root contract and every
+component of both record and history paths. Reading existing history applies
+the same component checks. Internal aliases and escaping directory links are
+both rejected, including `history/records` and the per-record history directory.
+
+Twenty regression cases cover dry-run and apply across five directory positions
+and both internal and external symlink targets. All 20 fail against the original
+committed writer in an isolated worktree with a fresh Python bytecode cache.
+The fixed complete gate passes 145 tests with three expected skips, including
+normal create, dry-run, edit and history-preservation cases. Governance remains
+unchanged. The updated PR stays draft until independent re-review and its new
+remote checks pass; no scientific record was modified by this fix.

@@ -146,14 +146,34 @@ def validate_record(record: dict) -> None:
         seen_history.add(event["history_file"])
 
 
+def validate_path_components(root: Path, relative: str) -> None:
+    """Reject directory aliases before reading or staging a corpus path."""
+    path = relative_path(relative)
+    current = root
+    for index, part in enumerate(path.parts):
+        current = current / part
+        if current.is_symlink() or not current.resolve().is_relative_to(root.resolve()):
+            raise ValueError(f"record/history path must not include a symlink or escape: {relative}")
+        if index < len(path.parts) - 1 and current.exists() and not current.is_dir():
+            raise ValueError(f"record/history parent must be a directory: {relative}")
+
+
+def validate_inventory_roots(root: Path) -> None:
+    for relative in ("data", "data/cofactors", "history"):
+        directory = root / relative
+        if directory.is_symlink() or not directory.resolve().is_relative_to(root.resolve()):
+            raise ValueError(f"inventory/history root must not be a symlink or escape: {relative}")
+        if not directory.is_dir():
+            raise ValueError(f"required inventory or history directory is missing: {relative}")
+
+
 def validate_history_links(root: Path, record: dict, record_path: str, proposed=None) -> set[str]:
     proposed = proposed or {}
     referenced = set()
     for event in record["curation_history"]:
         relative = event["history_file"]
+        validate_path_components(root, relative)
         source = root / relative
-        if source.is_symlink() or not source.resolve().is_relative_to(root.resolve()):
-            raise ValueError("history sidecar must not escape the repository or be a symlink")
         sidecar = proposed.get(relative)
         if sidecar is None:
             sidecar = load(source.read_text())
@@ -176,12 +196,7 @@ def validate_history_links(root: Path, record: dict, record_path: str, proposed=
 def validate_repository(root: Path) -> int:
     validator()
     validator("HistoryRecord")
-    for relative in ("data", "data/cofactors", "history"):
-        directory = root / relative
-        if directory.is_symlink() or not directory.resolve().is_relative_to(root.resolve()):
-            raise ValueError(f"inventory/history root must not be a symlink or escape: {relative}")
-        if not directory.is_dir():
-            raise ValueError(f"required inventory or history directory is missing: {relative}")
+    validate_inventory_roots(root)
     ids = set()
     referenced = set()
     paths = sorted((root / "data/cofactors").glob("*.yaml"))

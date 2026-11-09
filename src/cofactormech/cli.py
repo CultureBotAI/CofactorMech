@@ -18,6 +18,8 @@ from .validate import (
     relative_path,
     validate_history,
     validate_history_links,
+    validate_inventory_roots,
+    validate_path_components,
     validate_record,
     validate_repository,
     validator,
@@ -46,6 +48,8 @@ def new_history(root: Path, args) -> dict:
                             check=True, capture_output=True, text=True).stdout.strip()
     lock_root = (root / common).resolve() / "cofactormech-locks"
     with LockManager({"locks_dir": str(lock_root)}).lock("cofactormech", "new-history"):
+        validate_inventory_roots(root)
+        validate_path_components(root, str(target_path))
         record = load(Path(args.input).read_text())
         if record.get("id") != f"CofactorMech:{target_path.stem}":
             raise ValueError("record ID must match target filename")
@@ -62,6 +66,7 @@ def new_history(root: Path, args) -> dict:
         history_path, session_id, timestamp = new_history_path(
             Path("history"), "record", target_path.stem, args.actor
         )
+        validate_path_components(root, str(history_path))
         if (root / history_path).exists():
             raise ValueError("refusing to overwrite an existing history sidecar")
         sidecar = build_record(kind="record", slug=target_path.stem,
