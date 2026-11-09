@@ -1,0 +1,150 @@
+{
+  "id": "CofactorMech:thiamine-diphosphate",
+  "name": "thiamine(1+) diphosphate",
+  "chemical_id": "CHEBI:9532",
+  "categories": [
+    "COENZYME"
+  ],
+  "description": "thiamine(1+) diphosphate is represented by the precise ChEBI entity CHEBI:9532. Cofactor roles are chemical-context annotations; ingredient links describe chemical supply and do not establish uptake, bioavailability or a requirement for every organism.",
+  "evidence": [
+    {
+      "reference": "https://www.ebi.ac.uk/chebi/CHEBI:9532",
+      "title": "ChEBI CHEBI:9532",
+      "claim": "ChEBI assigns a cofactor, coenzyme or prosthetic-group role to CHEBI:9532.",
+      "locator": "JSON Pointer /roles_classification",
+      "source_license": "CC-BY-4.0"
+    },
+    {
+      "reference": "https://rest.uniprot.org/keywords/KW-0786.json",
+      "title": "UniProt thiamine pyrophosphate keyword",
+      "claim": "The issuing UniProt keyword identifies thiamine pyrophosphate as a coenzyme; chemical charge distinctions remain those of the ChEBI grounding.",
+      "locator": "JSON Pointer /definition_excerpt",
+      "source_license": "CC-BY-4.0"
+    }
+  ],
+  "related_records": [
+    {
+      "corpus": "mediaingredientmech",
+      "identifier": "CHEBI:9532",
+      "relation": "SUPPLIED_BY",
+      "basis": "The current MIM ontology mapping exactly matches the candidate cofactor chemical identifier. This establishes a compound supply link, not organism-specific uptake or requirement.",
+      "source_version": "0529fc6bc065bfa04aba0aed234f6b0cfad6a142",
+      "source_path": "data/ingredients/mapped/Thiamine_pyrophosphate.yaml",
+      "source_url": "https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thiamine_pyrophosphate.yaml",
+      "status": "PROVISIONAL",
+      "evidence": [
+        {
+          "reference": "https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thiamine_pyrophosphate.yaml",
+          "title": "MIM ingredient identity",
+          "claim": "The cited ingredient is mapped to CHEBI:9532; this is a compound-identity assertion, not a bioavailability measurement.",
+          "locator": "JSON Pointer /identifier",
+          "source_license": "CC-BY-4.0"
+        }
+      ]
+    },
+    {
+      "corpus": "proteintraitsmech",
+      "identifier": "proteintraitsmech:COFACTOR_REQ_CHEBI_9532",
+      "relation": "REQUIRED_BY",
+      "basis": "Conceptual requirement coverage: this PTM trait defines the requirement for the same ChEBI chemical. It is not an organism-level or enzyme-level measurement.",
+      "source_version": "8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f",
+      "source_path": "data/traits/function/cofactor_requirement/chebi/thiamine-1-diphosphate-chebi9532.yaml",
+      "source_url": "https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/thiamine-1-diphosphate-chebi9532.yaml",
+      "status": "VERIFIED",
+      "evidence": [
+        {
+          "reference": "https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/thiamine-1-diphosphate-chebi9532.yaml",
+          "title": "PTM cofactor-requirement concept",
+          "claim": "The target is a CLASS trait with an explicit cross-reference to this chemical, rather than a measured protein observation.",
+          "locator": "JSON Pointer /xrefs",
+          "source_license": "CC-BY-4.0"
+        }
+      ]
+    },
+    {
+      "corpus": "pathwaymech",
+      "identifier": "MetaCyc:THISYN-PWY",
+      "relation": "CONJUGATE_FORM_PRODUCED_BY",
+      "basis": "PathwayMech edge thiamine-edge-058 records RHEA:15914 produces CHEBI:58937. This is a cross-reference to the source-scoped reaction or cofactor annotation, not proof of complete pathway flux. The pathway chemical is CHEBI:58937, a distinct conjugate form of CHEBI:9532; this link does not identify their charge states.",
+      "source_version": "9584009d49579267233124f4a1057b9425a007d9",
+      "source_path": "data/pathways/thiamine-diphosphate-biosynthesis-i.yaml",
+      "source_url": "https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/thiamine-diphosphate-biosynthesis-i.yaml",
+      "status": "VERIFIED",
+      "evidence": [
+        {
+          "reference": "https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/thiamine-diphosphate-biosynthesis-i.yaml",
+          "title": "PathwayMech reaction or cofactor edge",
+          "claim": "PathwayMech edge thiamine-edge-058 records RHEA:15914 produces CHEBI:58937. This is a cross-reference to the source-scoped reaction or cofactor annotation, not proof of complete pathway flux.",
+          "locator": "JSON Pointer /mechanistic_edges/57",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://www.ebi.ac.uk/chebi/CHEBI:9532",
+          "title": "ChEBI CHEBI:9532",
+          "claim": "ChEBI provides the conjugate-form relationship linking the source chemical family to CHEBI:58937.",
+          "locator": "JSON Pointer /ontology_relations",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://www.ebi.ac.uk/chebi/CHEBI:45931",
+          "title": "ChEBI CHEBI:45931",
+          "claim": "The intermediate conjugate form links thiamine(1+) diphosphate to its more deprotonated form.",
+          "locator": "JSON Pointer /ontology_relations",
+          "source_license": "CC-BY-4.0"
+        }
+      ],
+      "target_chemical_id": "CHEBI:58937"
+    },
+    {
+      "corpus": "proteintraitsmech",
+      "identifier": "EC:4.1.1.1",
+      "relation": "CONJUGATE_FORM_REQUIRED_BY",
+      "basis": "The PTM enzyme-class record retains UniProtKB:P83779 as a named microbial exemplar. Its independently retrieved UniProt entry annotates CHEBI:58937. This link is restricted to that exemplar, not every member of EC:4.1.1.1. The cofactor annotation uses ECO:0000250 by similarity to P06169; it is not a direct assay of the Candida albicans exemplar. The cofactor is a conjugate form distinct from the neutral or differently charged seed entity.",
+      "source_version": "8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f",
+      "source_path": "data/traits/function/enzymatic_activity/ec/4-1-1-1-ec4-1-1-1.yaml",
+      "source_url": "https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/enzymatic_activity/ec/4-1-1-1-ec4-1-1-1.yaml",
+      "status": "VERIFIED",
+      "evidence": [
+        {
+          "reference": "https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/enzymatic_activity/ec/4-1-1-1-ec4-1-1-1.yaml",
+          "title": "PTM named enzyme exemplar",
+          "claim": "The exact named exemplar is retained in canonical_examples.",
+          "locator": "JSON Pointer /canonical_examples/1",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://rest.uniprot.org/uniprotkb/P83779.json",
+          "title": "UniProt microbial enzyme cofactor annotation",
+          "claim": "The cofactor annotation uses ECO:0000250 by similarity to P06169; it is not a direct assay of the Candida albicans exemplar.",
+          "locator": "JSON Pointer /comments/3",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://www.ebi.ac.uk/chebi/CHEBI:9532",
+          "title": "ChEBI CHEBI:9532",
+          "claim": "The seed entity and annotated enzyme cofactor belong to the explicitly linked conjugate series.",
+          "locator": "JSON Pointer /ontology_relations",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://www.ebi.ac.uk/chebi/CHEBI:45931",
+          "title": "ChEBI CHEBI:45931",
+          "claim": "This intermediate charge state provides the second link in the thiamine-diphosphate conjugate series.",
+          "locator": "JSON Pointer /ontology_relations",
+          "source_license": "CC-BY-4.0"
+        }
+      ],
+      "target_chemical_id": "CHEBI:58937"
+    }
+  ],
+  "research_gaps": [],
+  "curation_history": [
+    {
+      "timestamp": "2026-11-09T01:42:28Z",
+      "curator": "cofactor-stream-c",
+      "action": "CREATE",
+      "summary": "Curate initial source-backed cofactor and scoped cross-corpus links",
+      "history_file": "history/records/thiamine-diphosphate/2026-11-09T014228Z-cofactor-stream-c-160f55.yaml"
+    }
+  ]
+}

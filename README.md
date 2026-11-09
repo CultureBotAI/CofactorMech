@@ -2,7 +2,7 @@
 
 CofactorMech curates evidence-backed microbial coenzymes, prosthetic groups and metal ions. Ingredient role assignments are discovery candidates, not proof that an ingredient is itself a cofactor. Vitamin precursors and metal salts are distinguished from the active chemical species they can supply.
 
-The scaffold contains no scientific seed records. Curated records are introduced in a separate PR after source review. Records link to the supplying MediaIngredientMech ingredients, PathwayMech pathways and ProteinTraitsMech requirements only when the target and relation have been verified. A missing match is an explicit research gap. MIM references remain provisional until the stable `MIM:` identifier migration is available.
+The initial seed contains 14 cofactor entities, with 28 ingredient supply links and explicit dispositions for all 162 current-role MIM candidates. See [seed provenance and coverage](data/provenance/README.md) for source commits, chemical distinctions and limitations. Records link to the supplying MediaIngredientMech ingredients, PathwayMech pathways and ProteinTraitsMech requirements only when the target and relation have been verified. A missing match is an explicit research gap. MIM references remain provisional until the stable `MIM:` identifier migration is available.
 
 ## Development
 
@@ -14,7 +14,7 @@ just check
 just check-vendored
 ```
 
-`just check` is the same native lint, schema, data, history, and test gate used by CI. `just check-vendored` verifies every governed file against the immutable claw commit in `scripts/.vendored_canon_ref`; it requires public GitHub access. Both run in the required `validate-strict` CI job, including merge groups.
+`just check` is the same native lint, schema, data, history, source-projection, and test gate used by CI. `just check-vendored` verifies every governed file against the immutable claw commit in `scripts/.vendored_canon_ref`; it requires public GitHub access. Both run in the required `validate-strict` CI job, including merge groups.
 
 Records live at `data/cofactors/<slug>.yaml`. The installed LinkML schema is `src/cofactormech/schema/cofactormech.yaml`. JSON Schema is generated directly from LinkML at validation time, with unknown fields rejected at every object level. Semantic checks enforce evidence coverage, link provenance and history target matching. These structural checks do not establish scientific truth; curators must read the cited sources.
 

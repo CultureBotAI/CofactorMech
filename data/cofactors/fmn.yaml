@@ -1,0 +1,150 @@
+{
+  "id": "CofactorMech:fmn",
+  "name": "FMN",
+  "chemical_id": "CHEBI:17621",
+  "categories": [
+    "COENZYME"
+  ],
+  "description": "FMN is represented by the precise ChEBI entity CHEBI:17621. Cofactor roles are chemical-context annotations; ingredient links describe chemical supply and do not establish uptake, bioavailability or a requirement for every organism.",
+  "evidence": [
+    {
+      "reference": "https://www.ebi.ac.uk/chebi/CHEBI:17621",
+      "title": "ChEBI CHEBI:17621",
+      "claim": "ChEBI assigns a cofactor, coenzyme or prosthetic-group role to CHEBI:17621.",
+      "locator": "JSON Pointer /roles_classification",
+      "source_license": "CC-BY-4.0"
+    }
+  ],
+  "related_records": [
+    {
+      "corpus": "mediaingredientmech",
+      "identifier": "CHEBI:17015",
+      "relation": "PRECURSOR_SUPPLIED_BY",
+      "basis": "Riboflavin is a precursor, not FMN itself. PathwayMech documents riboflavin kinase forming FMN; chemistry and protonation state are distinct.",
+      "source_version": "0529fc6bc065bfa04aba0aed234f6b0cfad6a142",
+      "source_path": "data/ingredients/mapped/Riboflavin.yaml",
+      "source_url": "https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Riboflavin.yaml",
+      "status": "PROVISIONAL",
+      "evidence": [
+        {
+          "reference": "https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Riboflavin.yaml",
+          "title": "MIM ingredient identity",
+          "claim": "The cited ingredient is mapped to CHEBI:17015; this is a compound-identity assertion, not a bioavailability measurement.",
+          "locator": "JSON Pointer /identifier",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://www.ebi.ac.uk/chebi/CHEBI:17015",
+          "title": "ChEBI CHEBI:17015",
+          "claim": "This ingredient is riboflavin, whose conjugate riboflavin(1-) CHEBI:57986 is the pathway substrate; it remains distinct from phosphorylated FMN.",
+          "locator": "JSON Pointer /ontology_relations",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/flavin-biosynthesis-i.yaml",
+          "title": "PathwayMech riboflavin kinase substrate",
+          "claim": "The reaction forming FMN consumes the riboflavin conjugate CHEBI:57986.",
+          "locator": "JSON Pointer /mechanistic_edges/35",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/flavin-biosynthesis-i.yaml",
+          "title": "PathwayMech flavin biosynthesis",
+          "claim": "The retained pathway records FMN formation through riboflavin kinase. The pathway uses ionized forms; the ingredient is a precursor, not the FMN molecule.",
+          "locator": "JSON Pointer /mechanistic_edges/38",
+          "source_license": "CC-BY-4.0"
+        }
+      ]
+    },
+    {
+      "corpus": "proteintraitsmech",
+      "identifier": "proteintraitsmech:COFACTOR_REQ_CHEBI_17621",
+      "relation": "REQUIRED_BY",
+      "basis": "Conceptual requirement coverage: this PTM trait defines the requirement for the same ChEBI chemical. It is not an organism-level or enzyme-level measurement.",
+      "source_version": "8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f",
+      "source_path": "data/traits/function/cofactor_requirement/chebi/fmn-chebi17621.yaml",
+      "source_url": "https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/fmn-chebi17621.yaml",
+      "status": "VERIFIED",
+      "evidence": [
+        {
+          "reference": "https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/fmn-chebi17621.yaml",
+          "title": "PTM cofactor-requirement concept",
+          "claim": "The target is a CLASS trait with an explicit cross-reference to this chemical, rather than a measured protein observation.",
+          "locator": "JSON Pointer /xrefs",
+          "source_license": "CC-BY-4.0"
+        }
+      ]
+    },
+    {
+      "corpus": "pathwaymech",
+      "identifier": "MetaCyc:RIBOSYN2-PWY",
+      "relation": "CONJUGATE_FORM_PRODUCED_BY",
+      "basis": "PathwayMech edge edge-039 records RHEA:14358 produces CHEBI:58210. This is a cross-reference to the source-scoped reaction or cofactor annotation, not proof of complete pathway flux. The pathway chemical is CHEBI:58210, a distinct conjugate form of CHEBI:17621; this link does not identify their charge states.",
+      "source_version": "9584009d49579267233124f4a1057b9425a007d9",
+      "source_path": "data/pathways/flavin-biosynthesis-i.yaml",
+      "source_url": "https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/flavin-biosynthesis-i.yaml",
+      "status": "VERIFIED",
+      "evidence": [
+        {
+          "reference": "https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/flavin-biosynthesis-i.yaml",
+          "title": "PathwayMech reaction or cofactor edge",
+          "claim": "PathwayMech edge edge-039 records RHEA:14358 produces CHEBI:58210. This is a cross-reference to the source-scoped reaction or cofactor annotation, not proof of complete pathway flux.",
+          "locator": "JSON Pointer /mechanistic_edges/38",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://www.ebi.ac.uk/chebi/CHEBI:17621",
+          "title": "ChEBI CHEBI:17621",
+          "claim": "ChEBI provides the conjugate-form relationship linking the source chemical family to CHEBI:58210.",
+          "locator": "JSON Pointer /ontology_relations",
+          "source_license": "CC-BY-4.0"
+        }
+      ],
+      "target_chemical_id": "CHEBI:58210"
+    },
+    {
+      "corpus": "proteintraitsmech",
+      "identifier": "EC:1.4.3.5",
+      "relation": "CONJUGATE_FORM_REQUIRED_BY",
+      "basis": "The PTM enzyme-class record retains UniProtKB:P38075 as a named microbial exemplar. Its independently retrieved UniProt entry annotates CHEBI:58210. This link is restricted to that exemplar, not every member of EC:1.4.3.5. The cofactor comment is an issuing-database annotation without an explicit evidence code; no direct experiment is claimed. The cofactor is a conjugate form distinct from the neutral or differently charged seed entity.",
+      "source_version": "8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f",
+      "source_path": "data/traits/function/enzymatic_activity/ec/1-4-3-5-ec1-4-3-5.yaml",
+      "source_url": "https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/enzymatic_activity/ec/1-4-3-5-ec1-4-3-5.yaml",
+      "status": "VERIFIED",
+      "evidence": [
+        {
+          "reference": "https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/enzymatic_activity/ec/1-4-3-5-ec1-4-3-5.yaml",
+          "title": "PTM named enzyme exemplar",
+          "claim": "The exact named exemplar is retained in canonical_examples.",
+          "locator": "JSON Pointer /canonical_examples/1",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://rest.uniprot.org/uniprotkb/P38075.json",
+          "title": "UniProt microbial enzyme cofactor annotation",
+          "claim": "The cofactor comment is an issuing-database annotation without an explicit evidence code; no direct experiment is claimed.",
+          "locator": "JSON Pointer /comments/3",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://www.ebi.ac.uk/chebi/CHEBI:17621",
+          "title": "ChEBI CHEBI:17621",
+          "claim": "The seed entity and annotated enzyme cofactor belong to the explicitly linked conjugate series.",
+          "locator": "JSON Pointer /ontology_relations",
+          "source_license": "CC-BY-4.0"
+        }
+      ],
+      "target_chemical_id": "CHEBI:58210"
+    }
+  ],
+  "research_gaps": [],
+  "curation_history": [
+    {
+      "timestamp": "2026-11-09T01:42:27Z",
+      "curator": "cofactor-stream-c",
+      "action": "CREATE",
+      "summary": "Curate initial source-backed cofactor and scoped cross-corpus links",
+      "history_file": "history/records/fmn/2026-11-09T014227Z-cofactor-stream-c-79f79f.yaml"
+    }
+  ]
+}
