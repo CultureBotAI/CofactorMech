@@ -6,7 +6,7 @@ default:
 check: lint validate test
 
 lint:
-    uv run --locked ruff check src tests/test_native.py
+    uv run --locked ruff check src tests/test_native.py scripts/check_review_event_base.py tests/test_review_event_base.py
 
 validate:
     uv run --locked cofactormech validate
@@ -29,3 +29,6 @@ new-history *args:
 
 validate-history:
     uv run --locked cofactormech validate
+
+check-review-event-base:
+    uv run --locked python scripts/check_review_event_base.py
