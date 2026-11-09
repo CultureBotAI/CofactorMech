@@ -239,3 +239,25 @@ def test_provisional_legacy_identifiers_remain_distinct_by_source_path(record, l
     record["related_records"].append(deepcopy(link))
     with pytest.raises(ValueError, match="duplicate cross-corpus"):
         validate_record(record)
+
+
+@pytest.mark.parametrize("relative", ["data", "data/cofactors", "history"])
+@pytest.mark.parametrize("external", [False, True])
+def test_symlinked_inventory_and_history_roots_are_rejected(tmp_path, relative, external):
+    root = tmp_path / "repo"
+    (root / "data/cofactors").mkdir(parents=True)
+    (root / "history").mkdir()
+    source = root / relative
+    destination = tmp_path / "outside" if external else root / "alternate"
+    source.rename(destination)
+    source.symlink_to(destination, target_is_directory=True)
+    assert source.is_symlink() and source.is_dir()
+    assert source.resolve().is_relative_to(root) is not external
+    with pytest.raises(ValueError, match="must not be a symlink or escape"):
+        validate_repository(root)
+
+
+def test_valid_empty_scaffold_directories_pass(tmp_path):
+    (tmp_path / "data/cofactors").mkdir(parents=True)
+    (tmp_path / "history").mkdir()
+    assert validate_repository(tmp_path) == 0

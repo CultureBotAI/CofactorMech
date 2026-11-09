@@ -1,6 +1,6 @@
 # Scaffold validation
 
-Native gate: `just check` passes with 118 tests passed and three skipped.
+Native gate: `just check` passes with 125 tests passed and three skipped.
 The skips are the governed skill-frontmatter command-file parameterizations;
 this scaffold defines no project-local slash commands. There are zero scientific
 seed records. `just check-vendored` verifies 22 exact governed artifacts at
@@ -29,3 +29,12 @@ queue automation is paused; every merge remains a user decision.
 The bootstrap pin is published on the claw onboarding branch. Fleet release is
 still held on the active release lane and a separately authorized common-pin
 rollout; successful local synchronization does not establish deployed release.
+
+Independent review of the initial scaffold found issue #2: a symlinked empty
+inventory directory passed as zero records. Validation now checks `data`,
+`data/cofactors` and `history` before traversal, rejecting both symlinks within
+the repository and links escaping it. Six real symlink regression cases all
+failed when the new guard was reverted in a fresh pytest process; restored
+code passes, and a separate case preserves valid empty scaffold directories.
+The complete native gate and all 22 governed artifact checks passed after the
+fix. Independent re-review of the published fix remains a separate gate.

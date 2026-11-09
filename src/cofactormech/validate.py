@@ -176,8 +176,12 @@ def validate_history_links(root: Path, record: dict, record_path: str, proposed=
 def validate_repository(root: Path) -> int:
     validator()
     validator("HistoryRecord")
-    if not (root / "data/cofactors").is_dir() or not (root / "history").is_dir():
-        raise ValueError("required inventory or history directory is missing")
+    for relative in ("data", "data/cofactors", "history"):
+        directory = root / relative
+        if directory.is_symlink() or not directory.resolve().is_relative_to(root.resolve()):
+            raise ValueError(f"inventory/history root must not be a symlink or escape: {relative}")
+        if not directory.is_dir():
+            raise ValueError(f"required inventory or history directory is missing: {relative}")
     ids = set()
     referenced = set()
     paths = sorted((root / "data/cofactors").glob("*.yaml"))
