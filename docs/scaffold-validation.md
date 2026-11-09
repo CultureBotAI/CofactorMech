@@ -1,0 +1,31 @@
+# Scaffold validation
+
+Native gate: `just check` passes with 118 tests passed and three skipped.
+The skips are the governed skill-frontmatter command-file parameterizations;
+this scaffold defines no project-local slash commands. There are zero scientific
+seed records. `just check-vendored` verifies 22 exact governed artifacts at
+claw revision `5790569efd881bd8bca82a04ea278cc462c0c2c8`.
+
+Six fresh-process mutation checks each exited 1 after deliberately weakening a
+guard: recursive closed schema, seven-digit MIM IDs, source URL/commit/path
+binding, preservation of existing curation history, distinct conjugate-form
+chemical identity, and provisional legacy identity distinguished by source path.
+Each original source file was restored, then the native gate passed again.
+The fresh processes used distinct bytecode cache roots so stale caches could
+not conceal a mutation.
+
+Native history authoring emits deterministic JSON, which is a YAML subset.
+It round-trips the input's scientific values, appends an event through the
+canonical history builder, and stages both the record and sidecar in the shared
+validated transaction. Shared corpus serialization remains unverified and
+`kg_microbe_write.dump_record` refuses it; this scaffold does not pretend the
+native authoring contract establishes a shared emit profile.
+
+These are structural and behavioral checks, not a scientific review or an
+independent adversarial review. The latter is a separate PR gate. Canonical
+provider workflows are not invoked by the native gate. The repository merge
+queue automation is paused; every merge remains a user decision.
+
+The bootstrap pin is published on the claw onboarding branch. Fleet release is
+still held on the active release lane and a separately authorized common-pin
+rollout; successful local synchronization does not establish deployed release.
