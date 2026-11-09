@@ -25,8 +25,15 @@ def pointer(data, locator):
         raise ValueError(f"unsupported source locator: {locator}")
     try:
         for token in locator[len(prefix) + 1:].split("/"):
+            if re.search(r"~(?![01])", token):
+                raise ValueError("invalid JSON Pointer escape")
             token = token.replace("~1", "/").replace("~0", "~")
-            data = data[int(token)] if isinstance(data, list) else data[token]
+            if isinstance(data, list):
+                if not re.fullmatch(r"0|[1-9][0-9]*", token):
+                    raise ValueError("invalid JSON Pointer array index")
+                data = data[int(token)]
+            else:
+                data = data[token]
     except (KeyError, IndexError, TypeError, ValueError) as exc:
         raise ValueError(f"missing source locator: {locator}") from exc
     return data
@@ -106,8 +113,11 @@ def audit(records, index, queue):
                 edges = [x for x in selected if isinstance(x, dict) and "predicate" in x]
                 predicate = {"produces"} if link["relation"].endswith("PRODUCED_BY") else {"consumes", "has_cofactor"}
                 aliases = {chemical}
-                for entries in own.get("database_accessions", {}).values():
-                    aliases |= {"MetaCyc:" + e["accession_number"] for e in entries if e.get("source_name") == "MetaCyc"}
+                # Native aliases can collapse protonation states (e.g. BIOTIN).
+                # Conjugate links must match the declared exact CHEBI endpoint.
+                if not link["relation"].startswith("CONJUGATE_FORM_"):
+                    for entries in own.get("database_accessions", {}).values():
+                        aliases |= {"MetaCyc:" + e["accession_number"] for e in entries if e.get("source_name") == "MetaCyc"}
                 _require(any(e["predicate"] in predicate and (e["subject"] if e["predicate"] == "consumes" else e["object"]) in aliases for e in edges), "selected pathway edge does not support relation")
             elif "canonical_examples" in target:
                 examples = {x["protein_id"] for x in target["canonical_examples"]}

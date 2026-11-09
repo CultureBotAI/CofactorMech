@@ -61,3 +61,37 @@ def test_promotion_must_match_actual_supplier_link(inputs):
 def test_missing_locator_rejected():
     with pytest.raises(ValueError, match="missing source locator"):
         pointer({"kept": []}, "JSON Pointer /kept/5")
+
+
+@pytest.mark.parametrize("token", ["-1", "01", "+1", "1.0", "-", "~2"])
+def test_noncanonical_array_indices_rejected(token):
+    with pytest.raises(ValueError, match="missing source locator"):
+        pointer({"kept": ["a", "b"]}, "JSON Pointer /kept/" + token)
+
+
+def test_numeric_object_keys_are_not_array_indices():
+    assert pointer({"01": "valid key"}, "JSON Pointer /01") == "valid key"
+
+
+def test_negative_protein_comment_locator_rejected(inputs):
+    records, index, queue = inputs
+    record = next(r for r in records if r["id"] == "CofactorMech:thiamine-diphosphate")
+    enzyme = next(x for x in record["related_records"] if "enzyme-class" in x["basis"])
+    ev = next(e for e in enzyme["evidence"] if "/uniprotkb/" in e["reference"])
+    source = next(s for s in index["sources"] if s["reference"] == ev["reference"])
+    positive = int(ev["locator"].rsplit("/", 1)[1])
+    ev["locator"] = "JSON Pointer /comments/" + str(positive - len(source["data"]["comments"]))
+    with pytest.raises(ValueError, match="missing source locator"):
+        audit(records, index, queue)
+
+
+def test_original_chemical_alias_cannot_match_conjugate_endpoint(inputs):
+    records, index, queue = inputs
+    record = next(r for r in records if r["id"] == "CofactorMech:biotin")
+    link = next(x for x in record["related_records"] if x["corpus"] == "pathwaymech")
+    assert link["target_chemical_id"] != record["chemical_id"]
+    source = next(s for s in index["sources"] if s["reference"] == link["source_url"])
+    edge = pointer(source["data"], link["evidence"][0]["locator"])
+    edge["object"] = "MetaCyc:BIOTIN"
+    with pytest.raises(ValueError, match="selected pathway edge"):
+        audit(records, index, queue)
