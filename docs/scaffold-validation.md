@@ -48,9 +48,18 @@ the same component checks. Internal aliases and escaping directory links are
 both rejected, including `history/records` and the per-record history directory.
 
 Twenty regression cases cover dry-run and apply across five directory positions
-and both internal and external symlink targets. All 20 fail against the original
-committed writer in an isolated worktree with a fresh Python bytecode cache.
+and both internal and external symlink targets. Assertions concern refusal and
+unchanged record, sidecar and journal state, independently of diagnostic wording.
+Against the original committed writer, six cases fail: internal aliases at
+`history`, `history/records` and `history/records/fixture`, in dry-run and apply.
+The three apply cases actually create a record, sidecar and journal; the three
+dry runs incorrectly accept the invalid layout without writing. The other 14
+cases already refuse safely and remain passing controls. This distinction was
+verified in an isolated worktree with fresh Python bytecode caches and a separate
+20-case observation receipt. The earlier diagnostic-sensitive mutation report
+is superseded by this behavioral result.
+
 The fixed complete gate passes 145 tests with three expected skips, including
-normal create, dry-run, edit and history-preservation cases. Governance remains
-unchanged. The updated PR stays draft until independent re-review and its new
-remote checks pass; no scientific record was modified by this fix.
+all 20 symlink cases and normal create, dry-run, edit and history-preservation
+cases. Governance remains unchanged. The updated PR stays draft until independent
+re-review and its new remote checks pass; no scientific record was modified.

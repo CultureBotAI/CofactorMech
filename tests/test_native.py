@@ -282,7 +282,7 @@ def test_history_writer_rejects_all_symlink_directories_before_staging(repo, rec
     args = Namespace(record="data/cofactors/fixture.yaml", input=str(source), actor="fixture",
                      actor_type="human", summary="Create synthetic test", details="Fixture only",
                      action="CREATE", model=None, agent_tool=None, apply=apply)
-    with pytest.raises(ValueError, match="symlink or escape"):
+    with pytest.raises(Exception):  # Refusal and unchanged state, not exception wording.
         new_history(repo, args)
     assert not (repo / args.record).exists()
     assert not list(alternate.rglob("*.yaml"))
