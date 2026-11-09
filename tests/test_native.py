@@ -261,3 +261,30 @@ def test_valid_empty_scaffold_directories_pass(tmp_path):
     (tmp_path / "data/cofactors").mkdir(parents=True)
     (tmp_path / "history").mkdir()
     assert validate_repository(tmp_path) == 0
+
+
+@pytest.mark.parametrize("relative", ["data", "data/cofactors", "history", "history/records",
+                                      "history/records/fixture"])
+@pytest.mark.parametrize("external", [False, True])
+@pytest.mark.parametrize("apply", [False, True])
+def test_history_writer_rejects_all_symlink_directories_before_staging(repo, record,
+                                                                    relative, external, apply):
+    import json
+    source_directory = repo / relative
+    source_directory.mkdir(parents=True, exist_ok=True)
+    alternate = repo.parent / "external-alternate" if external else repo / "internal-alternate"
+    source_directory.rename(alternate)
+    source_directory.symlink_to(alternate, target_is_directory=True)
+    assert source_directory.is_symlink() and source_directory.is_dir()
+    record.pop("curation_history")
+    source = repo / "input.yaml"
+    source.write_text(json.dumps(record))
+    args = Namespace(record="data/cofactors/fixture.yaml", input=str(source), actor="fixture",
+                     actor_type="human", summary="Create synthetic test", details="Fixture only",
+                     action="CREATE", model=None, agent_tool=None, apply=apply)
+    with pytest.raises(Exception):  # Refusal and unchanged state, not exception wording.
+        new_history(repo, args)
+    assert not (repo / args.record).exists()
+    assert not list(alternate.rglob("*.yaml"))
+    assert not list((repo / "history").rglob("*.yaml"))
+    assert not (repo / "workspace").exists()
