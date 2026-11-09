@@ -95,3 +95,17 @@ def test_original_chemical_alias_cannot_match_conjugate_endpoint(inputs):
     edge["object"] = "MetaCyc:BIOTIN"
     with pytest.raises(ValueError, match="selected pathway edge"):
         audit(records, index, queue)
+
+
+def test_evidence_from_another_pathway_cannot_support_target(inputs):
+    records, index, queue = inputs
+    fad = next(r for r in records if r["id"] == "CofactorMech:fad")
+    biotin = next(r for r in records if r["id"] == "CofactorMech:biotin")
+    link = next(x for x in fad["related_records"] if x["corpus"] == "pathwaymech")
+    other = next(x for x in biotin["related_records"] if x["corpus"] == "pathwaymech")
+    for field in ("identifier", "source_path", "source_url"):
+        link[field] = other[field]
+    # Both targets and citations exist, but the selected FAD edge is in a
+    # different pathway from the newly asserted target.
+    with pytest.raises(ValueError, match="selected pathway edge"):
+        audit(records, index, queue)

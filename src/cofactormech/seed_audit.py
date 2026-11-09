@@ -110,7 +110,8 @@ def audit(records, index, queue):
                 linked[link["source_path"]].add(rid)
             elif corpus == "pathwaymech":
                 # A valid target alone is insufficient: inspect the exact selected edge.
-                edges = [x for x in selected if isinstance(x, dict) and "predicate" in x]
+                edges = [x for ev, x in zip(link["evidence"], selected)
+                         if ev["reference"] == expected and isinstance(x, dict) and "predicate" in x]
                 predicate = {"produces"} if link["relation"].endswith("PRODUCED_BY") else {"consumes", "has_cofactor"}
                 aliases = {chemical}
                 # Native aliases can collapse protonation states (e.g. BIOTIN).
