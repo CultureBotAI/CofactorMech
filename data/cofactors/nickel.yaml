@@ -43,13 +43,6 @@
         {
           "reference": "https://www.ebi.ac.uk/chebi/CHEBI:34887",
           "title": "ChEBI CHEBI:34887",
-          "claim": "The parent salt contains the metal in oxidation state +2; the resulting ion is CHEBI:49786.",
-          "locator": "JSON Pointer /ontology_relations",
-          "source_license": "CC-BY-4.0"
-        },
-        {
-          "reference": "https://www.ebi.ac.uk/chebi/CHEBI:34887",
-          "title": "ChEBI CHEBI:34887",
           "claim": "The issuing ChEBI definition explicitly states nickel oxidation state +2 in nickel dichloride.",
           "locator": "JSON Pointer /definition",
           "source_license": "CC-BY-4.0"
@@ -71,13 +64,6 @@
           "title": "MIM ingredient identity",
           "claim": "The cited ingredient is mapped to CHEBI:34887; this is a compound-identity assertion, not a bioavailability measurement.",
           "locator": "JSON Pointer /identifier",
-          "source_license": "CC-BY-4.0"
-        },
-        {
-          "reference": "https://www.ebi.ac.uk/chebi/CHEBI:34887",
-          "title": "ChEBI CHEBI:34887",
-          "claim": "The source compound contains the metal in oxidation state +2, corresponding to CHEBI:49786; supply does not imply enzyme occupancy.",
-          "locator": "JSON Pointer /ontology_relations",
           "source_license": "CC-BY-4.0"
         },
         {
@@ -110,13 +96,6 @@
           "reference": "https://www.ebi.ac.uk/chebi/CHEBI:53542",
           "title": "ChEBI CHEBI:53542",
           "claim": "The exact source salt or hydrate supplies the chemical component represented by CHEBI:34887; this is a composition relationship.",
-          "locator": "JSON Pointer /ontology_relations",
-          "source_license": "CC-BY-4.0"
-        },
-        {
-          "reference": "https://www.ebi.ac.uk/chebi/CHEBI:34887",
-          "title": "ChEBI CHEBI:34887",
-          "claim": "The parent salt contains the metal in oxidation state +2; the resulting ion is CHEBI:49786.",
           "locator": "JSON Pointer /ontology_relations",
           "source_license": "CC-BY-4.0"
         },
@@ -181,6 +160,13 @@
       "action": "CREATE",
       "summary": "Curate initial source-backed cofactor and scoped cross-corpus links",
       "history_file": "history/records/nickel/2026-11-09T014228Z-cofactor-stream-c-55e8ad.yaml"
+    },
+    {
+      "timestamp": "2026-11-09T01:49:39Z",
+      "curator": "cofactor-stream-c",
+      "action": "EDIT",
+      "summary": "Correct nickel supplier evidence locators after independent review",
+      "history_file": "history/records/nickel/2026-11-09T014939Z-cofactor-stream-c-a8160b.yaml"
     }
   ]
 }
