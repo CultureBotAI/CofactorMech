@@ -1,0 +1,55 @@
+{
+  "archive_date": "2026-11-10",
+  "archive_semantics": "Exact historical copies; original host paths and four-file/head assumptions preserved. Do not execute or import as current rollout tooling.",
+  "candidate_sha256": {
+    "SKILL.md": "8cbb2e3091a9bc798489bb16431ad63c737abecd14c70c956b86c16d33efdccc",
+    "contract.yaml": "1066a37a7d6cb3511ebe24403b61478f55c03a33f3a1d83b9131b0d20f11c54c",
+    "proposal.json": "d17589b5e3ff7bf262d4212c35268add17f1c3939e3f4c0eef4e7e062be1d8fe",
+    "schema.yaml": "19f3bd1c4bf051e7a6564bd9ecdfb82ebac7b1f357c9640b958f9575d0e9974d"
+  },
+  "canonical_source": {
+    "at": "2026-11-10T10:20:11.396387+00:00",
+    "canonical_code_edited": false,
+    "scope": "generator, canonical payloads and provenance; not a canonical release or full-PR repair",
+    "source_commit": "02554818325cd77ddfb72a45a26b4d1d76d6b136",
+    "source_sha256": {
+      "src/kg_microbe_fleet/__init__.py": "8280395a8c3542f3c7c2d1b59ab0cf5790680b6d2124679477fce8073b70a589",
+      "src/kg_microbe_fleet/fleet.yaml": "1cf926eb16d70bfc81e120eb622b16063c4511e9c3d9cb534765a1f67621a91f",
+      "src/kg_microbe_governance/freshness_candidates.py": "355b71aefd69c4e259f489eb168a27bfc5f7fc07a23e046044ddf5847bcd1f49",
+      "src/kg_microbe_skills/canonical/repository-freshness.md": "569c6dc3641ff8014dee1f8b2de76b18b05208911ca1fc95de49f0cc4c2688ab",
+      "src/kg_microbe_workflows/schema/repository-freshness-v1.yaml": "19f3bd1c4bf051e7a6564bd9ecdfb82ebac7b1f357c9640b958f9575d0e9974d",
+      "src/kg_microbe_workflows/templates/repository-freshness-v1.yaml": "1066a37a7d6cb3511ebe24403b61478f55c03a33f3a1d83b9131b0d20f11c54c"
+    },
+    "source_tree": "23f3d44444c9f59178245814d20d07e62ece4fd2",
+    "validation": {
+      "command": "uv run --no-sync python -m pytest tests/test_freshness_candidates.py tests/test_freshness_contract.py -q --basetemp=/Users/marcin/agent-work/claw/stream-c-freshness-20261110/generator-test-fixtures",
+      "evidence_origin": "Observed execution result in this stream, not a rerun or inferred test count",
+      "exit_code": 0,
+      "observed_result": "39 passed in30.33s"
+    }
+  },
+  "generation_order": {
+    "assay_before_receipt_sha256": "090f8d0145a88f78b3e81cea4c71c44175bd545d5e51956d5339d8b0cf88660d",
+    "assay_preparation_started_at": "2026-11-10T10:21:47.322275+00:00",
+    "cofactor_canary_completed_at": "2026-11-10T10:21:39.469900+00:00",
+    "cofactor_canary_receipt_sha256": "b478356beccbade2d62740ca5879d35c13171fe9b0a778a926e4ff3790f1d974"
+  },
+  "issue": "https://github.com/CultureBotAI/CofactorMech/issues/12",
+  "original_evidence_sha256": {
+    "applied.json": "a14c2404283f929f164a28024d60675da3340de7b91f46f64b4269fc6cffc837",
+    "before.json": "1693f5d5cf0a889f9d8bbe635f0a8f083590ae97efc28ca3ac69cfc9a8482f0c",
+    "dry-run.json": "876e4e034b298d9b358ad4298bc28ba3371a8d3396874812ea5ae9b6be450839",
+    "final-handoff.json": "297f4adec953815f54bc6e37c65408afc423a9aeb999806e481862ba811428b6",
+    "readback.json": "364787f6d93509d16b09dd4193b0f1390fda5fbf632951a9cb5216e711641748",
+    "reviewed-source-validation.json": "4a820ca931deeba13c5914abcaee73dd90650c80adf9228adc97388d4ed767c9"
+  },
+  "original_helpers_sha256": {
+    "final_inventory.py": "d0a71a26f46bb6f1b7b6d4d38d815be46cb3c79d020fce0178fc1fab6a2284bc",
+    "prepare_consumer.py": "b9730f05b839d29ff002063681579596a44e7b7410107dcacf7ba153948bf76d",
+    "verify_candidate.py": "74695d6ee66a1eb894e0a0ce02b724bacea2486b2135d41b13ccc2daea8a7f1b"
+  },
+  "original_result_head": "666a56cf152227f7aa625c08d51460d55030bf1b",
+  "packaging_edits": [],
+  "repository": "CultureBotAI/CofactorMech",
+  "scaffold_base": "67e9124ac6941c0e103fa7eeb23373b28e5addbf"
+}
