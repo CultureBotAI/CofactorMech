@@ -1,0 +1,152 @@
+id: https://w3id.org/cofactormech/schema
+name: cofactormech
+title: CofactorMech evidence-backed cofactors
+license: CC0-1.0
+prefixes:
+  linkml: https://w3id.org/linkml/
+  CofactorMech: https://w3id.org/cofactormech/record/
+  CHEBI: http://purl.obolibrary.org/obo/CHEBI_
+default_prefix: CofactorMech
+default_range: string
+imports:
+  - linkml:types
+  - mech_shared
+  - history
+enums:
+  CofactorCategory:
+    permissible_values:
+      COENZYME:
+      PROSTHETIC_GROUP:
+      METAL_ION:
+  LinkCorpus:
+    permissible_values:
+      mediaingredientmech:
+      pathwaymech:
+      proteintraitsmech:
+  LinkRelation:
+    permissible_values:
+      SUPPLIED_BY:
+      PRECURSOR_SUPPLIED_BY:
+      PRODUCED_BY:
+      USED_BY:
+      REQUIRED_BY:
+      CONJUGATE_FORM_PRODUCED_BY:
+      CONJUGATE_FORM_USED_BY:
+      CONJUGATE_FORM_REQUIRED_BY:
+  LinkStatus:
+    permissible_values:
+      PROVISIONAL:
+      VERIFIED:
+  CurationAction:
+    permissible_values:
+      CREATE:
+      EDIT:
+      REVIEW:
+      AUDIT:
+classes:
+  CofactorRecord:
+    tree_root: true
+    description: A defined chemical species with evidence for its cofactor function.
+    attributes:
+      id:
+        identifier: true
+        required: true
+        pattern: '^CofactorMech:[a-z0-9]+(?:-[a-z0-9]+)*$'
+      name:
+        required: true
+      chemical_id:
+        required: true
+        pattern: '^CHEBI:[0-9]+$'
+      categories:
+        description: Categories can overlap; binding and organism context belong in the evidence.
+        range: CofactorCategory
+        required: true
+        multivalued: true
+        minimum_cardinality: 1
+      description:
+        required: true
+      evidence:
+        range: EvidenceItem
+        required: true
+        multivalued: true
+        minimum_cardinality: 1
+        inlined_as_list: true
+      related_records:
+        range: CofactorCrossCorpusLink
+        multivalued: true
+        inlined_as_list: true
+      research_gaps:
+        range: ResearchGap
+        multivalued: true
+        inlined_as_list: true
+      curation_history:
+        range: CurationEvent
+        required: true
+        multivalued: true
+        minimum_cardinality: 1
+        inlined_as_list: true
+  EvidenceItem:
+    description: Source supporting the accompanying claim, with a precise locator.
+    attributes:
+      reference:
+        required: true
+        pattern: '^https://[^ ]+$'
+      title:
+        required: true
+      claim:
+        required: true
+      locator:
+        required: true
+      source_license:
+        description: Licence verified for the cited source; omit if not established.
+  CofactorCrossCorpusLink:
+    is_a: CrossCorpusLink
+    description: A curator-verified target at an immutable revision, plus evidence for the relation.
+    slot_usage:
+      corpus:
+        range: LinkCorpus
+      relation:
+        range: LinkRelation
+      source_version:
+        required: true
+        pattern: '^[0-9a-f]{40}$'
+    attributes:
+      status:
+        range: LinkStatus
+        required: true
+      target_chemical_id:
+        description: Chemical species in the target when explicitly linking a conjugate form.
+        pattern: '^CHEBI:[0-9]+$'
+      source_path:
+        required: true
+      source_url:
+        required: true
+        pattern: '^https://github.com/[^ ]+$'
+      evidence:
+        range: EvidenceItem
+        required: true
+        multivalued: true
+        minimum_cardinality: 1
+        inlined_as_list: true
+  ResearchGap:
+    attributes:
+      corpus:
+        range: LinkCorpus
+        required: true
+      reason:
+        required: true
+  CurationEvent:
+    attributes:
+      timestamp:
+        required: true
+        pattern: '^20[0-9]{2}-'
+      curator:
+        required: true
+      action:
+        range: CurationAction
+        required: true
+      summary:
+        required: true
+      history_file:
+        description: Canonical append-only HistoryRecord sidecar for this event.
+        required: true

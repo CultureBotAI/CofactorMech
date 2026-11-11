@@ -1,0 +1,48 @@
+{
+  "activation_requirements": [
+    "canonical merge and protected release proof",
+    "consumer review and merge",
+    "approved immutable boundary adoption record",
+    "verified cycle boundary with exact predecessor closure",
+    "reviewed deployment for any live claw control checkout"
+  ],
+  "adopted": false,
+  "authority": "proposal_only",
+  "canonical_source": {
+    "files": {
+      "src/kg_microbe_skills/canonical/repository-freshness.md": "569c6dc3641ff8014dee1f8b2de76b18b05208911ca1fc95de49f0cc4c2688ab",
+      "src/kg_microbe_workflows/schema/repository-freshness-v1.yaml": "19f3bd1c4bf051e7a6564bd9ecdfb82ebac7b1f357c9640b958f9575d0e9974d",
+      "src/kg_microbe_workflows/templates/repository-freshness-v1.yaml": "1066a37a7d6cb3511ebe24403b61478f55c03a33f3a1d83b9131b0d20f11c54c"
+    },
+    "released": false,
+    "repository": "CultureBotAI/culturebotai-claw",
+    "reviewed_source_commit": "02554818325cd77ddfb72a45a26b4d1d76d6b136"
+  },
+  "fleet_provenance": {
+    "loader_path": "src/kg_microbe_fleet/__init__.py",
+    "loader_sha256": "8280395a8c3542f3c7c2d1b59ab0cf5790680b6d2124679477fce8073b70a589",
+    "manifest_path": "src/kg_microbe_fleet/fleet.yaml",
+    "manifest_sha256": "1cf926eb16d70bfc81e120eb622b16063c4511e9c3d9cb534765a1f67621a91f"
+  },
+  "github_repository": "CultureBotAI/CofactorMech",
+  "installed": false,
+  "observed_base": {
+    "branch": "prepare/repository-freshness-v1-stream-c-20261110",
+    "head": "67e9124ac6941c0e103fa7eeb23373b28e5addbf",
+    "preserved": {
+      "scripts/.vendored_canon_ref": "692301913a4080d8ef95e9e99c80562ed0d963a3acb31826da657fa43db24398",
+      "workflow/mech-workflow.yaml": null,
+      "workflow/parent/mech-cycle.yaml": null,
+      "workflow/parent/workflow.yaml": null
+    }
+  },
+  "repository_key": "cofactormech",
+  "runtime_requirements": [
+    "pre_goal_before_inventory",
+    "post_merge_before_closure",
+    "no_change_goals",
+    "agy_and_codex_same_runner"
+  ],
+  "schema_version": "1.0.0",
+  "state": "blocked_on_canonical_release"
+}
