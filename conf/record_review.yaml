@@ -1,0 +1,6 @@
+version: 1
+repository: CultureBotAI/CofactorMech
+skills:
+  - .claude/skills/curate-cofactor/SKILL.md
+rubrics:
+  - docs/record-review-profile.md
