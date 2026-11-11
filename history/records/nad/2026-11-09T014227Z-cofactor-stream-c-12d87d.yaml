@@ -1,0 +1,27 @@
+{
+  "history_version": 1,
+  "target": {
+    "kind": "record",
+    "path": "data/cofactors/nad.yaml",
+    "slug": "nad"
+  },
+  "session": {
+    "id": "2026-11-09T014227Z-cofactor-stream-c-12d87d",
+    "timestamp": "2026-11-09T01:42:27Z",
+    "actors": [
+      {
+        "type": "ai_agent",
+        "name": "cofactor-stream-c",
+        "agent_tool": "codex"
+      }
+    ]
+  },
+  "events": [
+    {
+      "type": "CREATE",
+      "outcome": "changed",
+      "summary": "Curate initial source-backed cofactor and scoped cross-corpus links",
+      "details": "Initial seed from commit-pinned MIM, PathwayMech and ProteinTraitsMech targets, primary ChEBI chemistry and named UniProt annotations. MIM links remain provisional; precise conjugate states, annotation evidence levels and explicit research gaps retained. See data/provenance/README.md and seed_sources.json."
+    }
+  ]
+}

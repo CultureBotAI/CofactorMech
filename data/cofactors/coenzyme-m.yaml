@@ -1,0 +1,99 @@
+{
+  "id": "CofactorMech:coenzyme-m",
+  "name": "coenzyme M",
+  "chemical_id": "CHEBI:17905",
+  "categories": [
+    "COENZYME"
+  ],
+  "description": "coenzyme M is represented by the precise ChEBI entity CHEBI:17905. Cofactor roles are chemical-context annotations; ingredient links describe chemical supply and do not establish uptake, bioavailability or a requirement for every organism.",
+  "evidence": [
+    {
+      "reference": "https://www.ebi.ac.uk/chebi/CHEBI:17905",
+      "title": "ChEBI CHEBI:17905",
+      "claim": "ChEBI assigns a cofactor, coenzyme or prosthetic-group role to CHEBI:17905.",
+      "locator": "JSON Pointer /roles_classification",
+      "source_license": "CC-BY-4.0"
+    }
+  ],
+  "related_records": [
+    {
+      "corpus": "mediaingredientmech",
+      "identifier": "CHEBI:17905",
+      "relation": "SUPPLIED_BY",
+      "basis": "The current MIM ontology mapping exactly matches the candidate cofactor chemical identifier. This establishes a compound supply link, not organism-specific uptake or requirement.",
+      "source_version": "0529fc6bc065bfa04aba0aed234f6b0cfad6a142",
+      "source_path": "data/ingredients/mapped/2-mercaptoethanesulfonate.yaml",
+      "source_url": "https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/2-mercaptoethanesulfonate.yaml",
+      "status": "PROVISIONAL",
+      "evidence": [
+        {
+          "reference": "https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/2-mercaptoethanesulfonate.yaml",
+          "title": "MIM ingredient identity",
+          "claim": "The cited ingredient is mapped to CHEBI:17905; this is a compound-identity assertion, not a bioavailability measurement.",
+          "locator": "JSON Pointer /identifier",
+          "source_license": "CC-BY-4.0"
+        }
+      ]
+    },
+    {
+      "corpus": "proteintraitsmech",
+      "identifier": "proteintraitsmech:COFACTOR_REQ_CHEBI_17905",
+      "relation": "REQUIRED_BY",
+      "basis": "Conceptual requirement coverage: this PTM trait defines the requirement for the same ChEBI chemical. It is not an organism-level or enzyme-level measurement.",
+      "source_version": "8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f",
+      "source_path": "data/traits/function/cofactor_requirement/chebi/coenzyme-m-chebi17905.yaml",
+      "source_url": "https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/coenzyme-m-chebi17905.yaml",
+      "status": "VERIFIED",
+      "evidence": [
+        {
+          "reference": "https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/coenzyme-m-chebi17905.yaml",
+          "title": "PTM cofactor-requirement concept",
+          "claim": "The target is a CLASS trait with an explicit cross-reference to this chemical, rather than a measured protein observation.",
+          "locator": "JSON Pointer /xrefs",
+          "source_license": "CC-BY-4.0"
+        }
+      ]
+    },
+    {
+      "corpus": "pathwaymech",
+      "identifier": "MetaCyc:METHANOGENESIS-PWY",
+      "relation": "USED_BY",
+      "basis": "PathwayMech edge native-ne036 records MetaCyc:CoM consumes MetaCyc:2.1.1.86-RXN. This is a cross-reference to the source-scoped reaction or cofactor annotation, not proof of complete pathway flux. ChEBI explicitly cross-references MetaCyc:CoM. The native route ends at methyl-CoM; it does not itself include methane formation.",
+      "source_version": "9584009d49579267233124f4a1057b9425a007d9",
+      "source_path": "data/pathways/methanogenesis-from-h2-and-co2.yaml",
+      "source_url": "https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/methanogenesis-from-h2-and-co2.yaml",
+      "status": "VERIFIED",
+      "evidence": [
+        {
+          "reference": "https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/methanogenesis-from-h2-and-co2.yaml",
+          "title": "PathwayMech reaction or cofactor edge",
+          "claim": "PathwayMech edge native-ne036 records MetaCyc:CoM consumes MetaCyc:2.1.1.86-RXN. This is a cross-reference to the source-scoped reaction or cofactor annotation, not proof of complete pathway flux. ChEBI explicitly cross-references MetaCyc:CoM. The native route ends at methyl-CoM; it does not itself include methane formation.",
+          "locator": "JSON Pointer /mechanistic_edges/35",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://www.ebi.ac.uk/chebi/CHEBI:17905",
+          "title": "ChEBI CHEBI:17905",
+          "claim": "The issuing ChEBI record cross-references the native MetaCyc identifier CoM.",
+          "locator": "JSON Pointer /database_accessions",
+          "source_license": "CC-BY-4.0"
+        }
+      ]
+    }
+  ],
+  "research_gaps": [
+    {
+      "corpus": "proteintraitsmech",
+      "reason": "The curated PTM link covers a cofactor-requirement concept only. A separately sourced, named enzyme exemplar requiring this exact chemical has not been curated in this seed record."
+    }
+  ],
+  "curation_history": [
+    {
+      "timestamp": "2026-11-09T01:42:27Z",
+      "curator": "cofactor-stream-c",
+      "action": "CREATE",
+      "summary": "Curate initial source-backed cofactor and scoped cross-corpus links",
+      "history_file": "history/records/coenzyme-m/2026-11-09T014227Z-cofactor-stream-c-96728d.yaml"
+    }
+  ]
+}

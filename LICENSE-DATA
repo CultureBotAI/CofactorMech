@@ -1,0 +1,15 @@
+CofactorMech curated scientific data and derived source projections
+Copyright 2026 CultureBotAI contributors and cited source contributors.
+
+Licensed under the Creative Commons Attribution 4.0 International licence
+(CC-BY-4.0): https://creativecommons.org/licenses/by/4.0/
+Legal terms: https://creativecommons.org/licenses/by/4.0/legalcode
+
+You may share and adapt the data, including commercially, subject to those
+terms. Retain attribution, source citations, licence notices and indication of
+changes. This notice does not replace the legal terms or relicense third-party
+content. Source-specific attribution, licences and modifications are documented
+in data/provenance/README.md and data/provenance/seed_sources.json.
+
+Original code and schemas retain the separate licence in LICENSE. Governed and
+other imported files retain their own notices.

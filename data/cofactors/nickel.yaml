@@ -1,0 +1,172 @@
+{
+  "id": "CofactorMech:nickel",
+  "name": "nickel(2+)",
+  "chemical_id": "CHEBI:49786",
+  "categories": [
+    "METAL_ION"
+  ],
+  "description": "nickel(2+) is represented by the precise ChEBI entity CHEBI:49786. Cofactor roles are chemical-context annotations; ingredient links describe chemical supply and do not establish uptake, bioavailability or a requirement for every organism.",
+  "evidence": [
+    {
+      "reference": "https://www.ebi.ac.uk/chebi/CHEBI:49786",
+      "title": "ChEBI CHEBI:49786",
+      "claim": "ChEBI assigns a cofactor, coenzyme or prosthetic-group role to CHEBI:49786.",
+      "locator": "JSON Pointer /roles_classification",
+      "source_license": "CC-BY-4.0"
+    }
+  ],
+  "related_records": [
+    {
+      "corpus": "mediaingredientmech",
+      "identifier": "CHEBI:53542",
+      "relation": "SUPPLIED_BY",
+      "basis": "The source is a chemically specified salt containing this metal in the +2 oxidation state; supply is chemical composition, not proof of uptake, cellular availability or enzyme occupancy.",
+      "source_version": "0529fc6bc065bfa04aba0aed234f6b0cfad6a142",
+      "source_path": "data/ingredients/mapped/Nickel_II_chloride_hexahydrate.yaml",
+      "source_url": "https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nickel_II_chloride_hexahydrate.yaml",
+      "status": "PROVISIONAL",
+      "evidence": [
+        {
+          "reference": "https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nickel_II_chloride_hexahydrate.yaml",
+          "title": "MIM ingredient identity",
+          "claim": "The cited ingredient is mapped to CHEBI:53542; this is a compound-identity assertion, not a bioavailability measurement.",
+          "locator": "JSON Pointer /identifier",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://www.ebi.ac.uk/chebi/CHEBI:53542",
+          "title": "ChEBI CHEBI:53542",
+          "claim": "The exact source salt or hydrate supplies the chemical component represented by CHEBI:34887; this is a composition relationship.",
+          "locator": "JSON Pointer /ontology_relations",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://www.ebi.ac.uk/chebi/CHEBI:34887",
+          "title": "ChEBI CHEBI:34887",
+          "claim": "The issuing ChEBI definition explicitly states nickel oxidation state +2 in nickel dichloride.",
+          "locator": "JSON Pointer /definition",
+          "source_license": "CC-BY-4.0"
+        }
+      ]
+    },
+    {
+      "corpus": "mediaingredientmech",
+      "identifier": "CHEBI:34887",
+      "relation": "SUPPLIED_BY",
+      "basis": "The source is a chemically specified salt containing this metal in the +2 oxidation state; supply is chemical composition, not proof of uptake, cellular availability or enzyme occupancy.",
+      "source_version": "0529fc6bc065bfa04aba0aed234f6b0cfad6a142",
+      "source_path": "data/ingredients/mapped/Nicl2.yaml",
+      "source_url": "https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nicl2.yaml",
+      "status": "PROVISIONAL",
+      "evidence": [
+        {
+          "reference": "https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nicl2.yaml",
+          "title": "MIM ingredient identity",
+          "claim": "The cited ingredient is mapped to CHEBI:34887; this is a compound-identity assertion, not a bioavailability measurement.",
+          "locator": "JSON Pointer /identifier",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://www.ebi.ac.uk/chebi/CHEBI:34887",
+          "title": "ChEBI CHEBI:34887",
+          "claim": "The issuing ChEBI definition explicitly states nickel oxidation state +2 in nickel dichloride.",
+          "locator": "JSON Pointer /definition",
+          "source_license": "CC-BY-4.0"
+        }
+      ]
+    },
+    {
+      "corpus": "mediaingredientmech",
+      "identifier": "CHEBI:53542",
+      "relation": "SUPPLIED_BY",
+      "basis": "The source is a chemically specified salt containing this metal in the +2 oxidation state; supply is chemical composition, not proof of uptake, cellular availability or enzyme occupancy.",
+      "source_version": "0529fc6bc065bfa04aba0aed234f6b0cfad6a142",
+      "source_path": "data/ingredients/mapped/Nicl2_X_6_H2o.yaml",
+      "source_url": "https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nicl2_X_6_H2o.yaml",
+      "status": "PROVISIONAL",
+      "evidence": [
+        {
+          "reference": "https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nicl2_X_6_H2o.yaml",
+          "title": "MIM ingredient identity",
+          "claim": "The cited ingredient is mapped to CHEBI:53542; this is a compound-identity assertion, not a bioavailability measurement.",
+          "locator": "JSON Pointer /identifier",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://www.ebi.ac.uk/chebi/CHEBI:53542",
+          "title": "ChEBI CHEBI:53542",
+          "claim": "The exact source salt or hydrate supplies the chemical component represented by CHEBI:34887; this is a composition relationship.",
+          "locator": "JSON Pointer /ontology_relations",
+          "source_license": "CC-BY-4.0"
+        },
+        {
+          "reference": "https://www.ebi.ac.uk/chebi/CHEBI:34887",
+          "title": "ChEBI CHEBI:34887",
+          "claim": "The issuing ChEBI definition explicitly states nickel oxidation state +2 in nickel dichloride.",
+          "locator": "JSON Pointer /definition",
+          "source_license": "CC-BY-4.0"
+        }
+      ]
+    },
+    {
+      "corpus": "proteintraitsmech",
+      "identifier": "proteintraitsmech:COFACTOR_REQ_CHEBI_49786",
+      "relation": "REQUIRED_BY",
+      "basis": "Conceptual requirement coverage: this PTM trait defines the requirement for the same ChEBI chemical. It is not an organism-level or enzyme-level measurement.",
+      "source_version": "8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f",
+      "source_path": "data/traits/function/cofactor_requirement/chebi/nickel-2-chebi49786.yaml",
+      "source_url": "https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/nickel-2-chebi49786.yaml",
+      "status": "VERIFIED",
+      "evidence": [
+        {
+          "reference": "https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/nickel-2-chebi49786.yaml",
+          "title": "PTM cofactor-requirement concept",
+          "claim": "The target is a CLASS trait with an explicit cross-reference to this chemical, rather than a measured protein observation.",
+          "locator": "JSON Pointer /xrefs",
+          "source_license": "CC-BY-4.0"
+        }
+      ]
+    },
+    {
+      "corpus": "pathwaymech",
+      "identifier": "MetaCyc:PWY-5705",
+      "relation": "USED_BY",
+      "basis": "PathwayMech edge allantoin-glyoxylate-iii-edge-036 records UniProtKB:P77731 has_cofactor CHEBI:49786. This is a cross-reference to the source-scoped reaction or cofactor annotation, not proof of complete pathway flux. The link concerns nickel-dependent urea release by purified AllA; it does not assign a universal metal stoichiometry.",
+      "source_version": "9584009d49579267233124f4a1057b9425a007d9",
+      "source_path": "data/pathways/allantoin-degradation-to-glyoxylate-iii.yaml",
+      "source_url": "https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/allantoin-degradation-to-glyoxylate-iii.yaml",
+      "status": "VERIFIED",
+      "evidence": [
+        {
+          "reference": "https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/allantoin-degradation-to-glyoxylate-iii.yaml",
+          "title": "PathwayMech reaction or cofactor edge",
+          "claim": "PathwayMech edge allantoin-glyoxylate-iii-edge-036 records UniProtKB:P77731 has_cofactor CHEBI:49786. This is a cross-reference to the source-scoped reaction or cofactor annotation, not proof of complete pathway flux. The link concerns nickel-dependent urea release by purified AllA; it does not assign a universal metal stoichiometry.",
+          "locator": "JSON Pointer /mechanistic_edges/35",
+          "source_license": "CC-BY-4.0"
+        }
+      ]
+    }
+  ],
+  "research_gaps": [
+    {
+      "corpus": "proteintraitsmech",
+      "reason": "The curated PTM link covers a cofactor-requirement concept only. A separately sourced, named enzyme exemplar requiring this exact chemical has not been curated in this seed record."
+    }
+  ],
+  "curation_history": [
+    {
+      "timestamp": "2026-11-09T01:42:28Z",
+      "curator": "cofactor-stream-c",
+      "action": "CREATE",
+      "summary": "Curate initial source-backed cofactor and scoped cross-corpus links",
+      "history_file": "history/records/nickel/2026-11-09T014228Z-cofactor-stream-c-55e8ad.yaml"
+    },
+    {
+      "timestamp": "2026-11-09T01:49:39Z",
+      "curator": "cofactor-stream-c",
+      "action": "EDIT",
+      "summary": "Correct nickel supplier evidence locators after independent review",
+      "history_file": "history/records/nickel/2026-11-09T014939Z-cofactor-stream-c-a8160b.yaml"
+    }
+  ]
+}

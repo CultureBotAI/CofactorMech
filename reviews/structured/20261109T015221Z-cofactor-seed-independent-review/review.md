@@ -1,0 +1,7282 @@
+# Independent scientific review of the initial cofactor seed and complete candidate ledger
+
+- Review: 20261109T015221Z-cofactor-seed-independent-review
+- Repository: CultureBotAI/CofactorMech
+- Started UTC: 2026-11-09T01:48:02Z
+- Finished UTC: 2026-11-09T01:52:21Z
+- Reviewer: Codex independent seed-review team (independent)
+- Completion: completed
+- Verdict: pass_with_limitations
+- Scientific review: true
+
+## Summary
+
+The14 curated cofactor entities and all162 candidate dispositions have bounded evidence support. No unresolved scientific finding remains at this exact revision after three audit fixes and a minor nickel evidence-locator correction. This review does not authorize a merge, assert complete cofactor coverage, or promote a native scientific status.
+
+## Scope And Provenance
+
+All 14 maintained CofactorRecord files plus all162 exact rows of the frozen MIM candidate ledger (176 targets); 28 supplier links,12 pathway links,14 requirement-concept links and3 named enzyme-exemplar links.
+
+Selection: Every data/cofactors/*.yaml record and every curation/mim_candidates.tsv source_path row at the exact reviewed commit; no sample.
+Coverage: full; 176 reviewed / 176 in the declared population.
+Source: git_commit at Git base 1f18c575c1ead90d48833aa8da06a2057fd0236a.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CofactorMech:biotin | data/cofactors/biotin.yaml | maintained | biotin |
+| CofactorMech:cobalamin | data/cofactors/cobalamin.yaml | maintained | cobalamin |
+| CofactorMech:cobalt | data/cofactors/cobalt.yaml | maintained | cobalt(2+) |
+| CofactorMech:coenzyme-a | data/cofactors/coenzyme-a.yaml | maintained | coenzyme A |
+| CofactorMech:coenzyme-m | data/cofactors/coenzyme-m.yaml | maintained | coenzyme M |
+| CofactorMech:copper | data/cofactors/copper.yaml | maintained | copper(2+) |
+| CofactorMech:fad | data/cofactors/fad.yaml | maintained | FAD |
+| CofactorMech:fmn | data/cofactors/fmn.yaml | maintained | FMN |
+| CofactorMech:manganese | data/cofactors/manganese.yaml | maintained | manganese(2+) |
+| CofactorMech:nad | data/cofactors/nad.yaml | maintained | NAD(+) |
+| CofactorMech:nickel | data/cofactors/nickel.yaml | maintained | nickel(2+) |
+| CofactorMech:pyridoxal-phosphate | data/cofactors/pyridoxal-phosphate.yaml | maintained | pyridoxal 5'-phosphate |
+| CofactorMech:thiamine-diphosphate | data/cofactors/thiamine-diphosphate.yaml | maintained | thiamine(1+) diphosphate |
+| CofactorMech:zinc | data/cofactors/zinc.yaml | maintained | zinc(2+) |
+| candidate-ee90f6fa3c70309b | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/02_Thiamine_Pyrophosphate.yaml | snapshot_row | 0.2% Thiamine pyrophosphate |
+| candidate-f0d0c59872b26b61 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/2-mercaptoethanesulfonate.yaml | snapshot_row | 2-Mercaptoethanesulfonate |
+| candidate-6ad3cf8f490598d1 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/4-Pyridoxic_Acid.yaml | snapshot_row | 4-Pyridoxic acid |
+| candidate-24b128e21bd5079c | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/4-aminobenzoate.yaml | snapshot_row | 4-Aminobenzoate |
+| candidate-36ba402a461281c5 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/ATCC_Wolfes_Mineral_Mix.yaml | snapshot_row | ATCC Wolfe's mineral mix |
+| candidate-69ee94c77ad7ece9 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/ATCC_Wolfes_Vitamin_Mix.yaml | snapshot_row | ATCC Wolfe's vitamin mix |
+| candidate-e9b3648170ca8260 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Alcl3.yaml | snapshot_row | AlCl3 |
+| candidate-cf459abf24c1d0ae | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Alcl3_X_6_H2o.yaml | snapshot_row | AlCl3 x 6 H2O |
+| candidate-9fa8e3d2bfde3386 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Algal_Trace_Elements_Solution.yaml | snapshot_row | Algal Trace Elements Solution |
+| candidate-3a90e79f74a45533 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Alk_So42.yaml | snapshot_row | AlK(SO4)2 |
+| candidate-05576c16ea52edad | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Alk_So42_X_12_H2o.yaml | snapshot_row | AlK(SO4)2 x 12 H2O |
+| candidate-6fc193ae5a854a22 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Ammonium_Molybdate_Tetrahydrate.yaml | snapshot_row | ammonium molybdate tetrahydrate |
+| candidate-dc2f661688317689 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Ascorbic_Acid.yaml | snapshot_row | Ascorbic acid |
+| candidate-3744546993318eba | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Bacl2.yaml | snapshot_row | BaCl2 |
+| candidate-9b2dcfd7a3735c04 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Beta-nad.yaml | snapshot_row | beta-NAD |
+| candidate-7d94fef282a9db36 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Biotin.yaml | snapshot_row | Biotin |
+| candidate-ed8e2e0c812cde8e | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Biotin_Vitamin_Solution.yaml | snapshot_row | Biotin Vitamin Solution |
+| candidate-d2b9e3d9130bc906 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Ca-folinate.yaml | snapshot_row | Ca-folinate |
+| candidate-d675462d90274ebd | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Ca-pantothenate.yaml | snapshot_row | Ca-pantothenate |
+| candidate-d504846cee0b4a77 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Calcium_D-Pantothenate.yaml | snapshot_row | Calcium D-Pantothenate |
+| candidate-3a3d3166b2faac3e | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Calcium_Pantothenate.yaml | snapshot_row | Calcium pantothenate |
+| candidate-a220ec1a5729adb6 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cecl3.yaml | snapshot_row | CeCl3 |
+| candidate-e06c987d8ce4121b | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cecl3_X_7_H2o.yaml | snapshot_row | CeCl3 x 7 H2O |
+| candidate-519a491ff5cbc19d | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Chalcopyrite.yaml | snapshot_row | Chalcopyrite |
+| candidate-796a6ace4fb45575 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Co_No32.yaml | snapshot_row | Co(NO3)2 |
+| candidate-6cbe62046ff5e4c3 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Co_No32_X_6_H2o.yaml | snapshot_row | Co(NO3)2 x 6 H2O |
+| candidate-762de7be4c229f0b | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cobalamine.yaml | snapshot_row | Cobalamine |
+| candidate-f9db6fc3a8d2618f | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cobalt_chloride_hexahydrate.yaml | snapshot_row | Cobalt chloride hexahydrate |
+| candidate-aa0894de29adcb5c | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cocl2.yaml | snapshot_row | CoCl2 |
+| candidate-e6bce3f910a889a5 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cocl2_X_2_H2o.yaml | snapshot_row | CoCl2 x 2 H2O |
+| candidate-f7073b8138fa8e4e | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cocl2_X_4_H2o.yaml | snapshot_row | CoCl2 x 4 H2O |
+| candidate-ee89ac5730b0d030 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cocl2_X_6_H2o.yaml | snapshot_row | CoCl2 x 6 H2O |
+| candidate-04b99bf093c23316 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Coenzyme_A.yaml | snapshot_row | Coenzyme A |
+| candidate-e5bf6680401f7d2c | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Coso4.yaml | snapshot_row | CoSO4 |
+| candidate-8676312e396cd528 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Coso4_X_7_H2o.yaml | snapshot_row | CoSO4 x 7 H2O |
+| candidate-4e80df1ec775dd84 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cr2_So43_X_N_H2o.yaml | snapshot_row | Cr2(SO4)3 x n H2O |
+| candidate-3d0d09563c316e26 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cucl.yaml | snapshot_row | CuCl |
+| candidate-0d11301b4e402fe3 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cucl2.yaml | snapshot_row | CuCl2 |
+| candidate-f06b20ef756002a1 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cucl2_X_2_H2o.yaml | snapshot_row | CuCl2 x 2 H2O |
+| candidate-0ec03978bae241d4 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cucl2_X_5_H2o.yaml | snapshot_row | CuCl2 x 5 H2O |
+| candidate-87f6576606d1c4ff | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cucl2_X_6_H2o.yaml | snapshot_row | CuCl2 x 6 H2O |
+| candidate-f1f1d8955cf2c98a | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cuso4.yaml | snapshot_row | CuSO4 |
+| candidate-b73d8ea700a6b07d | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cuso4_X_2_H2o.yaml | snapshot_row | CuSO4 x 2 H2O |
+| candidate-5b8ceb5e216ceae4 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cuso4_X_4_H2o.yaml | snapshot_row | CuSO4 x 4 H2O |
+| candidate-0a2ba25c5a81e7a8 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cuso4_X_5_H2o.yaml | snapshot_row | CuSO4 x 5 H2O |
+| candidate-4ff89eb991f78308 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cuso4_X_6_H2o.yaml | snapshot_row | CuSO4 x 6 H2O |
+| candidate-257276526125ced0 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Cyanocobalamin.yaml | snapshot_row | Cyanocobalamin |
+| candidate-9122c364d42e8559 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/DL_Vitamins.yaml | snapshot_row | DL vitamins |
+| candidate-797da68010f27377 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Desulfovibrio_Trace_Elements.yaml | snapshot_row | Desulfovibrio trace elements |
+| candidate-3aed449d9b4200ac | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Diammonium_molybdate.yaml | snapshot_row | Diammonium molybdate |
+| candidate-53cca7998b1cb5bf | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Dl-alpha-lipoic_Acid.yaml | snapshot_row | (DL)-alpha-Lipoic acid |
+| candidate-7baa5feffa5690ec | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Fad.yaml | snapshot_row | FAD |
+| candidate-0342a970229031a5 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Fe2_So43_X_N_H2o.yaml | snapshot_row | Fe2(SO4)3 x n H2O |
+| candidate-41f4535c09a79d8e | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Fe_Iii-edta.yaml | snapshot_row | Fe(III)-EDTA |
+| candidate-efa8f3ce848e6134 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Fe_Nh42_So42_X_7_H2o.yaml | snapshot_row | Fe(NH4)2(SO4)2 x 7 H2O |
+| candidate-fc2f1c8e1973820c | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Folic_Acid.yaml | snapshot_row | Folic acid |
+| candidate-df97a65c35115640 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Folinic_Acid.yaml | snapshot_row | Folinic acid |
+| candidate-06cfe15b0880f8b6 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/H2seo3.yaml | snapshot_row | H2SeO3 |
+| candidate-afdea23bff1509dd | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/H2wo4.yaml | snapshot_row | H2WO4 |
+| candidate-210cbb9879522b68 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/H3bo2.yaml | snapshot_row | H3BO2 |
+| candidate-b5b196e022fb02fc | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/H3bo3.yaml | snapshot_row | H3BO3 |
+| candidate-f3a8229a11e444a8 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Haemin.yaml | snapshot_row | Haemin |
+| candidate-c061f80d9a1b713d | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Inositol.yaml | snapshot_row | Inositol |
+| candidate-6e86be68514526f1 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Kao_And_Michayluk_Vitamin_Solution.yaml | snapshot_row | Kao and Michayluk vitamin solution |
+| candidate-235fa915e6835391 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/L-Carnitine.yaml | snapshot_row | L-Carnitine |
+| candidate-6dfe51b0035d8b37 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/L-ascorbic_Acid.yaml | snapshot_row | L-Ascorbic acid |
+| candidate-af4eca52410fc28c | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/M-inositol.yaml | snapshot_row | m-Inositol |
+| candidate-563f15322b1ebf74 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/MME_Trace_Minerals.yaml | snapshot_row | MME Trace Minerals |
+| candidate-538c2f8709942c4c | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Mc_trace_minerals.yaml | snapshot_row | Mc_trace_minerals |
+| candidate-bf272107d1740429 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Mc_trace_minerals_SO4free.yaml | snapshot_row | Mc_trace_minerals_SO4free |
+| candidate-062dbe4934b5bca6 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Mc_vitamins.yaml | snapshot_row | Mc_vitamins |
+| candidate-0e9cd469f9390561 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Menadione.yaml | snapshot_row | Menadione |
+| candidate-679b63fe887c224b | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Menadione_Sodium_Bisulfate.yaml | snapshot_row | Menadione sodium bisulfate |
+| candidate-3d1ab6b2c38d6965 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Mineral_3B_Solution.yaml | snapshot_row | Mineral 3B solution |
+| candidate-a4c3e9ae8efce8fa | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Mncl2.yaml | snapshot_row | MnCl2 |
+| candidate-e5f54c96163d2705 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Mncl2_X_2_H2o.yaml | snapshot_row | MnCl2 x 2 H2O |
+| candidate-f57a467dbfb714a2 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Mncl2_X_4_H2o.yaml | snapshot_row | MnCl2 x 4 H2O |
+| candidate-d97584845be8a823 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Mnso4.yaml | snapshot_row | MnSO4 |
+| candidate-8fe9ff348804a593 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Mnso4_X_1_H2o.yaml | snapshot_row | MnSO4 x 1 H2O |
+| candidate-b4a98a3100fb1fdb | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Mnso4_X_2_H2o.yaml | snapshot_row | MnSO4 x 2 H2O |
+| candidate-4508428623ecf316 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Mnso4_X_4_H2o.yaml | snapshot_row | MnSO4 x 4 H2O |
+| candidate-29aef4ebc57de03a | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Mnso4_X_5_H2o.yaml | snapshot_row | MnSO4 x 5 H2O |
+| candidate-8a0986b422795927 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Mnso4_X_6_H2o.yaml | snapshot_row | MnSO4 x 6 H2O |
+| candidate-4560fc6cc7fa4ad9 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Mnso4_X_7_H2o.yaml | snapshot_row | MnSO4 x 7 H2O |
+| candidate-b7cbc0048d090fd2 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Mnso4_X_H2o.yaml | snapshot_row | MnSO4 x H2O |
+| candidate-6c3a726bdb81a718 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Moo3.yaml | snapshot_row | MoO3 |
+| candidate-5a9e2f914dd48794 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Myo-inositol.yaml | snapshot_row | myo-Inositol |
+| candidate-1460ff9880c39741 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Na-ascorbate.yaml | snapshot_row | Na-ascorbate |
+| candidate-bf91a719f65368fc | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Na2b4o7.yaml | snapshot_row | Na2B4O7 |
+| candidate-fa80b058812c8549 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Na2moo4.yaml | snapshot_row | Na2MoO4 |
+| candidate-37e19515a9bf6799 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Na2moo42h2o.yaml | snapshot_row | Na2MoO4·2H2O |
+| candidate-80c090c120505e67 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Na2moo4_X_2_H2o.yaml | snapshot_row | Na2MoO4 x 2 H2O |
+| candidate-d41203d614779c47 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Na2moo4_X_7_H2o.yaml | snapshot_row | Na2MoO4 x 7 H2O |
+| candidate-e13ee66355bbb0cf | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Na2seo3.yaml | snapshot_row | Na2SeO3 |
+| candidate-f46d08e37ba3d370 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Na2seo35h2o.yaml | snapshot_row | Na2SeO3·5H2O |
+| candidate-07f709f34ed0ea0a | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Na2seo3_X_5_H2o.yaml | snapshot_row | Na2SeO3 x 5 H2O |
+| candidate-fd11327c1aa911c9 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Na2seo4.yaml | snapshot_row | Na2SeO4 |
+| candidate-72fc6ab22e3eb78d | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Na2wo4.yaml | snapshot_row | Na2WO4 |
+| candidate-3caced37c68a8c8e | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Na2wo4_X_2_H2o.yaml | snapshot_row | Na2WO4 x 2 H2O |
+| candidate-2c4799e33df88fc4 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Navo3.yaml | snapshot_row | NaVO3 |
+| candidate-135734c948bce49a | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Navo3_X_H2o.yaml | snapshot_row | NaVO3 x H2O |
+| candidate-a5a4a1ff290df2c1 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Nh42ni_So42.yaml | snapshot_row | (NH4)2Ni(SO4)2 |
+| candidate-3e71b213b68d6716 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Nh42ni_So42_X_6_H2o.yaml | snapshot_row | (NH4)2Ni(SO4)2 x 6 H2O |
+| candidate-77687c39e6747459 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Nickel_II_chloride_hexahydrate.yaml | snapshot_row | Nickel (II) chloride hexahydrate |
+| candidate-b952cb59a98f5746 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Nickel_II_sulfate_hexahydrate.yaml | snapshot_row | Nickel (II) sulfate hexahydrate |
+| candidate-3dcf9e2ccc32a7aa | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Nicl2.yaml | snapshot_row | NiCl2 |
+| candidate-5f2d78dbe06a0f9d | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Nicl2_X_2_H2o.yaml | snapshot_row | NiCl2 x 2 H2O |
+| candidate-9cfedbb214901aee | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Nicl2_X_5_H2o.yaml | snapshot_row | NiCl2 x 5 H2O |
+| candidate-4c5453e4c4053d5c | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Nicl2_X_6_H2o.yaml | snapshot_row | NiCl2 x 6 H2O |
+| candidate-c648fe682ab04504 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Nicotinamide.yaml | snapshot_row | Nicotinamide |
+| candidate-2acc28cf88424a26 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Nicotinic_Acid.yaml | snapshot_row | Nicotinic acid |
+| candidate-5e4138c912ba3b4c | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Niso4_X_6_H2o.yaml | snapshot_row | NiSO4 x 6 H2O |
+| candidate-19b63a6ad1ce6109 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Niso4_X_7_H2o.yaml | snapshot_row | NiSO4 x 7 H2O |
+| candidate-f0957b4f878bad9c | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/P-aminobenzoic_Acid.yaml | snapshot_row | p-Aminobenzoic acid |
+| candidate-89fa0b81bc6b59ff | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/P-iv_Metal_Solution.yaml | snapshot_row | P-IV Metal Solution |
+| candidate-72f1454e13a59047 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Pantothenate.yaml | snapshot_row | Pantothenate |
+| candidate-1c3e5b93c7b8ba06 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Pantothenic_Acid.yaml | snapshot_row | Pantothenic acid |
+| candidate-1bbf30e5cbec5335 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Pyridoxal_Hydrochloride.yaml | snapshot_row | Pyridoxal hydrochloride |
+| candidate-b5eae47b8dc1770f | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Pyridoxal_Phosphate.yaml | snapshot_row | Pyridoxal phosphate |
+| candidate-3b74e442106e38d0 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Pyridoxamine.yaml | snapshot_row | Pyridoxamine |
+| candidate-3702a926465dd764 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Pyridoxamine_Dihydrochloride.yaml | snapshot_row | Pyridoxamine Dihydrochloride |
+| candidate-ab5a6786004592e6 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Pyridoxamine_Hydrochloride.yaml | snapshot_row | Pyridoxamine hydrochloride |
+| candidate-e807ce425b003386 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Pyridoxine.yaml | snapshot_row | Pyridoxine |
+| candidate-aa2be19f8423496d | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Pyridoxine_Hydrochloride.yaml | snapshot_row | Pyridoxine hydrochloride |
+| candidate-59776f859c41300d | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Riboflavin.yaml | snapshot_row | Riboflavin |
+| candidate-4989d071844b4403 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Sncl2_X_2_H2o.yaml | snapshot_row | SnCl2 x 2 H2O |
+| candidate-abd533b528463404 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Srcl2.yaml | snapshot_row | SrCl2 |
+| candidate-edb69fb35eaf3b37 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Srcl2_X_6_H2o.yaml | snapshot_row | SrCl2 x 6 H2O |
+| candidate-5f6e83f9b42d5ad3 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Thauers_Vitamin_Mix.yaml | snapshot_row | Thauer's vitamin mix |
+| candidate-38fd3e685f44b6cf | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Thauers_Vitamin_Mix_No_Biotin.yaml | snapshot_row | Thauer's vitamin mix no Biotin |
+| candidate-dff17523de241273 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Thiamin_Pyrophosphate.yaml | snapshot_row | Thiamin pyrophosphate |
+| candidate-50d3d5c3c8b8e265 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Thiamine-hcl_X_2_H2o.yaml | snapshot_row | Thiamine-HCl x 2 H2O |
+| candidate-615b0d99b5f72b86 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Thiamine.yaml | snapshot_row | Thiamine |
+| candidate-c375e99738c7374d | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Thiamine_Hcl.yaml | snapshot_row | Thiamine HCl |
+| candidate-f790d2e32ec35d95 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Thiamine_Vitamin_Solution.yaml | snapshot_row | Thiamine Vitamin Solution |
+| candidate-92372a0a8f9ff917 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Thiamine_pyrophosphate.yaml | snapshot_row | Thiamine pyrophosphate |
+| candidate-b75b34c4ba40b278 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Thioctic_Acid.yaml | snapshot_row | Thioctic acid |
+| candidate-a8b003fd9b7bff0e | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Trace_Element_Solution.yaml | snapshot_row | Trace element solution |
+| candidate-4753354366bfc026 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Trace_Element_Solution_SL-10.yaml | snapshot_row | Trace element solution SL-10 |
+| candidate-78ea6a14a080dbf0 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Trace_Metal_Mix_A5.yaml | snapshot_row | Trace metal mix A5 |
+| candidate-02608edf7d339331 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Tungstate.yaml | snapshot_row | Tungstate |
+| candidate-1a9f0e0e728260f4 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/UW_Concentrated_Base.yaml | snapshot_row | UW concentrated base |
+| candidate-f1ed5a2e1a362e7c | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/UW_Concentrated_Base_No_Mo.yaml | snapshot_row | UW concentrated base no Mo |
+| candidate-76e70d675ccceba2 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/UW_Concentrated_Base_No_Sulfur.yaml | snapshot_row | UW concentrated base no sulfur |
+| candidate-83cbeeeafb19f31c | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Vanadium_Chloride.yaml | snapshot_row | vanadium chloride |
+| candidate-c5452544f5171e8b | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Vitamin_B12.yaml | snapshot_row | Vitamin B12 |
+| candidate-f9ecdfe63885336a | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Vitamin_K1.yaml | snapshot_row | Vitamin K1 |
+| candidate-6f7461b8e7007457 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Vitamin_Solution.yaml | snapshot_row | Vitamin solution |
+| candidate-b3239724e22c2717 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Vitamin_Solution_See_Medium_No_403.yaml | snapshot_row | Vitamin solution see Medium No. 403 |
+| candidate-1d75635b5f764a44 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Vitamin_Solution_Thermophilic_Formulation.yaml | snapshot_row | Vitamin solution (thermophilic formulation) |
+| candidate-75106bf5336176fe | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Voso4_X_2_H2o.yaml | snapshot_row | VOSO4 x 2 H2O |
+| candidate-dd3b36dc9359254c | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Voso4_X_5_H2o.yaml | snapshot_row | VOSO4 x 5 H2O |
+| candidate-44b6d3ce812240de | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Voso4_X_N_H2o.yaml | snapshot_row | VOSO4 x n H2O |
+| candidate-4a445e71fe30bfaa | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Wc_Trace_Elements_Solution.yaml | snapshot_row | WC Trace Elements Solution |
+| candidate-eba48f413770a1fe | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Wolfes_Mineral_Mix.yaml | snapshot_row | Wolfe's mineral mix |
+| candidate-367d576718228f0e | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Wolfes_Vitamin_Mix.yaml | snapshot_row | Wolfe's vitamin mix |
+| candidate-a40e126a67bee709 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Zeikus_Trace_Element_Solution.yaml | snapshot_row | Zeikus trace element solution |
+| candidate-9aa86894462c89ae | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Zinc_Sulfate.yaml | snapshot_row | Zinc sulfate |
+| candidate-cf658bb0a67c7a74 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Zncl2.yaml | snapshot_row | ZnCl2 |
+| candidate-bdad169b1912c616 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Znso4_X_6_H2o.yaml | snapshot_row | ZnSO4 x 6 H2O |
+| candidate-98cb1d7d228701e5 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Znso4_X_7_H2o.yaml | snapshot_row | ZnSO4 x 7 H2O |
+| candidate-b21faf34879b78a3 | curation/mim_candidates.tsv # source_path=data/ingredients/mapped/Α-lipoic_Acid.yaml | snapshot_row | α-lipoic acid |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Pinned corpus source and projection integrity | passed | True | CofactorMech:biotin, CofactorMech:cobalamin, CofactorMech:cobalt, CofactorMech:coenzyme-a, CofactorMech:coenzyme-m, CofactorMech:copper, CofactorMech:fad, CofactorMech:fmn, CofactorMech:manganese, CofactorMech:nad, CofactorMech:nickel, CofactorMech:pyridoxal-phosphate, CofactorMech:thiamine-diphosphate, CofactorMech:zinc, candidate-ee90f6fa3c70309b, candidate-f0d0c59872b26b61, candidate-6ad3cf8f490598d1, candidate-24b128e21bd5079c, candidate-36ba402a461281c5, candidate-69ee94c77ad7ece9, candidate-e9b3648170ca8260, candidate-cf459abf24c1d0ae, candidate-9fa8e3d2bfde3386, candidate-3a90e79f74a45533, candidate-05576c16ea52edad, candidate-6fc193ae5a854a22, candidate-dc2f661688317689, candidate-3744546993318eba, candidate-9b2dcfd7a3735c04, candidate-7d94fef282a9db36, candidate-ed8e2e0c812cde8e, candidate-d2b9e3d9130bc906, candidate-d675462d90274ebd, candidate-d504846cee0b4a77, candidate-3a3d3166b2faac3e, candidate-a220ec1a5729adb6, candidate-e06c987d8ce4121b, candidate-519a491ff5cbc19d, candidate-796a6ace4fb45575, candidate-6cbe62046ff5e4c3, candidate-762de7be4c229f0b, candidate-f9db6fc3a8d2618f, candidate-aa0894de29adcb5c, candidate-e6bce3f910a889a5, candidate-f7073b8138fa8e4e, candidate-ee89ac5730b0d030, candidate-04b99bf093c23316, candidate-e5bf6680401f7d2c, candidate-8676312e396cd528, candidate-4e80df1ec775dd84, candidate-3d0d09563c316e26, candidate-0d11301b4e402fe3, candidate-f06b20ef756002a1, candidate-0ec03978bae241d4, candidate-87f6576606d1c4ff, candidate-f1f1d8955cf2c98a, candidate-b73d8ea700a6b07d, candidate-5b8ceb5e216ceae4, candidate-0a2ba25c5a81e7a8, candidate-4ff89eb991f78308, candidate-257276526125ced0, candidate-9122c364d42e8559, candidate-797da68010f27377, candidate-3aed449d9b4200ac, candidate-53cca7998b1cb5bf, candidate-7baa5feffa5690ec, candidate-0342a970229031a5, candidate-41f4535c09a79d8e, candidate-efa8f3ce848e6134, candidate-fc2f1c8e1973820c, candidate-df97a65c35115640, candidate-06cfe15b0880f8b6, candidate-afdea23bff1509dd, candidate-210cbb9879522b68, candidate-b5b196e022fb02fc, candidate-f3a8229a11e444a8, candidate-c061f80d9a1b713d, candidate-6e86be68514526f1, candidate-235fa915e6835391, candidate-6dfe51b0035d8b37, candidate-af4eca52410fc28c, candidate-563f15322b1ebf74, candidate-538c2f8709942c4c, candidate-bf272107d1740429, candidate-062dbe4934b5bca6, candidate-0e9cd469f9390561, candidate-679b63fe887c224b, candidate-3d1ab6b2c38d6965, candidate-a4c3e9ae8efce8fa, candidate-e5f54c96163d2705, candidate-f57a467dbfb714a2, candidate-d97584845be8a823, candidate-8fe9ff348804a593, candidate-b4a98a3100fb1fdb, candidate-4508428623ecf316, candidate-29aef4ebc57de03a, candidate-8a0986b422795927, candidate-4560fc6cc7fa4ad9, candidate-b7cbc0048d090fd2, candidate-6c3a726bdb81a718, candidate-5a9e2f914dd48794, candidate-1460ff9880c39741, candidate-bf91a719f65368fc, candidate-fa80b058812c8549, candidate-37e19515a9bf6799, candidate-80c090c120505e67, candidate-d41203d614779c47, candidate-e13ee66355bbb0cf, candidate-f46d08e37ba3d370, candidate-07f709f34ed0ea0a, candidate-fd11327c1aa911c9, candidate-72fc6ab22e3eb78d, candidate-3caced37c68a8c8e, candidate-2c4799e33df88fc4, candidate-135734c948bce49a, candidate-a5a4a1ff290df2c1, candidate-3e71b213b68d6716, candidate-77687c39e6747459, candidate-b952cb59a98f5746, candidate-3dcf9e2ccc32a7aa, candidate-5f2d78dbe06a0f9d, candidate-9cfedbb214901aee, candidate-4c5453e4c4053d5c, candidate-c648fe682ab04504, candidate-2acc28cf88424a26, candidate-5e4138c912ba3b4c, candidate-19b63a6ad1ce6109, candidate-f0957b4f878bad9c, candidate-89fa0b81bc6b59ff, candidate-72f1454e13a59047, candidate-1c3e5b93c7b8ba06, candidate-1bbf30e5cbec5335, candidate-b5eae47b8dc1770f, candidate-3b74e442106e38d0, candidate-3702a926465dd764, candidate-ab5a6786004592e6, candidate-e807ce425b003386, candidate-aa2be19f8423496d, candidate-59776f859c41300d, candidate-4989d071844b4403, candidate-abd533b528463404, candidate-edb69fb35eaf3b37, candidate-5f6e83f9b42d5ad3, candidate-38fd3e685f44b6cf, candidate-dff17523de241273, candidate-50d3d5c3c8b8e265, candidate-615b0d99b5f72b86, candidate-c375e99738c7374d, candidate-f790d2e32ec35d95, candidate-92372a0a8f9ff917, candidate-b75b34c4ba40b278, candidate-a8b003fd9b7bff0e, candidate-4753354366bfc026, candidate-78ea6a14a080dbf0, candidate-02608edf7d339331, candidate-1a9f0e0e728260f4, candidate-f1ed5a2e1a362e7c, candidate-76e70d675ccceba2, candidate-83cbeeeafb19f31c, candidate-c5452544f5171e8b, candidate-f9ecdfe63885336a, candidate-6f7461b8e7007457, candidate-b3239724e22c2717, candidate-1d75635b5f764a44, candidate-75106bf5336176fe, candidate-dd3b36dc9359254c, candidate-44b6d3ce812240de, candidate-4a445e71fe30bfaa, candidate-eba48f413770a1fe, candidate-367d576718228f0e, candidate-a40e126a67bee709, candidate-9aa86894462c89ae, candidate-cf658bb0a67c7a74, candidate-bdad169b1912c616, candidate-98cb1d7d228701e5, candidate-b21faf34879b78a3 | All 189 pinned corpus projections matched original Git source byte SHA-256 and recursively retained values/positions:162 MIM,10 Pathway,17 PTM. |
+| Independent biochemical and evidence-tier assessment | passed | True | CofactorMech:biotin, CofactorMech:cobalamin, CofactorMech:cobalt, CofactorMech:coenzyme-a, CofactorMech:coenzyme-m, CofactorMech:copper, CofactorMech:fad, CofactorMech:fmn, CofactorMech:manganese, CofactorMech:nad, CofactorMech:nickel, CofactorMech:pyridoxal-phosphate, CofactorMech:thiamine-diphosphate, CofactorMech:zinc, candidate-ee90f6fa3c70309b, candidate-f0d0c59872b26b61, candidate-6ad3cf8f490598d1, candidate-24b128e21bd5079c, candidate-36ba402a461281c5, candidate-69ee94c77ad7ece9, candidate-e9b3648170ca8260, candidate-cf459abf24c1d0ae, candidate-9fa8e3d2bfde3386, candidate-3a90e79f74a45533, candidate-05576c16ea52edad, candidate-6fc193ae5a854a22, candidate-dc2f661688317689, candidate-3744546993318eba, candidate-9b2dcfd7a3735c04, candidate-7d94fef282a9db36, candidate-ed8e2e0c812cde8e, candidate-d2b9e3d9130bc906, candidate-d675462d90274ebd, candidate-d504846cee0b4a77, candidate-3a3d3166b2faac3e, candidate-a220ec1a5729adb6, candidate-e06c987d8ce4121b, candidate-519a491ff5cbc19d, candidate-796a6ace4fb45575, candidate-6cbe62046ff5e4c3, candidate-762de7be4c229f0b, candidate-f9db6fc3a8d2618f, candidate-aa0894de29adcb5c, candidate-e6bce3f910a889a5, candidate-f7073b8138fa8e4e, candidate-ee89ac5730b0d030, candidate-04b99bf093c23316, candidate-e5bf6680401f7d2c, candidate-8676312e396cd528, candidate-4e80df1ec775dd84, candidate-3d0d09563c316e26, candidate-0d11301b4e402fe3, candidate-f06b20ef756002a1, candidate-0ec03978bae241d4, candidate-87f6576606d1c4ff, candidate-f1f1d8955cf2c98a, candidate-b73d8ea700a6b07d, candidate-5b8ceb5e216ceae4, candidate-0a2ba25c5a81e7a8, candidate-4ff89eb991f78308, candidate-257276526125ced0, candidate-9122c364d42e8559, candidate-797da68010f27377, candidate-3aed449d9b4200ac, candidate-53cca7998b1cb5bf, candidate-7baa5feffa5690ec, candidate-0342a970229031a5, candidate-41f4535c09a79d8e, candidate-efa8f3ce848e6134, candidate-fc2f1c8e1973820c, candidate-df97a65c35115640, candidate-06cfe15b0880f8b6, candidate-afdea23bff1509dd, candidate-210cbb9879522b68, candidate-b5b196e022fb02fc, candidate-f3a8229a11e444a8, candidate-c061f80d9a1b713d, candidate-6e86be68514526f1, candidate-235fa915e6835391, candidate-6dfe51b0035d8b37, candidate-af4eca52410fc28c, candidate-563f15322b1ebf74, candidate-538c2f8709942c4c, candidate-bf272107d1740429, candidate-062dbe4934b5bca6, candidate-0e9cd469f9390561, candidate-679b63fe887c224b, candidate-3d1ab6b2c38d6965, candidate-a4c3e9ae8efce8fa, candidate-e5f54c96163d2705, candidate-f57a467dbfb714a2, candidate-d97584845be8a823, candidate-8fe9ff348804a593, candidate-b4a98a3100fb1fdb, candidate-4508428623ecf316, candidate-29aef4ebc57de03a, candidate-8a0986b422795927, candidate-4560fc6cc7fa4ad9, candidate-b7cbc0048d090fd2, candidate-6c3a726bdb81a718, candidate-5a9e2f914dd48794, candidate-1460ff9880c39741, candidate-bf91a719f65368fc, candidate-fa80b058812c8549, candidate-37e19515a9bf6799, candidate-80c090c120505e67, candidate-d41203d614779c47, candidate-e13ee66355bbb0cf, candidate-f46d08e37ba3d370, candidate-07f709f34ed0ea0a, candidate-fd11327c1aa911c9, candidate-72fc6ab22e3eb78d, candidate-3caced37c68a8c8e, candidate-2c4799e33df88fc4, candidate-135734c948bce49a, candidate-a5a4a1ff290df2c1, candidate-3e71b213b68d6716, candidate-77687c39e6747459, candidate-b952cb59a98f5746, candidate-3dcf9e2ccc32a7aa, candidate-5f2d78dbe06a0f9d, candidate-9cfedbb214901aee, candidate-4c5453e4c4053d5c, candidate-c648fe682ab04504, candidate-2acc28cf88424a26, candidate-5e4138c912ba3b4c, candidate-19b63a6ad1ce6109, candidate-f0957b4f878bad9c, candidate-89fa0b81bc6b59ff, candidate-72f1454e13a59047, candidate-1c3e5b93c7b8ba06, candidate-1bbf30e5cbec5335, candidate-b5eae47b8dc1770f, candidate-3b74e442106e38d0, candidate-3702a926465dd764, candidate-ab5a6786004592e6, candidate-e807ce425b003386, candidate-aa2be19f8423496d, candidate-59776f859c41300d, candidate-4989d071844b4403, candidate-abd533b528463404, candidate-edb69fb35eaf3b37, candidate-5f6e83f9b42d5ad3, candidate-38fd3e685f44b6cf, candidate-dff17523de241273, candidate-50d3d5c3c8b8e265, candidate-615b0d99b5f72b86, candidate-c375e99738c7374d, candidate-f790d2e32ec35d95, candidate-92372a0a8f9ff917, candidate-b75b34c4ba40b278, candidate-a8b003fd9b7bff0e, candidate-4753354366bfc026, candidate-78ea6a14a080dbf0, candidate-02608edf7d339331, candidate-1a9f0e0e728260f4, candidate-f1ed5a2e1a362e7c, candidate-76e70d675ccceba2, candidate-83cbeeeafb19f31c, candidate-c5452544f5171e8b, candidate-f9ecdfe63885336a, candidate-6f7461b8e7007457, candidate-b3239724e22c2717, candidate-1d75635b5f764a44, candidate-75106bf5336176fe, candidate-dd3b36dc9359254c, candidate-44b6d3ce812240de, candidate-4a445e71fe30bfaa, candidate-eba48f413770a1fe, candidate-367d576718228f0e, candidate-a40e126a67bee709, candidate-9aa86894462c89ae, candidate-cf658bb0a67c7a74, candidate-bdad169b1912c616, candidate-98cb1d7d228701e5, candidate-b21faf34879b78a3 | All 14 records,28 suppliers,12 pathway links,14 concept links,3 named enzyme examples and162 candidate dispositions assessed;39 ChEBI entries and3 UniProt exemplars checked against direct issuing databases. |
+| Native gate | passed | True | CofactorMech:biotin, CofactorMech:cobalamin, CofactorMech:cobalt, CofactorMech:coenzyme-a, CofactorMech:coenzyme-m, CofactorMech:copper, CofactorMech:fad, CofactorMech:fmn, CofactorMech:manganese, CofactorMech:nad, CofactorMech:nickel, CofactorMech:pyridoxal-phosphate, CofactorMech:thiamine-diphosphate, CofactorMech:zinc, candidate-ee90f6fa3c70309b, candidate-f0d0c59872b26b61, candidate-6ad3cf8f490598d1, candidate-24b128e21bd5079c, candidate-36ba402a461281c5, candidate-69ee94c77ad7ece9, candidate-e9b3648170ca8260, candidate-cf459abf24c1d0ae, candidate-9fa8e3d2bfde3386, candidate-3a90e79f74a45533, candidate-05576c16ea52edad, candidate-6fc193ae5a854a22, candidate-dc2f661688317689, candidate-3744546993318eba, candidate-9b2dcfd7a3735c04, candidate-7d94fef282a9db36, candidate-ed8e2e0c812cde8e, candidate-d2b9e3d9130bc906, candidate-d675462d90274ebd, candidate-d504846cee0b4a77, candidate-3a3d3166b2faac3e, candidate-a220ec1a5729adb6, candidate-e06c987d8ce4121b, candidate-519a491ff5cbc19d, candidate-796a6ace4fb45575, candidate-6cbe62046ff5e4c3, candidate-762de7be4c229f0b, candidate-f9db6fc3a8d2618f, candidate-aa0894de29adcb5c, candidate-e6bce3f910a889a5, candidate-f7073b8138fa8e4e, candidate-ee89ac5730b0d030, candidate-04b99bf093c23316, candidate-e5bf6680401f7d2c, candidate-8676312e396cd528, candidate-4e80df1ec775dd84, candidate-3d0d09563c316e26, candidate-0d11301b4e402fe3, candidate-f06b20ef756002a1, candidate-0ec03978bae241d4, candidate-87f6576606d1c4ff, candidate-f1f1d8955cf2c98a, candidate-b73d8ea700a6b07d, candidate-5b8ceb5e216ceae4, candidate-0a2ba25c5a81e7a8, candidate-4ff89eb991f78308, candidate-257276526125ced0, candidate-9122c364d42e8559, candidate-797da68010f27377, candidate-3aed449d9b4200ac, candidate-53cca7998b1cb5bf, candidate-7baa5feffa5690ec, candidate-0342a970229031a5, candidate-41f4535c09a79d8e, candidate-efa8f3ce848e6134, candidate-fc2f1c8e1973820c, candidate-df97a65c35115640, candidate-06cfe15b0880f8b6, candidate-afdea23bff1509dd, candidate-210cbb9879522b68, candidate-b5b196e022fb02fc, candidate-f3a8229a11e444a8, candidate-c061f80d9a1b713d, candidate-6e86be68514526f1, candidate-235fa915e6835391, candidate-6dfe51b0035d8b37, candidate-af4eca52410fc28c, candidate-563f15322b1ebf74, candidate-538c2f8709942c4c, candidate-bf272107d1740429, candidate-062dbe4934b5bca6, candidate-0e9cd469f9390561, candidate-679b63fe887c224b, candidate-3d1ab6b2c38d6965, candidate-a4c3e9ae8efce8fa, candidate-e5f54c96163d2705, candidate-f57a467dbfb714a2, candidate-d97584845be8a823, candidate-8fe9ff348804a593, candidate-b4a98a3100fb1fdb, candidate-4508428623ecf316, candidate-29aef4ebc57de03a, candidate-8a0986b422795927, candidate-4560fc6cc7fa4ad9, candidate-b7cbc0048d090fd2, candidate-6c3a726bdb81a718, candidate-5a9e2f914dd48794, candidate-1460ff9880c39741, candidate-bf91a719f65368fc, candidate-fa80b058812c8549, candidate-37e19515a9bf6799, candidate-80c090c120505e67, candidate-d41203d614779c47, candidate-e13ee66355bbb0cf, candidate-f46d08e37ba3d370, candidate-07f709f34ed0ea0a, candidate-fd11327c1aa911c9, candidate-72fc6ab22e3eb78d, candidate-3caced37c68a8c8e, candidate-2c4799e33df88fc4, candidate-135734c948bce49a, candidate-a5a4a1ff290df2c1, candidate-3e71b213b68d6716, candidate-77687c39e6747459, candidate-b952cb59a98f5746, candidate-3dcf9e2ccc32a7aa, candidate-5f2d78dbe06a0f9d, candidate-9cfedbb214901aee, candidate-4c5453e4c4053d5c, candidate-c648fe682ab04504, candidate-2acc28cf88424a26, candidate-5e4138c912ba3b4c, candidate-19b63a6ad1ce6109, candidate-f0957b4f878bad9c, candidate-89fa0b81bc6b59ff, candidate-72f1454e13a59047, candidate-1c3e5b93c7b8ba06, candidate-1bbf30e5cbec5335, candidate-b5eae47b8dc1770f, candidate-3b74e442106e38d0, candidate-3702a926465dd764, candidate-ab5a6786004592e6, candidate-e807ce425b003386, candidate-aa2be19f8423496d, candidate-59776f859c41300d, candidate-4989d071844b4403, candidate-abd533b528463404, candidate-edb69fb35eaf3b37, candidate-5f6e83f9b42d5ad3, candidate-38fd3e685f44b6cf, candidate-dff17523de241273, candidate-50d3d5c3c8b8e265, candidate-615b0d99b5f72b86, candidate-c375e99738c7374d, candidate-f790d2e32ec35d95, candidate-92372a0a8f9ff917, candidate-b75b34c4ba40b278, candidate-a8b003fd9b7bff0e, candidate-4753354366bfc026, candidate-78ea6a14a080dbf0, candidate-02608edf7d339331, candidate-1a9f0e0e728260f4, candidate-f1ed5a2e1a362e7c, candidate-76e70d675ccceba2, candidate-83cbeeeafb19f31c, candidate-c5452544f5171e8b, candidate-f9ecdfe63885336a, candidate-6f7461b8e7007457, candidate-b3239724e22c2717, candidate-1d75635b5f764a44, candidate-75106bf5336176fe, candidate-dd3b36dc9359254c, candidate-44b6d3ce812240de, candidate-4a445e71fe30bfaa, candidate-eba48f413770a1fe, candidate-367d576718228f0e, candidate-a40e126a67bee709, candidate-9aa86894462c89ae, candidate-cf658bb0a67c7a74, candidate-bdad169b1912c616, candidate-98cb1d7d228701e5, candidate-b21faf34879b78a3 | Native lint,14 record validation,232 source projection audit and141 tests pass;3 empty command parameter cases skip. |
+| Independent re-review of audit findings | passed | True | CofactorMech:biotin, CofactorMech:cobalamin, CofactorMech:cobalt, CofactorMech:coenzyme-a, CofactorMech:coenzyme-m, CofactorMech:copper, CofactorMech:fad, CofactorMech:fmn, CofactorMech:manganese, CofactorMech:nad, CofactorMech:nickel, CofactorMech:pyridoxal-phosphate, CofactorMech:thiamine-diphosphate, CofactorMech:zinc | Original negative-pointer,wrong-conjugate-alias and other-pathway-source probes all reject after fixes; unmodified baseline passes. Published issues 3, 4 and 6 retain the findings. |
+| Minor nickel evidence locator correction | passed | True | CofactorMech:nickel | All 3redundant unsupported parent ontology locators removed; existing explicit +2 definition and hydrate edges preserved with appended native history. |
+
+## Scientific And Domain Assessments
+
+### Chemical identity, cofactor context, supplier form and scoped cross-corpus links
+
+evidence: supported. Targets: CofactorMech:biotin.
+
+Exact biotin ingredient and PTM concept identifiers agree. The pathway produces biotinate CHEBI:57586, recorded explicitly as a distinct conjugate form rather than identical charge state. The prosthetic-group context is supported; a named enzyme remains an explicit research gap.
+
+### Chemical identity, cofactor context, supplier form and scoped cross-corpus links
+
+evidence: supported. Targets: CofactorMech:cobalamin.
+
+The generic cobalamin identity and exact ingredient/PTM concept links are supported. Specific methyl- or adenosylcobalamin forms are not substituted for the generic entity. Missing pathway and named-enzyme links are honestly bounded research gaps.
+
+### Chemical identity, cofactor context, supplier form and scoped cross-corpus links
+
+evidence: supported. Targets: CofactorMech:cobalt.
+
+Three chemically specified cobalt(II) salt suppliers are supported by their ChEBI composition chain. Ald2 cobalt support is correctly restricted to alternative in vitro reconstitution; it does not assert physiological occupancy or joint cobalt/nickel dependence.
+
+### Chemical identity, cofactor context, supplier form and scoped cross-corpus links
+
+evidence: supported. Targets: CofactorMech:coenzyme-a.
+
+Exact coenzyme A supplier and PTM concept agree. The biosynthetic endpoint CHEBI:57287 is a separate conjugate form with retained ChEBI relationships, not identical protonation to the seed entity.
+
+### Chemical identity, cofactor context, supplier form and scoped cross-corpus links
+
+evidence: supported. Targets: CofactorMech:coenzyme-m.
+
+The exact source supplies coenzyme M. Its ChEBI cross-reference supports the native MetaCyc:CoM consumed edge. The linked route ends at methyl-CoM and does not itself claim methane formation.
+
+### Chemical identity, cofactor context, supplier form and scoped cross-corpus links
+
+evidence: supported. Targets: CofactorMech:copper.
+
+The three copper(II) salt suppliers support chemical composition. Cu(II) is not collapsed into the broader copper-cation SOD1 cofactor; exact activation/inhibition occurrences do not become cofactor-use links. The pathway gap is appropriate.
+
+### Chemical identity, cofactor context, supplier form and scoped cross-corpus links
+
+evidence: supported. Targets: CofactorMech:fad.
+
+Exact FAD supplier and concept links are supported. Biosynthesis and the named P00363 exemplar concern the declared FAD conjugate CHEBI:57692. P00363 is a retained microbial exemplar in PTM EC:1.3.5.1; UniProt experimental-note evidence is scoped to it, not every enzyme class member.
+
+### Chemical identity, cofactor context, supplier form and scoped cross-corpus links
+
+evidence: supported. Targets: CofactorMech:fmn.
+
+Riboflavin is correctly typed as a precursor supplier rather than FMN itself. The riboflavin-kinase pathway supports conversion to the declared FMN conjugate. P38075 supports an issuing-database cofactor annotation without an explicit experimental evidence code.
+
+### Chemical identity, cofactor context, supplier form and scoped cross-corpus links
+
+evidence: supported. Targets: CofactorMech:manganese.
+
+Seven specified manganese(II) salts/hydrates supply the chemically grounded ion. The retained SOD2 cofactor annotation is by similarity; the record does not inflate it into a newly verified direct metal assay.
+
+### Chemical identity, cofactor context, supplier form and scoped cross-corpus links
+
+evidence: supported. Targets: CofactorMech:nad.
+
+The source and PTM concept identify the same NAD+ entity. The selected WikiPathways edge produces the exact identifier. The link denotes source-scoped reaction production, not complete pathway flux or organism uptake.
+
+### Chemical identity, cofactor context, supplier form and scoped cross-corpus links
+
+evidence: supported. Targets: CofactorMech:nickel.
+
+Three nickel(II) suppliers retain the verified hydrate-to-parent composition chain and explicit parent definition for oxidation state +2. The corrected locators support each claim. The AllA pathway assertion is restricted to the reported nickel-dependent purified-enzyme assay.
+
+### Chemical identity, cofactor context, supplier form and scoped cross-corpus links
+
+evidence: supported. Targets: CofactorMech:pyridoxal-phosphate.
+
+The exact pyridoxal phosphate supplier and conceptual requirement are supported. Biosynthesis refers to the explicitly distinct conjugate CHEBI:597326, backed by retained conjugate relationships.
+
+### Chemical identity, cofactor context, supplier form and scoped cross-corpus links
+
+evidence: supported. Targets: CofactorMech:thiamine-diphosphate.
+
+Exact thiamine diphosphate supplier and concept identifiers are supported. The pathway and P83779 exemplar use the explicit conjugate CHEBI:58937. The enzyme evidence is honestly by similarity to P06169 rather than a direct Candida albicans assay.
+
+### Chemical identity, cofactor context, supplier form and scoped cross-corpus links
+
+evidence: supported. Targets: CofactorMech:zinc.
+
+Three specified zinc(II) suppliers support composition. The retained riboflavin-biosynthesis pathway edge uses the exact zinc ion. Supply and conceptual requirement links remain separate from organism bioavailability.
+
+### Candidate disposition and boundary of promotion
+
+scope: supported. Targets: candidate-ee90f6fa3c70309b, candidate-36ba402a461281c5, candidate-69ee94c77ad7ece9, candidate-9fa8e3d2bfde3386, candidate-ed8e2e0c812cde8e, candidate-9122c364d42e8559, candidate-797da68010f27377, candidate-6e86be68514526f1, candidate-563f15322b1ebf74, candidate-538c2f8709942c4c, candidate-bf272107d1740429, candidate-062dbe4934b5bca6, candidate-3d1ab6b2c38d6965, candidate-89fa0b81bc6b59ff, candidate-5f6e83f9b42d5ad3, candidate-38fd3e685f44b6cf, candidate-f790d2e32ec35d95, candidate-a8b003fd9b7bff0e, candidate-4753354366bfc026, candidate-78ea6a14a080dbf0, candidate-1a9f0e0e728260f4, candidate-f1ed5a2e1a362e7c, candidate-76e70d675ccceba2, candidate-6f7461b8e7007457, candidate-b3239724e22c2717, candidate-1d75635b5f764a44, candidate-4a445e71fe30bfaa, candidate-eba48f413770a1fe, candidate-367d576718228f0e, candidate-a40e126a67bee709.
+
+All 30 formulations/mixtures remain deferred because their named mixture alone cannot establish a single exact active cofactor species. Deferral makes no claim that the mixture lacks biological activity.
+
+### Candidate disposition and boundary of promotion
+
+scope: supported. Targets: candidate-f0d0c59872b26b61, candidate-9b2dcfd7a3735c04, candidate-7d94fef282a9db36, candidate-762de7be4c229f0b, candidate-f9db6fc3a8d2618f, candidate-aa0894de29adcb5c, candidate-ee89ac5730b0d030, candidate-04b99bf093c23316, candidate-0d11301b4e402fe3, candidate-f06b20ef756002a1, candidate-0ec03978bae241d4, candidate-7baa5feffa5690ec, candidate-d97584845be8a823, candidate-8fe9ff348804a593, candidate-b4a98a3100fb1fdb, candidate-4508428623ecf316, candidate-29aef4ebc57de03a, candidate-8a0986b422795927, candidate-b7cbc0048d090fd2, candidate-77687c39e6747459, candidate-3dcf9e2ccc32a7aa, candidate-4c5453e4c4053d5c, candidate-b5eae47b8dc1770f, candidate-59776f859c41300d, candidate-92372a0a8f9ff917, candidate-9aa86894462c89ae, candidate-bdad169b1912c616, candidate-98cb1d7d228701e5.
+
+All 28 promoted candidate paths correspond to actual source-matched supplier links. Direct chemical identities, the riboflavin precursor relation, and specified metal salt/hydrate composition are kept distinct; no organism uptake is inferred.
+
+### Candidate disposition and boundary of promotion
+
+scope: supported. Targets: candidate-6ad3cf8f490598d1, candidate-24b128e21bd5079c, candidate-dc2f661688317689, candidate-d2b9e3d9130bc906, candidate-d675462d90274ebd, candidate-d504846cee0b4a77, candidate-3a3d3166b2faac3e, candidate-257276526125ced0, candidate-53cca7998b1cb5bf, candidate-fc2f1c8e1973820c, candidate-df97a65c35115640, candidate-c061f80d9a1b713d, candidate-235fa915e6835391, candidate-6dfe51b0035d8b37, candidate-af4eca52410fc28c, candidate-0e9cd469f9390561, candidate-679b63fe887c224b, candidate-5a9e2f914dd48794, candidate-1460ff9880c39741, candidate-c648fe682ab04504, candidate-2acc28cf88424a26, candidate-f0957b4f878bad9c, candidate-72f1454e13a59047, candidate-1c3e5b93c7b8ba06, candidate-1bbf30e5cbec5335, candidate-3b74e442106e38d0, candidate-3702a926465dd764, candidate-ab5a6786004592e6, candidate-e807ce425b003386, candidate-aa2be19f8423496d, candidate-dff17523de241273, candidate-50d3d5c3c8b8e265, candidate-615b0d99b5f72b86, candidate-c375e99738c7374d, candidate-b75b34c4ba40b278, candidate-c5452544f5171e8b, candidate-f9ecdfe63885336a, candidate-b21faf34879b78a3.
+
+All 38 vitamin/precursor candidates remain a research backlog. A nutritional role or precursor name alone does not establish the active cofactor entity or its exact biosynthetic relation.
+
+### Candidate disposition and boundary of promotion
+
+scope: supported. Targets: candidate-e9b3648170ca8260, candidate-cf459abf24c1d0ae, candidate-3a90e79f74a45533, candidate-05576c16ea52edad, candidate-6fc193ae5a854a22, candidate-3744546993318eba, candidate-a220ec1a5729adb6, candidate-519a491ff5cbc19d, candidate-796a6ace4fb45575, candidate-6cbe62046ff5e4c3, candidate-e5bf6680401f7d2c, candidate-8676312e396cd528, candidate-3d0d09563c316e26, candidate-f1f1d8955cf2c98a, candidate-0a2ba25c5a81e7a8, candidate-4ff89eb991f78308, candidate-3aed449d9b4200ac, candidate-41f4535c09a79d8e, candidate-efa8f3ce848e6134, candidate-06cfe15b0880f8b6, candidate-afdea23bff1509dd, candidate-210cbb9879522b68, candidate-b5b196e022fb02fc, candidate-a4c3e9ae8efce8fa, candidate-e5f54c96163d2705, candidate-f57a467dbfb714a2, candidate-6c3a726bdb81a718, candidate-bf91a719f65368fc, candidate-fa80b058812c8549, candidate-37e19515a9bf6799, candidate-80c090c120505e67, candidate-d41203d614779c47, candidate-e13ee66355bbb0cf, candidate-f46d08e37ba3d370, candidate-07f709f34ed0ea0a, candidate-fd11327c1aa911c9, candidate-72fc6ab22e3eb78d, candidate-3caced37c68a8c8e, candidate-2c4799e33df88fc4, candidate-135734c948bce49a, candidate-a5a4a1ff290df2c1, candidate-3e71b213b68d6716, candidate-b952cb59a98f5746, candidate-5e4138c912ba3b4c, candidate-19b63a6ad1ce6109, candidate-4989d071844b4403, candidate-abd533b528463404, candidate-edb69fb35eaf3b37, candidate-02608edf7d339331, candidate-75106bf5336176fe, candidate-dd3b36dc9359254c, candidate-44b6d3ce812240de, candidate-cf658bb0a67c7a74.
+
+All 53 metal/nonmetal candidates remain a research backlog; elemental or trace-nutrient assignment alone does not establish ion speciation and cofactor function.
+
+### Candidate disposition and boundary of promotion
+
+scope: supported. Targets: candidate-e06c987d8ce4121b, candidate-e6bce3f910a889a5, candidate-f7073b8138fa8e4e, candidate-4e80df1ec775dd84, candidate-87f6576606d1c4ff, candidate-b73d8ea700a6b07d, candidate-5b8ceb5e216ceae4, candidate-0342a970229031a5, candidate-4560fc6cc7fa4ad9, candidate-5f2d78dbe06a0f9d, candidate-9cfedbb214901aee, candidate-83cbeeeafb19f31c.
+
+All 12 candidates retain a registry or provisional identity rather than a verified exact salt/hydrate/material ontology mapping. Deferral preserves uncertainty and does not silently infer speciation from a name.
+
+### Candidate disposition and boundary of promotion
+
+scope: supported. Targets: candidate-f3a8229a11e444a8.
+
+The hemin candidate is appropriately deferred: chloridoiron(III) identity is not substituted for ferroheme, ferriheme or a generic heme requirement.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| source-001 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/02_Thiamine_Pyrophosphate.yaml; data/provenance/seed_sources.json /sources/0/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-002 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/2-mercaptoethanesulfonate.yaml; data/provenance/seed_sources.json /sources/1/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-003 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/4-Pyridoxic_Acid.yaml; data/provenance/seed_sources.json /sources/2/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-004 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/4-aminobenzoate.yaml; data/provenance/seed_sources.json /sources/3/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-005 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/ATCC_Wolfes_Mineral_Mix.yaml; data/provenance/seed_sources.json /sources/4/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-006 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/ATCC_Wolfes_Vitamin_Mix.yaml; data/provenance/seed_sources.json /sources/5/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-007 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Alcl3.yaml; data/provenance/seed_sources.json /sources/6/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-008 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Alcl3_X_6_H2o.yaml; data/provenance/seed_sources.json /sources/7/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-009 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Algal_Trace_Elements_Solution.yaml; data/provenance/seed_sources.json /sources/8/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-010 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Alk_So42.yaml; data/provenance/seed_sources.json /sources/9/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-011 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Alk_So42_X_12_H2o.yaml; data/provenance/seed_sources.json /sources/10/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-012 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Ammonium_Molybdate_Tetrahydrate.yaml; data/provenance/seed_sources.json /sources/11/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-013 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Ascorbic_Acid.yaml; data/provenance/seed_sources.json /sources/12/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-014 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Bacl2.yaml; data/provenance/seed_sources.json /sources/13/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-015 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Beta-nad.yaml; data/provenance/seed_sources.json /sources/14/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-016 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Biotin.yaml; data/provenance/seed_sources.json /sources/15/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-017 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Biotin_Vitamin_Solution.yaml; data/provenance/seed_sources.json /sources/16/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-018 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Ca-folinate.yaml; data/provenance/seed_sources.json /sources/17/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-019 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Ca-pantothenate.yaml; data/provenance/seed_sources.json /sources/18/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-020 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Calcium_D-Pantothenate.yaml; data/provenance/seed_sources.json /sources/19/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-021 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Calcium_Pantothenate.yaml; data/provenance/seed_sources.json /sources/20/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-022 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cecl3.yaml; data/provenance/seed_sources.json /sources/21/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-023 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cecl3_X_7_H2o.yaml; data/provenance/seed_sources.json /sources/22/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-024 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Chalcopyrite.yaml; data/provenance/seed_sources.json /sources/23/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-025 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Co_No32.yaml; data/provenance/seed_sources.json /sources/24/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-026 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Co_No32_X_6_H2o.yaml; data/provenance/seed_sources.json /sources/25/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-027 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cobalamine.yaml; data/provenance/seed_sources.json /sources/26/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-028 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cobalt_chloride_hexahydrate.yaml; data/provenance/seed_sources.json /sources/27/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-029 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cocl2.yaml; data/provenance/seed_sources.json /sources/28/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-030 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cocl2_X_2_H2o.yaml; data/provenance/seed_sources.json /sources/29/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-031 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cocl2_X_4_H2o.yaml; data/provenance/seed_sources.json /sources/30/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-032 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cocl2_X_6_H2o.yaml; data/provenance/seed_sources.json /sources/31/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-033 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Coenzyme_A.yaml; data/provenance/seed_sources.json /sources/32/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-034 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Coso4.yaml; data/provenance/seed_sources.json /sources/33/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-035 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Coso4_X_7_H2o.yaml; data/provenance/seed_sources.json /sources/34/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-036 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cr2_So43_X_N_H2o.yaml; data/provenance/seed_sources.json /sources/35/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-037 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cucl.yaml; data/provenance/seed_sources.json /sources/36/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-038 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cucl2.yaml; data/provenance/seed_sources.json /sources/37/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-039 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cucl2_X_2_H2o.yaml; data/provenance/seed_sources.json /sources/38/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-040 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cucl2_X_5_H2o.yaml; data/provenance/seed_sources.json /sources/39/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-041 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cucl2_X_6_H2o.yaml; data/provenance/seed_sources.json /sources/40/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-042 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cuso4.yaml; data/provenance/seed_sources.json /sources/41/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-043 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cuso4_X_2_H2o.yaml; data/provenance/seed_sources.json /sources/42/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-044 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cuso4_X_4_H2o.yaml; data/provenance/seed_sources.json /sources/43/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-045 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cuso4_X_5_H2o.yaml; data/provenance/seed_sources.json /sources/44/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-046 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cuso4_X_6_H2o.yaml; data/provenance/seed_sources.json /sources/45/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-047 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cyanocobalamin.yaml; data/provenance/seed_sources.json /sources/46/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-048 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/DL_Vitamins.yaml; data/provenance/seed_sources.json /sources/47/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-049 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Desulfovibrio_Trace_Elements.yaml; data/provenance/seed_sources.json /sources/48/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-050 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Diammonium_molybdate.yaml; data/provenance/seed_sources.json /sources/49/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-051 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Dl-alpha-lipoic_Acid.yaml; data/provenance/seed_sources.json /sources/50/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-052 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Fad.yaml; data/provenance/seed_sources.json /sources/51/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-053 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Fe2_So43_X_N_H2o.yaml; data/provenance/seed_sources.json /sources/52/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-054 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Fe_Iii-edta.yaml; data/provenance/seed_sources.json /sources/53/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-055 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Fe_Nh42_So42_X_7_H2o.yaml; data/provenance/seed_sources.json /sources/54/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-056 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Folic_Acid.yaml; data/provenance/seed_sources.json /sources/55/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-057 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Folinic_Acid.yaml; data/provenance/seed_sources.json /sources/56/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-058 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/H2seo3.yaml; data/provenance/seed_sources.json /sources/57/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-059 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/H2wo4.yaml; data/provenance/seed_sources.json /sources/58/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-060 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/H3bo2.yaml; data/provenance/seed_sources.json /sources/59/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-061 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/H3bo3.yaml; data/provenance/seed_sources.json /sources/60/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-062 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Haemin.yaml; data/provenance/seed_sources.json /sources/61/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-063 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Inositol.yaml; data/provenance/seed_sources.json /sources/62/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-064 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Kao_And_Michayluk_Vitamin_Solution.yaml; data/provenance/seed_sources.json /sources/63/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-065 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/L-Carnitine.yaml; data/provenance/seed_sources.json /sources/64/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-066 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/L-ascorbic_Acid.yaml; data/provenance/seed_sources.json /sources/65/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-067 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/M-inositol.yaml; data/provenance/seed_sources.json /sources/66/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-068 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/MME_Trace_Minerals.yaml; data/provenance/seed_sources.json /sources/67/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-069 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mc_trace_minerals.yaml; data/provenance/seed_sources.json /sources/68/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-070 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mc_trace_minerals_SO4free.yaml; data/provenance/seed_sources.json /sources/69/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-071 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mc_vitamins.yaml; data/provenance/seed_sources.json /sources/70/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-072 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Menadione.yaml; data/provenance/seed_sources.json /sources/71/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-073 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Menadione_Sodium_Bisulfate.yaml; data/provenance/seed_sources.json /sources/72/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-074 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mineral_3B_Solution.yaml; data/provenance/seed_sources.json /sources/73/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-075 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mncl2.yaml; data/provenance/seed_sources.json /sources/74/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-076 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mncl2_X_2_H2o.yaml; data/provenance/seed_sources.json /sources/75/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-077 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mncl2_X_4_H2o.yaml; data/provenance/seed_sources.json /sources/76/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-078 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mnso4.yaml; data/provenance/seed_sources.json /sources/77/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-079 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mnso4_X_1_H2o.yaml; data/provenance/seed_sources.json /sources/78/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-080 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mnso4_X_2_H2o.yaml; data/provenance/seed_sources.json /sources/79/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-081 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mnso4_X_4_H2o.yaml; data/provenance/seed_sources.json /sources/80/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-082 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mnso4_X_5_H2o.yaml; data/provenance/seed_sources.json /sources/81/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-083 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mnso4_X_6_H2o.yaml; data/provenance/seed_sources.json /sources/82/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-084 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mnso4_X_7_H2o.yaml; data/provenance/seed_sources.json /sources/83/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-085 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mnso4_X_H2o.yaml; data/provenance/seed_sources.json /sources/84/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-086 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Moo3.yaml; data/provenance/seed_sources.json /sources/85/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-087 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Myo-inositol.yaml; data/provenance/seed_sources.json /sources/86/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-088 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na-ascorbate.yaml; data/provenance/seed_sources.json /sources/87/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-089 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2b4o7.yaml; data/provenance/seed_sources.json /sources/88/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-090 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2moo4.yaml; data/provenance/seed_sources.json /sources/89/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-091 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2moo42h2o.yaml; data/provenance/seed_sources.json /sources/90/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-092 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2moo4_X_2_H2o.yaml; data/provenance/seed_sources.json /sources/91/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-093 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2moo4_X_7_H2o.yaml; data/provenance/seed_sources.json /sources/92/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-094 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2seo3.yaml; data/provenance/seed_sources.json /sources/93/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-095 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2seo35h2o.yaml; data/provenance/seed_sources.json /sources/94/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-096 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2seo3_X_5_H2o.yaml; data/provenance/seed_sources.json /sources/95/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-097 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2seo4.yaml; data/provenance/seed_sources.json /sources/96/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-098 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2wo4.yaml; data/provenance/seed_sources.json /sources/97/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-099 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2wo4_X_2_H2o.yaml; data/provenance/seed_sources.json /sources/98/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-100 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Navo3.yaml; data/provenance/seed_sources.json /sources/99/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-101 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Navo3_X_H2o.yaml; data/provenance/seed_sources.json /sources/100/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-102 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nh42ni_So42.yaml; data/provenance/seed_sources.json /sources/101/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-103 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nh42ni_So42_X_6_H2o.yaml; data/provenance/seed_sources.json /sources/102/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-104 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nickel_II_chloride_hexahydrate.yaml; data/provenance/seed_sources.json /sources/103/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-105 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nickel_II_sulfate_hexahydrate.yaml; data/provenance/seed_sources.json /sources/104/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-106 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nicl2.yaml; data/provenance/seed_sources.json /sources/105/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-107 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nicl2_X_2_H2o.yaml; data/provenance/seed_sources.json /sources/106/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-108 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nicl2_X_5_H2o.yaml; data/provenance/seed_sources.json /sources/107/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-109 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nicl2_X_6_H2o.yaml; data/provenance/seed_sources.json /sources/108/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-110 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nicotinamide.yaml; data/provenance/seed_sources.json /sources/109/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-111 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nicotinic_Acid.yaml; data/provenance/seed_sources.json /sources/110/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-112 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Niso4_X_6_H2o.yaml; data/provenance/seed_sources.json /sources/111/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-113 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Niso4_X_7_H2o.yaml; data/provenance/seed_sources.json /sources/112/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-114 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/P-aminobenzoic_Acid.yaml; data/provenance/seed_sources.json /sources/113/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-115 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/P-iv_Metal_Solution.yaml; data/provenance/seed_sources.json /sources/114/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-116 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pantothenate.yaml; data/provenance/seed_sources.json /sources/115/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-117 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pantothenic_Acid.yaml; data/provenance/seed_sources.json /sources/116/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-118 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pyridoxal_Hydrochloride.yaml; data/provenance/seed_sources.json /sources/117/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-119 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pyridoxal_Phosphate.yaml; data/provenance/seed_sources.json /sources/118/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-120 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pyridoxamine.yaml; data/provenance/seed_sources.json /sources/119/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-121 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pyridoxamine_Dihydrochloride.yaml; data/provenance/seed_sources.json /sources/120/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-122 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pyridoxamine_Hydrochloride.yaml; data/provenance/seed_sources.json /sources/121/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-123 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pyridoxine.yaml; data/provenance/seed_sources.json /sources/122/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-124 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pyridoxine_Hydrochloride.yaml; data/provenance/seed_sources.json /sources/123/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-125 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Riboflavin.yaml; data/provenance/seed_sources.json /sources/124/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-126 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Sncl2_X_2_H2o.yaml; data/provenance/seed_sources.json /sources/125/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-127 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Srcl2.yaml; data/provenance/seed_sources.json /sources/126/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-128 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Srcl2_X_6_H2o.yaml; data/provenance/seed_sources.json /sources/127/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-129 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thauers_Vitamin_Mix.yaml; data/provenance/seed_sources.json /sources/128/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-130 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thauers_Vitamin_Mix_No_Biotin.yaml; data/provenance/seed_sources.json /sources/129/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-131 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thiamin_Pyrophosphate.yaml; data/provenance/seed_sources.json /sources/130/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-132 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thiamine-hcl_X_2_H2o.yaml; data/provenance/seed_sources.json /sources/131/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-133 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thiamine.yaml; data/provenance/seed_sources.json /sources/132/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-134 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thiamine_Hcl.yaml; data/provenance/seed_sources.json /sources/133/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-135 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thiamine_Vitamin_Solution.yaml; data/provenance/seed_sources.json /sources/134/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-136 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thiamine_pyrophosphate.yaml; data/provenance/seed_sources.json /sources/135/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-137 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thioctic_Acid.yaml; data/provenance/seed_sources.json /sources/136/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-138 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Trace_Element_Solution.yaml; data/provenance/seed_sources.json /sources/137/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-139 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Trace_Element_Solution_SL-10.yaml; data/provenance/seed_sources.json /sources/138/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-140 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Trace_Metal_Mix_A5.yaml; data/provenance/seed_sources.json /sources/139/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-141 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Tungstate.yaml; data/provenance/seed_sources.json /sources/140/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-142 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/UW_Concentrated_Base.yaml; data/provenance/seed_sources.json /sources/141/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-143 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/UW_Concentrated_Base_No_Mo.yaml; data/provenance/seed_sources.json /sources/142/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-144 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/UW_Concentrated_Base_No_Sulfur.yaml; data/provenance/seed_sources.json /sources/143/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-145 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Vanadium_Chloride.yaml; data/provenance/seed_sources.json /sources/144/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-146 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Vitamin_B12.yaml; data/provenance/seed_sources.json /sources/145/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-147 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Vitamin_K1.yaml; data/provenance/seed_sources.json /sources/146/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-148 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Vitamin_Solution.yaml; data/provenance/seed_sources.json /sources/147/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-149 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Vitamin_Solution_See_Medium_No_403.yaml; data/provenance/seed_sources.json /sources/148/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-150 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Vitamin_Solution_Thermophilic_Formulation.yaml; data/provenance/seed_sources.json /sources/149/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-151 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Voso4_X_2_H2o.yaml; data/provenance/seed_sources.json /sources/150/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-152 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Voso4_X_5_H2o.yaml; data/provenance/seed_sources.json /sources/151/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-153 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Voso4_X_N_H2o.yaml; data/provenance/seed_sources.json /sources/152/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-154 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Wc_Trace_Elements_Solution.yaml; data/provenance/seed_sources.json /sources/153/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-155 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Wolfes_Mineral_Mix.yaml; data/provenance/seed_sources.json /sources/154/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-156 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Wolfes_Vitamin_Mix.yaml; data/provenance/seed_sources.json /sources/155/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-157 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Zeikus_Trace_Element_Solution.yaml; data/provenance/seed_sources.json /sources/156/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-158 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Zinc_Sulfate.yaml; data/provenance/seed_sources.json /sources/157/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-159 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Zncl2.yaml; data/provenance/seed_sources.json /sources/158/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-160 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Znso4_X_6_H2o.yaml; data/provenance/seed_sources.json /sources/159/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-161 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Znso4_X_7_H2o.yaml; data/provenance/seed_sources.json /sources/160/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-162 | https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Α-lipoic_Acid.yaml; data/provenance/seed_sources.json /sources/161/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-163 | https://www.ebi.ac.uk/chebi/CHEBI:53542; data/provenance/seed_sources.json /sources/162/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-164 | https://www.ebi.ac.uk/chebi/CHEBI:53503; data/provenance/seed_sources.json /sources/163/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-165 | https://www.ebi.ac.uk/chebi/CHEBI:86360; data/provenance/seed_sources.json /sources/164/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-166 | https://www.ebi.ac.uk/chebi/CHEBI:29105; data/provenance/seed_sources.json /sources/165/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-167 | https://www.ebi.ac.uk/chebi/CHEBI:86356; data/provenance/seed_sources.json /sources/166/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-168 | https://www.ebi.ac.uk/chebi/CHEBI:58210; data/provenance/seed_sources.json /sources/167/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-169 | https://www.ebi.ac.uk/chebi/CHEBI:49786; data/provenance/seed_sources.json /sources/168/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-170 | https://www.ebi.ac.uk/chebi/CHEBI:49553; data/provenance/seed_sources.json /sources/169/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-171 | https://www.ebi.ac.uk/chebi/CHEBI:45931; data/provenance/seed_sources.json /sources/170/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-172 | https://www.ebi.ac.uk/chebi/CHEBI:597326; data/provenance/seed_sources.json /sources/171/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-173 | https://www.ebi.ac.uk/chebi/CHEBI:29036; data/provenance/seed_sources.json /sources/172/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-174 | https://www.ebi.ac.uk/chebi/CHEBI:34887; data/provenance/seed_sources.json /sources/173/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-175 | https://www.ebi.ac.uk/chebi/CHEBI:30411; data/provenance/seed_sources.json /sources/174/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-176 | https://www.ebi.ac.uk/chebi/CHEBI:17905; data/provenance/seed_sources.json /sources/175/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-177 | https://www.ebi.ac.uk/chebi/CHEBI:57287; data/provenance/seed_sources.json /sources/176/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-178 | https://www.ebi.ac.uk/chebi/CHEBI:35696; data/provenance/seed_sources.json /sources/177/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-179 | https://www.ebi.ac.uk/chebi/CHEBI:18405; data/provenance/seed_sources.json /sources/178/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-180 | https://www.ebi.ac.uk/chebi/CHEBI:17621; data/provenance/seed_sources.json /sources/179/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-181 | https://www.ebi.ac.uk/chebi/CHEBI:32312; data/provenance/seed_sources.json /sources/180/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-182 | https://www.ebi.ac.uk/chebi/CHEBI:15846; data/provenance/seed_sources.json /sources/181/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-183 | https://www.ebi.ac.uk/chebi/CHEBI:35176; data/provenance/seed_sources.json /sources/182/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-184 | https://www.ebi.ac.uk/chebi/CHEBI:48828; data/provenance/seed_sources.json /sources/183/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-185 | https://www.ebi.ac.uk/chebi/CHEBI:86364; data/provenance/seed_sources.json /sources/184/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-186 | https://www.ebi.ac.uk/chebi/CHEBI:9532; data/provenance/seed_sources.json /sources/185/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-187 | https://www.ebi.ac.uk/chebi/CHEBI:57586; data/provenance/seed_sources.json /sources/186/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-188 | https://www.ebi.ac.uk/chebi/CHEBI:57986; data/provenance/seed_sources.json /sources/187/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-189 | https://www.ebi.ac.uk/chebi/CHEBI:131524; data/provenance/seed_sources.json /sources/188/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-190 | https://www.ebi.ac.uk/chebi/CHEBI:58937; data/provenance/seed_sources.json /sources/189/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-191 | https://www.ebi.ac.uk/chebi/CHEBI:132762; data/provenance/seed_sources.json /sources/190/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-192 | https://www.ebi.ac.uk/chebi/CHEBI:15346; data/provenance/seed_sources.json /sources/191/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-193 | https://www.ebi.ac.uk/chebi/CHEBI:91245; data/provenance/seed_sources.json /sources/192/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-194 | https://www.ebi.ac.uk/chebi/CHEBI:15956; data/provenance/seed_sources.json /sources/193/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-195 | https://www.ebi.ac.uk/chebi/CHEBI:29035; data/provenance/seed_sources.json /sources/194/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-196 | https://www.ebi.ac.uk/chebi/CHEBI:57692; data/provenance/seed_sources.json /sources/195/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-197 | https://www.ebi.ac.uk/chebi/CHEBI:131523; data/provenance/seed_sources.json /sources/196/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-198 | https://www.ebi.ac.uk/chebi/CHEBI:86358; data/provenance/seed_sources.json /sources/197/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-199 | https://www.ebi.ac.uk/chebi/CHEBI:16238; data/provenance/seed_sources.json /sources/198/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-200 | https://www.ebi.ac.uk/chebi/CHEBI:17015; data/provenance/seed_sources.json /sources/199/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-201 | https://www.ebi.ac.uk/chebi/CHEBI:86318; data/provenance/seed_sources.json /sources/200/data | supports | Inspected the retained factual projection and its claim scope. Independent direct ChEBI retrieval confirmed identity, chemical data and ontology relations. Chemical composition and conjugate-form assertions were read as such, without inferring cellular uptake or universal enzyme requirements. |
+| source-202 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/coenzyme-m-chebi17905.yaml; data/provenance/seed_sources.json /sources/201/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-203 | https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/methanogenesis-from-h2-and-co2.yaml; data/provenance/seed_sources.json /sources/202/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-204 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/nad-chebi15846.yaml; data/provenance/seed_sources.json /sources/203/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-205 | https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/nad-salvage-pathway-v.yaml; data/provenance/seed_sources.json /sources/204/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-206 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/coenzyme-a-chebi15346.yaml; data/provenance/seed_sources.json /sources/205/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-207 | https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/coenzyme-a-biosynthesis-i-prokaryotic.yaml; data/provenance/seed_sources.json /sources/206/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-208 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/fad-chebi16238.yaml; data/provenance/seed_sources.json /sources/207/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-209 | https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/flavin-biosynthesis-i.yaml; data/provenance/seed_sources.json /sources/208/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-210 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/fmn-chebi17621.yaml; data/provenance/seed_sources.json /sources/209/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-211 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/biotin-chebi15956.yaml; data/provenance/seed_sources.json /sources/210/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-212 | https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/biotin-biosynthesis-i.yaml; data/provenance/seed_sources.json /sources/211/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-213 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/pyridoxal-5-phosphate-chebi18405.yaml; data/provenance/seed_sources.json /sources/212/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-214 | https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/pyridoxal-5-phosphate-biosynthesis-i.yaml; data/provenance/seed_sources.json /sources/213/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-215 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/thiamine-1-diphosphate-chebi9532.yaml; data/provenance/seed_sources.json /sources/214/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-216 | https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/thiamine-diphosphate-biosynthesis-i.yaml; data/provenance/seed_sources.json /sources/215/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-217 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/cobalamin-chebi30411.yaml; data/provenance/seed_sources.json /sources/216/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-218 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/zinc-2-chebi29105.yaml; data/provenance/seed_sources.json /sources/217/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-219 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/manganese-2-chebi29035.yaml; data/provenance/seed_sources.json /sources/218/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-220 | https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/superoxide-radicals-degradation.yaml; data/provenance/seed_sources.json /sources/219/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-221 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/nickel-2-chebi49786.yaml; data/provenance/seed_sources.json /sources/220/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-222 | https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/allantoin-degradation-to-glyoxylate-iii.yaml; data/provenance/seed_sources.json /sources/221/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-223 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/cobalt-2-chebi48828.yaml; data/provenance/seed_sources.json /sources/222/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-224 | https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/5-prime-deoxyadenosine-degradation-i.yaml; data/provenance/seed_sources.json /sources/223/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-225 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/copper-2-chebi29036.yaml; data/provenance/seed_sources.json /sources/224/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-226 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/enzymatic_activity/ec/1-3-5-1-ec1-3-5-1.yaml; data/provenance/seed_sources.json /sources/225/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-227 | https://rest.uniprot.org/uniprotkb/P00363.json; data/provenance/seed_sources.json /sources/226/data | supports | Inspected the retained factual projection and its claim scope. Independent direct issuing-database retrieval confirmed entry version 230, named protein identity and selected cofactor annotation; the record preserves its annotation evidence tier. |
+| source-228 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/enzymatic_activity/ec/1-4-3-5-ec1-4-3-5.yaml; data/provenance/seed_sources.json /sources/227/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-229 | https://rest.uniprot.org/uniprotkb/P38075.json; data/provenance/seed_sources.json /sources/228/data | supports | Inspected the retained factual projection and its claim scope. Independent direct issuing-database retrieval confirmed entry version 208, named protein identity and selected cofactor annotation; the record preserves its annotation evidence tier. |
+| source-230 | https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/enzymatic_activity/ec/4-1-1-1-ec4-1-1-1.yaml; data/provenance/seed_sources.json /sources/229/data | supports | Inspected the retained factual projection and its claim scope. The original Git blob SHA-256 and every retained field/value/list position were independently checked against the exact source commit; selected fields do not reproduce the full upstream record. |
+| source-231 | https://rest.uniprot.org/uniprotkb/P83779.json; data/provenance/seed_sources.json /sources/230/data | supports | Inspected the retained factual projection and its claim scope. Independent direct issuing-database retrieval confirmed entry version 94, named protein identity and selected cofactor annotation; the record preserves its annotation evidence tier. |
+| source-232 | https://rest.uniprot.org/keywords/KW-0786.json; data/provenance/seed_sources.json /sources/231/data | supports | Inspected the retained factual projection and its claim scope. The retained UniProt keyword definition and identifier provide bounded coenzyme context; this is an authority annotation, not an organism experiment. |
+| inventory | data/provenance/seed_sources.json | supports | Recomputed the published MIM candidate set from all 2957 ingredient YAML source files: 162 unique current-role paths, four cofactor-provider records, 57 vitamin records with 58 assertions, and 101 trace-element records. All 162 disposition rows were inspected; historical role text was excluded deliberately. |
+| pathway-search | https://github.com/CultureBotAI/PathwayMech/tree/9584009d49579267233124f4a1057b9425a007d9/data/pathways | supports | The complete untruncated published tree contains 282 pathway YAMLs. Exact Cu(2+) occurrences concern activation/inhibition rather than a cofactor edge; SOD1 cites broader copper cation. Specific methyl/adenosylcobalamin endpoints do not establish the unspecified generic cobalamin endpoint. |
+| native-check | just check | supports | Independent execution at the reviewed source revision passed native lint, all 14 records, the source audit and 141 tests; three empty command-contract parameter cases were skipped. |
+| adversarial-rereview | https://github.com/CultureBotAI/CofactorMech/pull/5 | supports | Independent in-memory probes against published audit source reject the original invalid negative pointer, ambiguous conjugate MetaCyc alias and unrelated pathway source examples; the unmodified 14-record/162-row/232-source baseline passes. These are implementation acceptance boundaries, not proof of scientific truth. |
+| nickel-locator-rereview | https://github.com/CultureBotAI/CofactorMech/issues/8 | supports | Read all three corrected nickel supplier evidence lists against retained ChEBI source fields. The parent definition explicitly establishes Ni(II); hydrate-to-parent edges are retained. The redundant unsupported parent relation locators were removed through native history. |
+| ald2-primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC7237333/ | supports | Independent chemical reviewer read the official NCBI BioC article: recombinant Rhodospirillum rubrum Ald2 was separately reconstituted with cobalt or nickel after metal depletion. The seed limits cobalt support to alternative in vitro reconstitution. |
+| alla-primary | https://pmc.ncbi.nlm.nih.gov/articles/PMC3793230/ | supports | Independent chemical reviewer read the official NCBI BioC article: purified AllA activity was lost after EDTA and restored by Ni(II). The seed restricts nickel context to the retained assay and does not infer general stoichiometry. |
+
+## Limits And Additional Notes
+
+- The requested eight COFACTOR_PROVIDER ingredients were not reproduced: the pinned source has four current-role records. Vitamin-source 57 records contain 58 assertions;162 unique candidates are fully accounted for.
+- The 134 deferred candidates remain an explicit research backlog; their dispositions are not negative claims about biological activity and this 14-record seed is not complete cofactor coverage.
+- All MIM links remain provisional pending actual publication of the MIM stable-ID migration; source commit,path and legacy identifier preserve the reviewed identity.
+- PTM requirement concepts are conceptual coverage, not organism measurements. The three named enzyme examples do not establish universal EC-class dependence; FMN is annotation-only and thiamine is by similarity.
+- Database role annotations, chemical composition and selected pathway edges do not prove uptake, bioavailability, physiological occupancy, complete pathway flux or all organism requirements.
+- The review checked original corpus hashes/projections and issuing-database annotations; it did not independently reanalyse every cited primary study. Two scoped metal-enzyme contexts received supplemental primary-paper review.
+- Source projections retain selected facts rather than whole upstream documents; their original-source digests are integrity references, not cryptographic authenticity attestations.
+- The 3 skipped tests are empty command-contract parameter cases, not missing scientific assessments. Remote CI/release governance and merge decisions remain separate from this scientific verdict.
+- Three implementation acceptance-boundary findings (#3,#4,#6) were filed, fixed with regression/mutation controls and independently re-tested; the actual initial record links were correct. The minor record evidence-locator finding #8 was fixed by native history. These pre-bundle issue records are documented here without inventing earlier governed finding lineage.
+- This immutable review assesses source.state=git_commit at the recorded revision. A later commit adding this review changes repository HEAD but not the reviewed scientific input bytes.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261109T015221Z-cofactor-seed-independent-review
+kind: batch
+repository: CultureBotAI/CofactorMech
+title: Independent scientific review of the initial cofactor seed and complete candidate
+  ledger
+started_at: '2026-11-09T01:48:02Z'
+finished_at: '2026-11-09T01:52:21Z'
+reviewer:
+  identity: Codex independent seed-review team
+  kind: agent
+  independence: independent
+  independence_basis: The lead reviewer authored claw admission integration, not Cofactor
+    seed records, provenance or audit implementation. The independent chemical co-reviewer
+    authored scaffold infrastructure, not seed scientific data. Both inspected evidence
+    separately from the seed author.
+skill: CofactorMech docs/record-review-profile.md and governed structured-record-review
+  contract
+completion: completed
+verdict: pass_with_limitations
+scientific_review: true
+summary: The14 curated cofactor entities and all162 candidate dispositions have bounded
+  evidence support. No unresolved scientific finding remains at this exact revision
+  after three audit fixes and a minor nickel evidence-locator correction. This review
+  does not authorize a merge, assert complete cofactor coverage, or promote a native
+  scientific status.
+source:
+  git_revision: 1f18c575c1ead90d48833aa8da06a2057fd0236a
+  state: git_commit
+  inputs:
+  - path: README.md
+    sha256: e24f11ccaa3ff87fe4afd3216a2c7898d1eb934edce84497704ead0766a7d3c7
+    role: context
+  - path: curation/mim_candidates.tsv
+    sha256: 792b21f823c0068c843ffc1280f3f6667831dc69df715fc3f8d4ba3e837643dd
+    role: target
+  - path: data/cofactors/biotin.yaml
+    sha256: 4aa3fa6820fc5f69c9557e102bdc445ceac0341fd39103f126e5d7d5c37f0e49
+    role: target
+  - path: data/cofactors/cobalamin.yaml
+    sha256: c8099553de2fb6439ef61e5d35857ed6bc6e5de13643a966ea95ef92dd107185
+    role: target
+  - path: data/cofactors/cobalt.yaml
+    sha256: f63ba23c5d1d5b9a5e2b0c995b375031af4921b857081c7ba1d1189e976ada7a
+    role: target
+  - path: data/cofactors/coenzyme-a.yaml
+    sha256: 72f037345d8b641dfde95aaaef72c1f5d4ed87415382e1f91ddf39bf26935762
+    role: target
+  - path: data/cofactors/coenzyme-m.yaml
+    sha256: 68e6d35eadfd54caa192b2ef558c5ae9f986a9adf56f854b16ff21e5030a2d29
+    role: target
+  - path: data/cofactors/copper.yaml
+    sha256: ce23ed55ba8b03986b37c90a6f72c03d26011f8fedbffd008bf5435f5305df05
+    role: target
+  - path: data/cofactors/fad.yaml
+    sha256: aacef1736905d6f16a39dfffb16b73be914ba2db52019efc7078548e936c4608
+    role: target
+  - path: data/cofactors/fmn.yaml
+    sha256: c11408916e5f00244286303b602a309cc80196bfad2ab6a04ec02e66edcb8e4f
+    role: target
+  - path: data/cofactors/manganese.yaml
+    sha256: d5d68a8b55dc106d0a73f3ca7b2afb3d0e46b4094d702bcbaa067836591536fd
+    role: target
+  - path: data/cofactors/nad.yaml
+    sha256: b4517bf1676e9dc3e2eec38085925418c3427eedfd16e468966dea900b3b247b
+    role: target
+  - path: data/cofactors/nickel.yaml
+    sha256: eb80016cac7b53994c6d36bdaef05eb8ad30de0a908f8ca7947632a10b2108b6
+    role: target
+  - path: data/cofactors/pyridoxal-phosphate.yaml
+    sha256: b79b1de956fe68047ea6085aed48eedf05ea5eb134fba4d67120e331178c7311
+    role: target
+  - path: data/cofactors/thiamine-diphosphate.yaml
+    sha256: 6f5d50161f226c9bfc4c88947ba6b6144ae3f4a9c8ff74f58bd0865818743d23
+    role: target
+  - path: data/cofactors/zinc.yaml
+    sha256: 5a58b9b607e4332693081a5af5a43cc7a06a1a539d2cc0421c2e001f18366ae8
+    role: target
+  - path: data/provenance/README.md
+    sha256: 74628c47bd8041ded530406f67a4fe125889f2f615cef0c706d4b279264418d9
+    role: context
+  - path: data/provenance/seed_sources.json
+    sha256: 1e0b0dc400a1b4783f890160c5cf71075d116f1f381b0a46fdda7e4a244fe698
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: d083d068553dd81d614041572b1181954676f43ca251a88a622936893e872210
+    role: context
+  - path: docs/record-reviews.md
+    sha256: eaedec5783b40925a3f0e159dfd1202c315a12e98c8859526378ceea5c547822
+    role: context
+  - path: history/records/biotin/2026-11-09T014227Z-cofactor-stream-c-a1fed0.yaml
+    sha256: 4ef8e12494296e0c7faf1a0999140eb7f0307ea45d45a9884f594a4f28ce171a
+    role: context
+  - path: history/records/cobalamin/2026-11-09T014227Z-cofactor-stream-c-b8087e.yaml
+    sha256: 26672cb58a934817463b980a23c9ae9ab96c17f17bb18bff261d1b63f590643c
+    role: context
+  - path: history/records/cobalt/2026-11-09T014227Z-cofactor-stream-c-74be1c.yaml
+    sha256: 7d9c6783b60aa55e1a5559442b1020c37d799fb28afb22e52d3623648be61520
+    role: context
+  - path: history/records/coenzyme-a/2026-11-09T014227Z-cofactor-stream-c-d4488e.yaml
+    sha256: ccfd4fa79a05c778e6003b8fb7d312d3ccb4722c598caf354cd40c4078c25e27
+    role: context
+  - path: history/records/coenzyme-m/2026-11-09T014227Z-cofactor-stream-c-96728d.yaml
+    sha256: e7d1b7925ea02854d1c1786cf16bc3f022a9a54028c05a4110a62a6173176e9e
+    role: context
+  - path: history/records/copper/2026-11-09T014227Z-cofactor-stream-c-447118.yaml
+    sha256: f1645a283c837bb0c6f5731fdb72fedbf221dcb1092af44e9ac1f2612b95f9e2
+    role: context
+  - path: history/records/fad/2026-11-09T014227Z-cofactor-stream-c-2368e9.yaml
+    sha256: 236f78e6fd12d54731770b2b97625bf83dabb25aa49a1fbc544cc13201930829
+    role: context
+  - path: history/records/fmn/2026-11-09T014227Z-cofactor-stream-c-79f79f.yaml
+    sha256: 1d4c085f640683f90824daacbda0148ab851cadb4669298a02b014375a18fa99
+    role: context
+  - path: history/records/manganese/2026-11-09T014227Z-cofactor-stream-c-80520b.yaml
+    sha256: 12a5046efb287be4319b6c1e4e60b41f4ca72f5f0d26320fed003be41bd273c1
+    role: context
+  - path: history/records/nad/2026-11-09T014227Z-cofactor-stream-c-12d87d.yaml
+    sha256: 977e3c1106ca9336bc2ed7a53fc0009fdcd92ae15a9b8de4619c3382104a49c6
+    role: context
+  - path: history/records/nickel/2026-11-09T014228Z-cofactor-stream-c-55e8ad.yaml
+    sha256: df743a934e528b07f069c1fb00518fc417b8435116d25459a70543a511e40943
+    role: context
+  - path: history/records/nickel/2026-11-09T014939Z-cofactor-stream-c-a8160b.yaml
+    sha256: 94c1e3b66b05ae1679f6b3add70065c81d5938268f352075ab146edd9de4ded1
+    role: context
+  - path: history/records/pyridoxal-phosphate/2026-11-09T014228Z-cofactor-stream-c-6a26b2.yaml
+    sha256: 7d54a604a649875c17ef99f1530718f85c5eb03942e6a194bd16988e88b47304
+    role: context
+  - path: history/records/thiamine-diphosphate/2026-11-09T014228Z-cofactor-stream-c-160f55.yaml
+    sha256: 471570d1016fb4a151ce60e9bb4ee7d83abd3d96603fab69cfac667edf0d7b6d
+    role: context
+  - path: history/records/zinc/2026-11-09T014228Z-cofactor-stream-c-35063f.yaml
+    sha256: 0f7c0292bcf49705a8e006ab0b34ad73772cd0de237081e9fc6d081815f9aa54
+    role: context
+  - path: justfile
+    sha256: 9faa821b73acb50920beaa165556b4dfe97e0b5b5adf3fdc83dff85312f803d3
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: src/cofactormech/schema/cofactormech.yaml
+    sha256: 0714d6d23acda08f70e4292799be5ec65946c92fc1ca786dc4d89053e17f9ceb
+    role: context
+  - path: src/cofactormech/seed_audit.py
+    sha256: be716d285ec14207c3fcf28d8091594453277e53f720af15e9808b55da996e94
+    role: context
+  - path: src/cofactormech/validate.py
+    sha256: 2d3c798ea0948208fd5f541ad2ee8fde205897f1e66cc51c4a34b9308bf668ec
+    role: context
+  - path: tests/test_seed_evidence.py
+    sha256: bfce308cf6bbf8c729db41403141013464708428d32af53f3a436abd8892d6e2
+    role: context
+scope:
+  description: All 14 maintained CofactorRecord files plus all162 exact rows of the
+    frozen MIM candidate ledger (176 targets); 28 supplier links,12 pathway links,14
+    requirement-concept links and3 named enzyme-exemplar links.
+  selection: Every data/cofactors/*.yaml record and every curation/mim_candidates.tsv
+    source_path row at the exact reviewed commit; no sample.
+  coverage: full
+  population_size: 176
+  reviewed_target_ids:
+  - CofactorMech:biotin
+  - CofactorMech:cobalamin
+  - CofactorMech:cobalt
+  - CofactorMech:coenzyme-a
+  - CofactorMech:coenzyme-m
+  - CofactorMech:copper
+  - CofactorMech:fad
+  - CofactorMech:fmn
+  - CofactorMech:manganese
+  - CofactorMech:nad
+  - CofactorMech:nickel
+  - CofactorMech:pyridoxal-phosphate
+  - CofactorMech:thiamine-diphosphate
+  - CofactorMech:zinc
+  - candidate-ee90f6fa3c70309b
+  - candidate-f0d0c59872b26b61
+  - candidate-6ad3cf8f490598d1
+  - candidate-24b128e21bd5079c
+  - candidate-36ba402a461281c5
+  - candidate-69ee94c77ad7ece9
+  - candidate-e9b3648170ca8260
+  - candidate-cf459abf24c1d0ae
+  - candidate-9fa8e3d2bfde3386
+  - candidate-3a90e79f74a45533
+  - candidate-05576c16ea52edad
+  - candidate-6fc193ae5a854a22
+  - candidate-dc2f661688317689
+  - candidate-3744546993318eba
+  - candidate-9b2dcfd7a3735c04
+  - candidate-7d94fef282a9db36
+  - candidate-ed8e2e0c812cde8e
+  - candidate-d2b9e3d9130bc906
+  - candidate-d675462d90274ebd
+  - candidate-d504846cee0b4a77
+  - candidate-3a3d3166b2faac3e
+  - candidate-a220ec1a5729adb6
+  - candidate-e06c987d8ce4121b
+  - candidate-519a491ff5cbc19d
+  - candidate-796a6ace4fb45575
+  - candidate-6cbe62046ff5e4c3
+  - candidate-762de7be4c229f0b
+  - candidate-f9db6fc3a8d2618f
+  - candidate-aa0894de29adcb5c
+  - candidate-e6bce3f910a889a5
+  - candidate-f7073b8138fa8e4e
+  - candidate-ee89ac5730b0d030
+  - candidate-04b99bf093c23316
+  - candidate-e5bf6680401f7d2c
+  - candidate-8676312e396cd528
+  - candidate-4e80df1ec775dd84
+  - candidate-3d0d09563c316e26
+  - candidate-0d11301b4e402fe3
+  - candidate-f06b20ef756002a1
+  - candidate-0ec03978bae241d4
+  - candidate-87f6576606d1c4ff
+  - candidate-f1f1d8955cf2c98a
+  - candidate-b73d8ea700a6b07d
+  - candidate-5b8ceb5e216ceae4
+  - candidate-0a2ba25c5a81e7a8
+  - candidate-4ff89eb991f78308
+  - candidate-257276526125ced0
+  - candidate-9122c364d42e8559
+  - candidate-797da68010f27377
+  - candidate-3aed449d9b4200ac
+  - candidate-53cca7998b1cb5bf
+  - candidate-7baa5feffa5690ec
+  - candidate-0342a970229031a5
+  - candidate-41f4535c09a79d8e
+  - candidate-efa8f3ce848e6134
+  - candidate-fc2f1c8e1973820c
+  - candidate-df97a65c35115640
+  - candidate-06cfe15b0880f8b6
+  - candidate-afdea23bff1509dd
+  - candidate-210cbb9879522b68
+  - candidate-b5b196e022fb02fc
+  - candidate-f3a8229a11e444a8
+  - candidate-c061f80d9a1b713d
+  - candidate-6e86be68514526f1
+  - candidate-235fa915e6835391
+  - candidate-6dfe51b0035d8b37
+  - candidate-af4eca52410fc28c
+  - candidate-563f15322b1ebf74
+  - candidate-538c2f8709942c4c
+  - candidate-bf272107d1740429
+  - candidate-062dbe4934b5bca6
+  - candidate-0e9cd469f9390561
+  - candidate-679b63fe887c224b
+  - candidate-3d1ab6b2c38d6965
+  - candidate-a4c3e9ae8efce8fa
+  - candidate-e5f54c96163d2705
+  - candidate-f57a467dbfb714a2
+  - candidate-d97584845be8a823
+  - candidate-8fe9ff348804a593
+  - candidate-b4a98a3100fb1fdb
+  - candidate-4508428623ecf316
+  - candidate-29aef4ebc57de03a
+  - candidate-8a0986b422795927
+  - candidate-4560fc6cc7fa4ad9
+  - candidate-b7cbc0048d090fd2
+  - candidate-6c3a726bdb81a718
+  - candidate-5a9e2f914dd48794
+  - candidate-1460ff9880c39741
+  - candidate-bf91a719f65368fc
+  - candidate-fa80b058812c8549
+  - candidate-37e19515a9bf6799
+  - candidate-80c090c120505e67
+  - candidate-d41203d614779c47
+  - candidate-e13ee66355bbb0cf
+  - candidate-f46d08e37ba3d370
+  - candidate-07f709f34ed0ea0a
+  - candidate-fd11327c1aa911c9
+  - candidate-72fc6ab22e3eb78d
+  - candidate-3caced37c68a8c8e
+  - candidate-2c4799e33df88fc4
+  - candidate-135734c948bce49a
+  - candidate-a5a4a1ff290df2c1
+  - candidate-3e71b213b68d6716
+  - candidate-77687c39e6747459
+  - candidate-b952cb59a98f5746
+  - candidate-3dcf9e2ccc32a7aa
+  - candidate-5f2d78dbe06a0f9d
+  - candidate-9cfedbb214901aee
+  - candidate-4c5453e4c4053d5c
+  - candidate-c648fe682ab04504
+  - candidate-2acc28cf88424a26
+  - candidate-5e4138c912ba3b4c
+  - candidate-19b63a6ad1ce6109
+  - candidate-f0957b4f878bad9c
+  - candidate-89fa0b81bc6b59ff
+  - candidate-72f1454e13a59047
+  - candidate-1c3e5b93c7b8ba06
+  - candidate-1bbf30e5cbec5335
+  - candidate-b5eae47b8dc1770f
+  - candidate-3b74e442106e38d0
+  - candidate-3702a926465dd764
+  - candidate-ab5a6786004592e6
+  - candidate-e807ce425b003386
+  - candidate-aa2be19f8423496d
+  - candidate-59776f859c41300d
+  - candidate-4989d071844b4403
+  - candidate-abd533b528463404
+  - candidate-edb69fb35eaf3b37
+  - candidate-5f6e83f9b42d5ad3
+  - candidate-38fd3e685f44b6cf
+  - candidate-dff17523de241273
+  - candidate-50d3d5c3c8b8e265
+  - candidate-615b0d99b5f72b86
+  - candidate-c375e99738c7374d
+  - candidate-f790d2e32ec35d95
+  - candidate-92372a0a8f9ff917
+  - candidate-b75b34c4ba40b278
+  - candidate-a8b003fd9b7bff0e
+  - candidate-4753354366bfc026
+  - candidate-78ea6a14a080dbf0
+  - candidate-02608edf7d339331
+  - candidate-1a9f0e0e728260f4
+  - candidate-f1ed5a2e1a362e7c
+  - candidate-76e70d675ccceba2
+  - candidate-83cbeeeafb19f31c
+  - candidate-c5452544f5171e8b
+  - candidate-f9ecdfe63885336a
+  - candidate-6f7461b8e7007457
+  - candidate-b3239724e22c2717
+  - candidate-1d75635b5f764a44
+  - candidate-75106bf5336176fe
+  - candidate-dd3b36dc9359254c
+  - candidate-44b6d3ce812240de
+  - candidate-4a445e71fe30bfaa
+  - candidate-eba48f413770a1fe
+  - candidate-367d576718228f0e
+  - candidate-a40e126a67bee709
+  - candidate-9aa86894462c89ae
+  - candidate-cf658bb0a67c7a74
+  - candidate-bdad169b1912c616
+  - candidate-98cb1d7d228701e5
+  - candidate-b21faf34879b78a3
+targets:
+- target_id: CofactorMech:biotin
+  path: data/cofactors/biotin.yaml
+  label: biotin
+  kind: maintained
+  record_class: CofactorRecord
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: data/cofactors/biotin.yaml
+    role: maintained scientific record; changes use native append-only history writer
+- target_id: CofactorMech:cobalamin
+  path: data/cofactors/cobalamin.yaml
+  label: cobalamin
+  kind: maintained
+  record_class: CofactorRecord
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: data/cofactors/cobalamin.yaml
+    role: maintained scientific record; changes use native append-only history writer
+- target_id: CofactorMech:cobalt
+  path: data/cofactors/cobalt.yaml
+  label: cobalt(2+)
+  kind: maintained
+  record_class: CofactorRecord
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: data/cofactors/cobalt.yaml
+    role: maintained scientific record; changes use native append-only history writer
+- target_id: CofactorMech:coenzyme-a
+  path: data/cofactors/coenzyme-a.yaml
+  label: coenzyme A
+  kind: maintained
+  record_class: CofactorRecord
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: data/cofactors/coenzyme-a.yaml
+    role: maintained scientific record; changes use native append-only history writer
+- target_id: CofactorMech:coenzyme-m
+  path: data/cofactors/coenzyme-m.yaml
+  label: coenzyme M
+  kind: maintained
+  record_class: CofactorRecord
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: data/cofactors/coenzyme-m.yaml
+    role: maintained scientific record; changes use native append-only history writer
+- target_id: CofactorMech:copper
+  path: data/cofactors/copper.yaml
+  label: copper(2+)
+  kind: maintained
+  record_class: CofactorRecord
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: data/cofactors/copper.yaml
+    role: maintained scientific record; changes use native append-only history writer
+- target_id: CofactorMech:fad
+  path: data/cofactors/fad.yaml
+  label: FAD
+  kind: maintained
+  record_class: CofactorRecord
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: data/cofactors/fad.yaml
+    role: maintained scientific record; changes use native append-only history writer
+- target_id: CofactorMech:fmn
+  path: data/cofactors/fmn.yaml
+  label: FMN
+  kind: maintained
+  record_class: CofactorRecord
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: data/cofactors/fmn.yaml
+    role: maintained scientific record; changes use native append-only history writer
+- target_id: CofactorMech:manganese
+  path: data/cofactors/manganese.yaml
+  label: manganese(2+)
+  kind: maintained
+  record_class: CofactorRecord
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: data/cofactors/manganese.yaml
+    role: maintained scientific record; changes use native append-only history writer
+- target_id: CofactorMech:nad
+  path: data/cofactors/nad.yaml
+  label: NAD(+)
+  kind: maintained
+  record_class: CofactorRecord
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: data/cofactors/nad.yaml
+    role: maintained scientific record; changes use native append-only history writer
+- target_id: CofactorMech:nickel
+  path: data/cofactors/nickel.yaml
+  label: nickel(2+)
+  kind: maintained
+  record_class: CofactorRecord
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: data/cofactors/nickel.yaml
+    role: maintained scientific record; changes use native append-only history writer
+- target_id: CofactorMech:pyridoxal-phosphate
+  path: data/cofactors/pyridoxal-phosphate.yaml
+  label: pyridoxal 5'-phosphate
+  kind: maintained
+  record_class: CofactorRecord
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: data/cofactors/pyridoxal-phosphate.yaml
+    role: maintained scientific record; changes use native append-only history writer
+- target_id: CofactorMech:thiamine-diphosphate
+  path: data/cofactors/thiamine-diphosphate.yaml
+  label: thiamine(1+) diphosphate
+  kind: maintained
+  record_class: CofactorRecord
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: data/cofactors/thiamine-diphosphate.yaml
+    role: maintained scientific record; changes use native append-only history writer
+- target_id: CofactorMech:zinc
+  path: data/cofactors/zinc.yaml
+  label: zinc(2+)
+  kind: maintained
+  record_class: CofactorRecord
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: data/cofactors/zinc.yaml
+    role: maintained scientific record; changes use native append-only history writer
+- target_id: candidate-ee90f6fa3c70309b
+  path: curation/mim_candidates.tsv
+  label: 0.2% Thiamine pyrophosphate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/02_Thiamine_Pyrophosphate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-f0d0c59872b26b61
+  path: curation/mim_candidates.tsv
+  label: 2-Mercaptoethanesulfonate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/2-mercaptoethanesulfonate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-6ad3cf8f490598d1
+  path: curation/mim_candidates.tsv
+  label: 4-Pyridoxic acid
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/4-Pyridoxic_Acid.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-24b128e21bd5079c
+  path: curation/mim_candidates.tsv
+  label: 4-Aminobenzoate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/4-aminobenzoate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-36ba402a461281c5
+  path: curation/mim_candidates.tsv
+  label: ATCC Wolfe's mineral mix
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/ATCC_Wolfes_Mineral_Mix.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-69ee94c77ad7ece9
+  path: curation/mim_candidates.tsv
+  label: ATCC Wolfe's vitamin mix
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/ATCC_Wolfes_Vitamin_Mix.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-e9b3648170ca8260
+  path: curation/mim_candidates.tsv
+  label: AlCl3
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Alcl3.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-cf459abf24c1d0ae
+  path: curation/mim_candidates.tsv
+  label: AlCl3 x 6 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Alcl3_X_6_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-9fa8e3d2bfde3386
+  path: curation/mim_candidates.tsv
+  label: Algal Trace Elements Solution
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Algal_Trace_Elements_Solution.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-3a90e79f74a45533
+  path: curation/mim_candidates.tsv
+  label: AlK(SO4)2
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Alk_So42.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-05576c16ea52edad
+  path: curation/mim_candidates.tsv
+  label: AlK(SO4)2 x 12 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Alk_So42_X_12_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-6fc193ae5a854a22
+  path: curation/mim_candidates.tsv
+  label: ammonium molybdate tetrahydrate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Ammonium_Molybdate_Tetrahydrate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-dc2f661688317689
+  path: curation/mim_candidates.tsv
+  label: Ascorbic acid
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Ascorbic_Acid.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-3744546993318eba
+  path: curation/mim_candidates.tsv
+  label: BaCl2
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Bacl2.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-9b2dcfd7a3735c04
+  path: curation/mim_candidates.tsv
+  label: beta-NAD
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Beta-nad.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-7d94fef282a9db36
+  path: curation/mim_candidates.tsv
+  label: Biotin
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Biotin.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-ed8e2e0c812cde8e
+  path: curation/mim_candidates.tsv
+  label: Biotin Vitamin Solution
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Biotin_Vitamin_Solution.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-d2b9e3d9130bc906
+  path: curation/mim_candidates.tsv
+  label: Ca-folinate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Ca-folinate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-d675462d90274ebd
+  path: curation/mim_candidates.tsv
+  label: Ca-pantothenate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Ca-pantothenate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-d504846cee0b4a77
+  path: curation/mim_candidates.tsv
+  label: Calcium D-Pantothenate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Calcium_D-Pantothenate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-3a3d3166b2faac3e
+  path: curation/mim_candidates.tsv
+  label: Calcium pantothenate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Calcium_Pantothenate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-a220ec1a5729adb6
+  path: curation/mim_candidates.tsv
+  label: CeCl3
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cecl3.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-e06c987d8ce4121b
+  path: curation/mim_candidates.tsv
+  label: CeCl3 x 7 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cecl3_X_7_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-519a491ff5cbc19d
+  path: curation/mim_candidates.tsv
+  label: Chalcopyrite
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Chalcopyrite.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-796a6ace4fb45575
+  path: curation/mim_candidates.tsv
+  label: Co(NO3)2
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Co_No32.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-6cbe62046ff5e4c3
+  path: curation/mim_candidates.tsv
+  label: Co(NO3)2 x 6 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Co_No32_X_6_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-762de7be4c229f0b
+  path: curation/mim_candidates.tsv
+  label: Cobalamine
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cobalamine.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-f9db6fc3a8d2618f
+  path: curation/mim_candidates.tsv
+  label: Cobalt chloride hexahydrate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cobalt_chloride_hexahydrate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-aa0894de29adcb5c
+  path: curation/mim_candidates.tsv
+  label: CoCl2
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cocl2.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-e6bce3f910a889a5
+  path: curation/mim_candidates.tsv
+  label: CoCl2 x 2 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cocl2_X_2_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-f7073b8138fa8e4e
+  path: curation/mim_candidates.tsv
+  label: CoCl2 x 4 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cocl2_X_4_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-ee89ac5730b0d030
+  path: curation/mim_candidates.tsv
+  label: CoCl2 x 6 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cocl2_X_6_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-04b99bf093c23316
+  path: curation/mim_candidates.tsv
+  label: Coenzyme A
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Coenzyme_A.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-e5bf6680401f7d2c
+  path: curation/mim_candidates.tsv
+  label: CoSO4
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Coso4.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-8676312e396cd528
+  path: curation/mim_candidates.tsv
+  label: CoSO4 x 7 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Coso4_X_7_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-4e80df1ec775dd84
+  path: curation/mim_candidates.tsv
+  label: Cr2(SO4)3 x n H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cr2_So43_X_N_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-3d0d09563c316e26
+  path: curation/mim_candidates.tsv
+  label: CuCl
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cucl.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-0d11301b4e402fe3
+  path: curation/mim_candidates.tsv
+  label: CuCl2
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cucl2.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-f06b20ef756002a1
+  path: curation/mim_candidates.tsv
+  label: CuCl2 x 2 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cucl2_X_2_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-0ec03978bae241d4
+  path: curation/mim_candidates.tsv
+  label: CuCl2 x 5 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cucl2_X_5_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-87f6576606d1c4ff
+  path: curation/mim_candidates.tsv
+  label: CuCl2 x 6 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cucl2_X_6_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-f1f1d8955cf2c98a
+  path: curation/mim_candidates.tsv
+  label: CuSO4
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cuso4.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-b73d8ea700a6b07d
+  path: curation/mim_candidates.tsv
+  label: CuSO4 x 2 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cuso4_X_2_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-5b8ceb5e216ceae4
+  path: curation/mim_candidates.tsv
+  label: CuSO4 x 4 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cuso4_X_4_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-0a2ba25c5a81e7a8
+  path: curation/mim_candidates.tsv
+  label: CuSO4 x 5 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cuso4_X_5_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-4ff89eb991f78308
+  path: curation/mim_candidates.tsv
+  label: CuSO4 x 6 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cuso4_X_6_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-257276526125ced0
+  path: curation/mim_candidates.tsv
+  label: Cyanocobalamin
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Cyanocobalamin.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-9122c364d42e8559
+  path: curation/mim_candidates.tsv
+  label: DL vitamins
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/DL_Vitamins.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-797da68010f27377
+  path: curation/mim_candidates.tsv
+  label: Desulfovibrio trace elements
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Desulfovibrio_Trace_Elements.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-3aed449d9b4200ac
+  path: curation/mim_candidates.tsv
+  label: Diammonium molybdate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Diammonium_molybdate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-53cca7998b1cb5bf
+  path: curation/mim_candidates.tsv
+  label: (DL)-alpha-Lipoic acid
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Dl-alpha-lipoic_Acid.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-7baa5feffa5690ec
+  path: curation/mim_candidates.tsv
+  label: FAD
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Fad.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-0342a970229031a5
+  path: curation/mim_candidates.tsv
+  label: Fe2(SO4)3 x n H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Fe2_So43_X_N_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-41f4535c09a79d8e
+  path: curation/mim_candidates.tsv
+  label: Fe(III)-EDTA
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Fe_Iii-edta.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-efa8f3ce848e6134
+  path: curation/mim_candidates.tsv
+  label: Fe(NH4)2(SO4)2 x 7 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Fe_Nh42_So42_X_7_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-fc2f1c8e1973820c
+  path: curation/mim_candidates.tsv
+  label: Folic acid
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Folic_Acid.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-df97a65c35115640
+  path: curation/mim_candidates.tsv
+  label: Folinic acid
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Folinic_Acid.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-06cfe15b0880f8b6
+  path: curation/mim_candidates.tsv
+  label: H2SeO3
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/H2seo3.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-afdea23bff1509dd
+  path: curation/mim_candidates.tsv
+  label: H2WO4
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/H2wo4.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-210cbb9879522b68
+  path: curation/mim_candidates.tsv
+  label: H3BO2
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/H3bo2.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-b5b196e022fb02fc
+  path: curation/mim_candidates.tsv
+  label: H3BO3
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/H3bo3.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-f3a8229a11e444a8
+  path: curation/mim_candidates.tsv
+  label: Haemin
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Haemin.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-c061f80d9a1b713d
+  path: curation/mim_candidates.tsv
+  label: Inositol
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Inositol.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-6e86be68514526f1
+  path: curation/mim_candidates.tsv
+  label: Kao and Michayluk vitamin solution
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Kao_And_Michayluk_Vitamin_Solution.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-235fa915e6835391
+  path: curation/mim_candidates.tsv
+  label: L-Carnitine
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/L-Carnitine.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-6dfe51b0035d8b37
+  path: curation/mim_candidates.tsv
+  label: L-Ascorbic acid
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/L-ascorbic_Acid.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-af4eca52410fc28c
+  path: curation/mim_candidates.tsv
+  label: m-Inositol
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/M-inositol.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-563f15322b1ebf74
+  path: curation/mim_candidates.tsv
+  label: MME Trace Minerals
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/MME_Trace_Minerals.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-538c2f8709942c4c
+  path: curation/mim_candidates.tsv
+  label: Mc_trace_minerals
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Mc_trace_minerals.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-bf272107d1740429
+  path: curation/mim_candidates.tsv
+  label: Mc_trace_minerals_SO4free
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Mc_trace_minerals_SO4free.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-062dbe4934b5bca6
+  path: curation/mim_candidates.tsv
+  label: Mc_vitamins
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Mc_vitamins.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-0e9cd469f9390561
+  path: curation/mim_candidates.tsv
+  label: Menadione
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Menadione.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-679b63fe887c224b
+  path: curation/mim_candidates.tsv
+  label: Menadione sodium bisulfate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Menadione_Sodium_Bisulfate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-3d1ab6b2c38d6965
+  path: curation/mim_candidates.tsv
+  label: Mineral 3B solution
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Mineral_3B_Solution.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-a4c3e9ae8efce8fa
+  path: curation/mim_candidates.tsv
+  label: MnCl2
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Mncl2.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-e5f54c96163d2705
+  path: curation/mim_candidates.tsv
+  label: MnCl2 x 2 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Mncl2_X_2_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-f57a467dbfb714a2
+  path: curation/mim_candidates.tsv
+  label: MnCl2 x 4 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Mncl2_X_4_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-d97584845be8a823
+  path: curation/mim_candidates.tsv
+  label: MnSO4
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Mnso4.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-8fe9ff348804a593
+  path: curation/mim_candidates.tsv
+  label: MnSO4 x 1 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Mnso4_X_1_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-b4a98a3100fb1fdb
+  path: curation/mim_candidates.tsv
+  label: MnSO4 x 2 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Mnso4_X_2_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-4508428623ecf316
+  path: curation/mim_candidates.tsv
+  label: MnSO4 x 4 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Mnso4_X_4_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-29aef4ebc57de03a
+  path: curation/mim_candidates.tsv
+  label: MnSO4 x 5 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Mnso4_X_5_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-8a0986b422795927
+  path: curation/mim_candidates.tsv
+  label: MnSO4 x 6 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Mnso4_X_6_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-4560fc6cc7fa4ad9
+  path: curation/mim_candidates.tsv
+  label: MnSO4 x 7 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Mnso4_X_7_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-b7cbc0048d090fd2
+  path: curation/mim_candidates.tsv
+  label: MnSO4 x H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Mnso4_X_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-6c3a726bdb81a718
+  path: curation/mim_candidates.tsv
+  label: MoO3
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Moo3.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-5a9e2f914dd48794
+  path: curation/mim_candidates.tsv
+  label: myo-Inositol
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Myo-inositol.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-1460ff9880c39741
+  path: curation/mim_candidates.tsv
+  label: Na-ascorbate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Na-ascorbate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-bf91a719f65368fc
+  path: curation/mim_candidates.tsv
+  label: Na2B4O7
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Na2b4o7.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-fa80b058812c8549
+  path: curation/mim_candidates.tsv
+  label: Na2MoO4
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Na2moo4.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-37e19515a9bf6799
+  path: curation/mim_candidates.tsv
+  label: Na2MoO4·2H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Na2moo42h2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-80c090c120505e67
+  path: curation/mim_candidates.tsv
+  label: Na2MoO4 x 2 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Na2moo4_X_2_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-d41203d614779c47
+  path: curation/mim_candidates.tsv
+  label: Na2MoO4 x 7 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Na2moo4_X_7_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-e13ee66355bbb0cf
+  path: curation/mim_candidates.tsv
+  label: Na2SeO3
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Na2seo3.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-f46d08e37ba3d370
+  path: curation/mim_candidates.tsv
+  label: Na2SeO3·5H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Na2seo35h2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-07f709f34ed0ea0a
+  path: curation/mim_candidates.tsv
+  label: Na2SeO3 x 5 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Na2seo3_X_5_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-fd11327c1aa911c9
+  path: curation/mim_candidates.tsv
+  label: Na2SeO4
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Na2seo4.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-72fc6ab22e3eb78d
+  path: curation/mim_candidates.tsv
+  label: Na2WO4
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Na2wo4.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-3caced37c68a8c8e
+  path: curation/mim_candidates.tsv
+  label: Na2WO4 x 2 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Na2wo4_X_2_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-2c4799e33df88fc4
+  path: curation/mim_candidates.tsv
+  label: NaVO3
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Navo3.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-135734c948bce49a
+  path: curation/mim_candidates.tsv
+  label: NaVO3 x H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Navo3_X_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-a5a4a1ff290df2c1
+  path: curation/mim_candidates.tsv
+  label: (NH4)2Ni(SO4)2
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Nh42ni_So42.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-3e71b213b68d6716
+  path: curation/mim_candidates.tsv
+  label: (NH4)2Ni(SO4)2 x 6 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Nh42ni_So42_X_6_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-77687c39e6747459
+  path: curation/mim_candidates.tsv
+  label: Nickel (II) chloride hexahydrate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Nickel_II_chloride_hexahydrate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-b952cb59a98f5746
+  path: curation/mim_candidates.tsv
+  label: Nickel (II) sulfate hexahydrate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Nickel_II_sulfate_hexahydrate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-3dcf9e2ccc32a7aa
+  path: curation/mim_candidates.tsv
+  label: NiCl2
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Nicl2.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-5f2d78dbe06a0f9d
+  path: curation/mim_candidates.tsv
+  label: NiCl2 x 2 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Nicl2_X_2_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-9cfedbb214901aee
+  path: curation/mim_candidates.tsv
+  label: NiCl2 x 5 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Nicl2_X_5_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-4c5453e4c4053d5c
+  path: curation/mim_candidates.tsv
+  label: NiCl2 x 6 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Nicl2_X_6_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-c648fe682ab04504
+  path: curation/mim_candidates.tsv
+  label: Nicotinamide
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Nicotinamide.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-2acc28cf88424a26
+  path: curation/mim_candidates.tsv
+  label: Nicotinic acid
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Nicotinic_Acid.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-5e4138c912ba3b4c
+  path: curation/mim_candidates.tsv
+  label: NiSO4 x 6 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Niso4_X_6_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-19b63a6ad1ce6109
+  path: curation/mim_candidates.tsv
+  label: NiSO4 x 7 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Niso4_X_7_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-f0957b4f878bad9c
+  path: curation/mim_candidates.tsv
+  label: p-Aminobenzoic acid
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/P-aminobenzoic_Acid.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-89fa0b81bc6b59ff
+  path: curation/mim_candidates.tsv
+  label: P-IV Metal Solution
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/P-iv_Metal_Solution.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-72f1454e13a59047
+  path: curation/mim_candidates.tsv
+  label: Pantothenate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Pantothenate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-1c3e5b93c7b8ba06
+  path: curation/mim_candidates.tsv
+  label: Pantothenic acid
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Pantothenic_Acid.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-1bbf30e5cbec5335
+  path: curation/mim_candidates.tsv
+  label: Pyridoxal hydrochloride
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Pyridoxal_Hydrochloride.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-b5eae47b8dc1770f
+  path: curation/mim_candidates.tsv
+  label: Pyridoxal phosphate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Pyridoxal_Phosphate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-3b74e442106e38d0
+  path: curation/mim_candidates.tsv
+  label: Pyridoxamine
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Pyridoxamine.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-3702a926465dd764
+  path: curation/mim_candidates.tsv
+  label: Pyridoxamine Dihydrochloride
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Pyridoxamine_Dihydrochloride.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-ab5a6786004592e6
+  path: curation/mim_candidates.tsv
+  label: Pyridoxamine hydrochloride
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Pyridoxamine_Hydrochloride.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-e807ce425b003386
+  path: curation/mim_candidates.tsv
+  label: Pyridoxine
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Pyridoxine.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-aa2be19f8423496d
+  path: curation/mim_candidates.tsv
+  label: Pyridoxine hydrochloride
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Pyridoxine_Hydrochloride.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-59776f859c41300d
+  path: curation/mim_candidates.tsv
+  label: Riboflavin
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Riboflavin.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-4989d071844b4403
+  path: curation/mim_candidates.tsv
+  label: SnCl2 x 2 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Sncl2_X_2_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-abd533b528463404
+  path: curation/mim_candidates.tsv
+  label: SrCl2
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Srcl2.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-edb69fb35eaf3b37
+  path: curation/mim_candidates.tsv
+  label: SrCl2 x 6 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Srcl2_X_6_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-5f6e83f9b42d5ad3
+  path: curation/mim_candidates.tsv
+  label: Thauer's vitamin mix
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Thauers_Vitamin_Mix.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-38fd3e685f44b6cf
+  path: curation/mim_candidates.tsv
+  label: Thauer's vitamin mix no Biotin
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Thauers_Vitamin_Mix_No_Biotin.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-dff17523de241273
+  path: curation/mim_candidates.tsv
+  label: Thiamin pyrophosphate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Thiamin_Pyrophosphate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-50d3d5c3c8b8e265
+  path: curation/mim_candidates.tsv
+  label: Thiamine-HCl x 2 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Thiamine-hcl_X_2_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-615b0d99b5f72b86
+  path: curation/mim_candidates.tsv
+  label: Thiamine
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Thiamine.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-c375e99738c7374d
+  path: curation/mim_candidates.tsv
+  label: Thiamine HCl
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Thiamine_Hcl.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-f790d2e32ec35d95
+  path: curation/mim_candidates.tsv
+  label: Thiamine Vitamin Solution
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Thiamine_Vitamin_Solution.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-92372a0a8f9ff917
+  path: curation/mim_candidates.tsv
+  label: Thiamine pyrophosphate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Thiamine_pyrophosphate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-b75b34c4ba40b278
+  path: curation/mim_candidates.tsv
+  label: Thioctic acid
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Thioctic_Acid.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-a8b003fd9b7bff0e
+  path: curation/mim_candidates.tsv
+  label: Trace element solution
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Trace_Element_Solution.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-4753354366bfc026
+  path: curation/mim_candidates.tsv
+  label: Trace element solution SL-10
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Trace_Element_Solution_SL-10.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-78ea6a14a080dbf0
+  path: curation/mim_candidates.tsv
+  label: Trace metal mix A5
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Trace_Metal_Mix_A5.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-02608edf7d339331
+  path: curation/mim_candidates.tsv
+  label: Tungstate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Tungstate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-1a9f0e0e728260f4
+  path: curation/mim_candidates.tsv
+  label: UW concentrated base
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/UW_Concentrated_Base.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-f1ed5a2e1a362e7c
+  path: curation/mim_candidates.tsv
+  label: UW concentrated base no Mo
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/UW_Concentrated_Base_No_Mo.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-76e70d675ccceba2
+  path: curation/mim_candidates.tsv
+  label: UW concentrated base no sulfur
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/UW_Concentrated_Base_No_Sulfur.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-83cbeeeafb19f31c
+  path: curation/mim_candidates.tsv
+  label: vanadium chloride
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Vanadium_Chloride.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-c5452544f5171e8b
+  path: curation/mim_candidates.tsv
+  label: Vitamin B12
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Vitamin_B12.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-f9ecdfe63885336a
+  path: curation/mim_candidates.tsv
+  label: Vitamin K1
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Vitamin_K1.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-6f7461b8e7007457
+  path: curation/mim_candidates.tsv
+  label: Vitamin solution
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Vitamin_Solution.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-b3239724e22c2717
+  path: curation/mim_candidates.tsv
+  label: Vitamin solution see Medium No. 403
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Vitamin_Solution_See_Medium_No_403.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-1d75635b5f764a44
+  path: curation/mim_candidates.tsv
+  label: Vitamin solution (thermophilic formulation)
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Vitamin_Solution_Thermophilic_Formulation.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-75106bf5336176fe
+  path: curation/mim_candidates.tsv
+  label: VOSO4 x 2 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Voso4_X_2_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-dd3b36dc9359254c
+  path: curation/mim_candidates.tsv
+  label: VOSO4 x 5 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Voso4_X_5_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-44b6d3ce812240de
+  path: curation/mim_candidates.tsv
+  label: VOSO4 x n H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Voso4_X_N_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-4a445e71fe30bfaa
+  path: curation/mim_candidates.tsv
+  label: WC Trace Elements Solution
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Wc_Trace_Elements_Solution.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-eba48f413770a1fe
+  path: curation/mim_candidates.tsv
+  label: Wolfe's mineral mix
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Wolfes_Mineral_Mix.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-367d576718228f0e
+  path: curation/mim_candidates.tsv
+  label: Wolfe's vitamin mix
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Wolfes_Vitamin_Mix.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-a40e126a67bee709
+  path: curation/mim_candidates.tsv
+  label: Zeikus trace element solution
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Zeikus_Trace_Element_Solution.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-9aa86894462c89ae
+  path: curation/mim_candidates.tsv
+  label: Zinc sulfate
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Zinc_Sulfate.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-cf658bb0a67c7a74
+  path: curation/mim_candidates.tsv
+  label: ZnCl2
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Zncl2.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-bdad169b1912c616
+  path: curation/mim_candidates.tsv
+  label: ZnSO4 x 6 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Znso4_X_6_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-98cb1d7d228701e5
+  path: curation/mim_candidates.tsv
+  label: ZnSO4 x 7 H2O
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Znso4_X_7_H2o.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+- target_id: candidate-b21faf34879b78a3
+  path: curation/mim_candidates.tsv
+  label: α-lipoic acid
+  kind: snapshot_row
+  selector: source_path=data/ingredients/mapped/Α-lipoic_Acid.yaml
+  owner_paths:
+  - repository: CultureBotAI/CofactorMech
+    path: curation/mim_candidates.tsv
+    role: maintained candidate disposition
+  - repository: CultureBotAI/CofactorMech
+    path: data/provenance/seed_sources.json
+    role: retained factual source projection
+checks:
+- check_id: source-integrity
+  name: Pinned corpus source and projection integrity
+  status: passed
+  required: true
+  summary: All 189 pinned corpus projections matched original Git source byte SHA-256
+    and recursively retained values/positions:162 MIM,10 Pathway,17 PTM.
+  target_ids:
+  - CofactorMech:biotin
+  - CofactorMech:cobalamin
+  - CofactorMech:cobalt
+  - CofactorMech:coenzyme-a
+  - CofactorMech:coenzyme-m
+  - CofactorMech:copper
+  - CofactorMech:fad
+  - CofactorMech:fmn
+  - CofactorMech:manganese
+  - CofactorMech:nad
+  - CofactorMech:nickel
+  - CofactorMech:pyridoxal-phosphate
+  - CofactorMech:thiamine-diphosphate
+  - CofactorMech:zinc
+  - candidate-ee90f6fa3c70309b
+  - candidate-f0d0c59872b26b61
+  - candidate-6ad3cf8f490598d1
+  - candidate-24b128e21bd5079c
+  - candidate-36ba402a461281c5
+  - candidate-69ee94c77ad7ece9
+  - candidate-e9b3648170ca8260
+  - candidate-cf459abf24c1d0ae
+  - candidate-9fa8e3d2bfde3386
+  - candidate-3a90e79f74a45533
+  - candidate-05576c16ea52edad
+  - candidate-6fc193ae5a854a22
+  - candidate-dc2f661688317689
+  - candidate-3744546993318eba
+  - candidate-9b2dcfd7a3735c04
+  - candidate-7d94fef282a9db36
+  - candidate-ed8e2e0c812cde8e
+  - candidate-d2b9e3d9130bc906
+  - candidate-d675462d90274ebd
+  - candidate-d504846cee0b4a77
+  - candidate-3a3d3166b2faac3e
+  - candidate-a220ec1a5729adb6
+  - candidate-e06c987d8ce4121b
+  - candidate-519a491ff5cbc19d
+  - candidate-796a6ace4fb45575
+  - candidate-6cbe62046ff5e4c3
+  - candidate-762de7be4c229f0b
+  - candidate-f9db6fc3a8d2618f
+  - candidate-aa0894de29adcb5c
+  - candidate-e6bce3f910a889a5
+  - candidate-f7073b8138fa8e4e
+  - candidate-ee89ac5730b0d030
+  - candidate-04b99bf093c23316
+  - candidate-e5bf6680401f7d2c
+  - candidate-8676312e396cd528
+  - candidate-4e80df1ec775dd84
+  - candidate-3d0d09563c316e26
+  - candidate-0d11301b4e402fe3
+  - candidate-f06b20ef756002a1
+  - candidate-0ec03978bae241d4
+  - candidate-87f6576606d1c4ff
+  - candidate-f1f1d8955cf2c98a
+  - candidate-b73d8ea700a6b07d
+  - candidate-5b8ceb5e216ceae4
+  - candidate-0a2ba25c5a81e7a8
+  - candidate-4ff89eb991f78308
+  - candidate-257276526125ced0
+  - candidate-9122c364d42e8559
+  - candidate-797da68010f27377
+  - candidate-3aed449d9b4200ac
+  - candidate-53cca7998b1cb5bf
+  - candidate-7baa5feffa5690ec
+  - candidate-0342a970229031a5
+  - candidate-41f4535c09a79d8e
+  - candidate-efa8f3ce848e6134
+  - candidate-fc2f1c8e1973820c
+  - candidate-df97a65c35115640
+  - candidate-06cfe15b0880f8b6
+  - candidate-afdea23bff1509dd
+  - candidate-210cbb9879522b68
+  - candidate-b5b196e022fb02fc
+  - candidate-f3a8229a11e444a8
+  - candidate-c061f80d9a1b713d
+  - candidate-6e86be68514526f1
+  - candidate-235fa915e6835391
+  - candidate-6dfe51b0035d8b37
+  - candidate-af4eca52410fc28c
+  - candidate-563f15322b1ebf74
+  - candidate-538c2f8709942c4c
+  - candidate-bf272107d1740429
+  - candidate-062dbe4934b5bca6
+  - candidate-0e9cd469f9390561
+  - candidate-679b63fe887c224b
+  - candidate-3d1ab6b2c38d6965
+  - candidate-a4c3e9ae8efce8fa
+  - candidate-e5f54c96163d2705
+  - candidate-f57a467dbfb714a2
+  - candidate-d97584845be8a823
+  - candidate-8fe9ff348804a593
+  - candidate-b4a98a3100fb1fdb
+  - candidate-4508428623ecf316
+  - candidate-29aef4ebc57de03a
+  - candidate-8a0986b422795927
+  - candidate-4560fc6cc7fa4ad9
+  - candidate-b7cbc0048d090fd2
+  - candidate-6c3a726bdb81a718
+  - candidate-5a9e2f914dd48794
+  - candidate-1460ff9880c39741
+  - candidate-bf91a719f65368fc
+  - candidate-fa80b058812c8549
+  - candidate-37e19515a9bf6799
+  - candidate-80c090c120505e67
+  - candidate-d41203d614779c47
+  - candidate-e13ee66355bbb0cf
+  - candidate-f46d08e37ba3d370
+  - candidate-07f709f34ed0ea0a
+  - candidate-fd11327c1aa911c9
+  - candidate-72fc6ab22e3eb78d
+  - candidate-3caced37c68a8c8e
+  - candidate-2c4799e33df88fc4
+  - candidate-135734c948bce49a
+  - candidate-a5a4a1ff290df2c1
+  - candidate-3e71b213b68d6716
+  - candidate-77687c39e6747459
+  - candidate-b952cb59a98f5746
+  - candidate-3dcf9e2ccc32a7aa
+  - candidate-5f2d78dbe06a0f9d
+  - candidate-9cfedbb214901aee
+  - candidate-4c5453e4c4053d5c
+  - candidate-c648fe682ab04504
+  - candidate-2acc28cf88424a26
+  - candidate-5e4138c912ba3b4c
+  - candidate-19b63a6ad1ce6109
+  - candidate-f0957b4f878bad9c
+  - candidate-89fa0b81bc6b59ff
+  - candidate-72f1454e13a59047
+  - candidate-1c3e5b93c7b8ba06
+  - candidate-1bbf30e5cbec5335
+  - candidate-b5eae47b8dc1770f
+  - candidate-3b74e442106e38d0
+  - candidate-3702a926465dd764
+  - candidate-ab5a6786004592e6
+  - candidate-e807ce425b003386
+  - candidate-aa2be19f8423496d
+  - candidate-59776f859c41300d
+  - candidate-4989d071844b4403
+  - candidate-abd533b528463404
+  - candidate-edb69fb35eaf3b37
+  - candidate-5f6e83f9b42d5ad3
+  - candidate-38fd3e685f44b6cf
+  - candidate-dff17523de241273
+  - candidate-50d3d5c3c8b8e265
+  - candidate-615b0d99b5f72b86
+  - candidate-c375e99738c7374d
+  - candidate-f790d2e32ec35d95
+  - candidate-92372a0a8f9ff917
+  - candidate-b75b34c4ba40b278
+  - candidate-a8b003fd9b7bff0e
+  - candidate-4753354366bfc026
+  - candidate-78ea6a14a080dbf0
+  - candidate-02608edf7d339331
+  - candidate-1a9f0e0e728260f4
+  - candidate-f1ed5a2e1a362e7c
+  - candidate-76e70d675ccceba2
+  - candidate-83cbeeeafb19f31c
+  - candidate-c5452544f5171e8b
+  - candidate-f9ecdfe63885336a
+  - candidate-6f7461b8e7007457
+  - candidate-b3239724e22c2717
+  - candidate-1d75635b5f764a44
+  - candidate-75106bf5336176fe
+  - candidate-dd3b36dc9359254c
+  - candidate-44b6d3ce812240de
+  - candidate-4a445e71fe30bfaa
+  - candidate-eba48f413770a1fe
+  - candidate-367d576718228f0e
+  - candidate-a40e126a67bee709
+  - candidate-9aa86894462c89ae
+  - candidate-cf658bb0a67c7a74
+  - candidate-bdad169b1912c616
+  - candidate-98cb1d7d228701e5
+  - candidate-b21faf34879b78a3
+  evidence_ids:
+  - inventory
+- check_id: chemical-review
+  name: Independent biochemical and evidence-tier assessment
+  status: passed
+  required: true
+  summary: All 14 records,28 suppliers,12 pathway links,14 concept links,3 named enzyme
+    examples and162 candidate dispositions assessed;39 ChEBI entries and3 UniProt
+    exemplars checked against direct issuing databases.
+  target_ids:
+  - CofactorMech:biotin
+  - CofactorMech:cobalamin
+  - CofactorMech:cobalt
+  - CofactorMech:coenzyme-a
+  - CofactorMech:coenzyme-m
+  - CofactorMech:copper
+  - CofactorMech:fad
+  - CofactorMech:fmn
+  - CofactorMech:manganese
+  - CofactorMech:nad
+  - CofactorMech:nickel
+  - CofactorMech:pyridoxal-phosphate
+  - CofactorMech:thiamine-diphosphate
+  - CofactorMech:zinc
+  - candidate-ee90f6fa3c70309b
+  - candidate-f0d0c59872b26b61
+  - candidate-6ad3cf8f490598d1
+  - candidate-24b128e21bd5079c
+  - candidate-36ba402a461281c5
+  - candidate-69ee94c77ad7ece9
+  - candidate-e9b3648170ca8260
+  - candidate-cf459abf24c1d0ae
+  - candidate-9fa8e3d2bfde3386
+  - candidate-3a90e79f74a45533
+  - candidate-05576c16ea52edad
+  - candidate-6fc193ae5a854a22
+  - candidate-dc2f661688317689
+  - candidate-3744546993318eba
+  - candidate-9b2dcfd7a3735c04
+  - candidate-7d94fef282a9db36
+  - candidate-ed8e2e0c812cde8e
+  - candidate-d2b9e3d9130bc906
+  - candidate-d675462d90274ebd
+  - candidate-d504846cee0b4a77
+  - candidate-3a3d3166b2faac3e
+  - candidate-a220ec1a5729adb6
+  - candidate-e06c987d8ce4121b
+  - candidate-519a491ff5cbc19d
+  - candidate-796a6ace4fb45575
+  - candidate-6cbe62046ff5e4c3
+  - candidate-762de7be4c229f0b
+  - candidate-f9db6fc3a8d2618f
+  - candidate-aa0894de29adcb5c
+  - candidate-e6bce3f910a889a5
+  - candidate-f7073b8138fa8e4e
+  - candidate-ee89ac5730b0d030
+  - candidate-04b99bf093c23316
+  - candidate-e5bf6680401f7d2c
+  - candidate-8676312e396cd528
+  - candidate-4e80df1ec775dd84
+  - candidate-3d0d09563c316e26
+  - candidate-0d11301b4e402fe3
+  - candidate-f06b20ef756002a1
+  - candidate-0ec03978bae241d4
+  - candidate-87f6576606d1c4ff
+  - candidate-f1f1d8955cf2c98a
+  - candidate-b73d8ea700a6b07d
+  - candidate-5b8ceb5e216ceae4
+  - candidate-0a2ba25c5a81e7a8
+  - candidate-4ff89eb991f78308
+  - candidate-257276526125ced0
+  - candidate-9122c364d42e8559
+  - candidate-797da68010f27377
+  - candidate-3aed449d9b4200ac
+  - candidate-53cca7998b1cb5bf
+  - candidate-7baa5feffa5690ec
+  - candidate-0342a970229031a5
+  - candidate-41f4535c09a79d8e
+  - candidate-efa8f3ce848e6134
+  - candidate-fc2f1c8e1973820c
+  - candidate-df97a65c35115640
+  - candidate-06cfe15b0880f8b6
+  - candidate-afdea23bff1509dd
+  - candidate-210cbb9879522b68
+  - candidate-b5b196e022fb02fc
+  - candidate-f3a8229a11e444a8
+  - candidate-c061f80d9a1b713d
+  - candidate-6e86be68514526f1
+  - candidate-235fa915e6835391
+  - candidate-6dfe51b0035d8b37
+  - candidate-af4eca52410fc28c
+  - candidate-563f15322b1ebf74
+  - candidate-538c2f8709942c4c
+  - candidate-bf272107d1740429
+  - candidate-062dbe4934b5bca6
+  - candidate-0e9cd469f9390561
+  - candidate-679b63fe887c224b
+  - candidate-3d1ab6b2c38d6965
+  - candidate-a4c3e9ae8efce8fa
+  - candidate-e5f54c96163d2705
+  - candidate-f57a467dbfb714a2
+  - candidate-d97584845be8a823
+  - candidate-8fe9ff348804a593
+  - candidate-b4a98a3100fb1fdb
+  - candidate-4508428623ecf316
+  - candidate-29aef4ebc57de03a
+  - candidate-8a0986b422795927
+  - candidate-4560fc6cc7fa4ad9
+  - candidate-b7cbc0048d090fd2
+  - candidate-6c3a726bdb81a718
+  - candidate-5a9e2f914dd48794
+  - candidate-1460ff9880c39741
+  - candidate-bf91a719f65368fc
+  - candidate-fa80b058812c8549
+  - candidate-37e19515a9bf6799
+  - candidate-80c090c120505e67
+  - candidate-d41203d614779c47
+  - candidate-e13ee66355bbb0cf
+  - candidate-f46d08e37ba3d370
+  - candidate-07f709f34ed0ea0a
+  - candidate-fd11327c1aa911c9
+  - candidate-72fc6ab22e3eb78d
+  - candidate-3caced37c68a8c8e
+  - candidate-2c4799e33df88fc4
+  - candidate-135734c948bce49a
+  - candidate-a5a4a1ff290df2c1
+  - candidate-3e71b213b68d6716
+  - candidate-77687c39e6747459
+  - candidate-b952cb59a98f5746
+  - candidate-3dcf9e2ccc32a7aa
+  - candidate-5f2d78dbe06a0f9d
+  - candidate-9cfedbb214901aee
+  - candidate-4c5453e4c4053d5c
+  - candidate-c648fe682ab04504
+  - candidate-2acc28cf88424a26
+  - candidate-5e4138c912ba3b4c
+  - candidate-19b63a6ad1ce6109
+  - candidate-f0957b4f878bad9c
+  - candidate-89fa0b81bc6b59ff
+  - candidate-72f1454e13a59047
+  - candidate-1c3e5b93c7b8ba06
+  - candidate-1bbf30e5cbec5335
+  - candidate-b5eae47b8dc1770f
+  - candidate-3b74e442106e38d0
+  - candidate-3702a926465dd764
+  - candidate-ab5a6786004592e6
+  - candidate-e807ce425b003386
+  - candidate-aa2be19f8423496d
+  - candidate-59776f859c41300d
+  - candidate-4989d071844b4403
+  - candidate-abd533b528463404
+  - candidate-edb69fb35eaf3b37
+  - candidate-5f6e83f9b42d5ad3
+  - candidate-38fd3e685f44b6cf
+  - candidate-dff17523de241273
+  - candidate-50d3d5c3c8b8e265
+  - candidate-615b0d99b5f72b86
+  - candidate-c375e99738c7374d
+  - candidate-f790d2e32ec35d95
+  - candidate-92372a0a8f9ff917
+  - candidate-b75b34c4ba40b278
+  - candidate-a8b003fd9b7bff0e
+  - candidate-4753354366bfc026
+  - candidate-78ea6a14a080dbf0
+  - candidate-02608edf7d339331
+  - candidate-1a9f0e0e728260f4
+  - candidate-f1ed5a2e1a362e7c
+  - candidate-76e70d675ccceba2
+  - candidate-83cbeeeafb19f31c
+  - candidate-c5452544f5171e8b
+  - candidate-f9ecdfe63885336a
+  - candidate-6f7461b8e7007457
+  - candidate-b3239724e22c2717
+  - candidate-1d75635b5f764a44
+  - candidate-75106bf5336176fe
+  - candidate-dd3b36dc9359254c
+  - candidate-44b6d3ce812240de
+  - candidate-4a445e71fe30bfaa
+  - candidate-eba48f413770a1fe
+  - candidate-367d576718228f0e
+  - candidate-a40e126a67bee709
+  - candidate-9aa86894462c89ae
+  - candidate-cf658bb0a67c7a74
+  - candidate-bdad169b1912c616
+  - candidate-98cb1d7d228701e5
+  - candidate-b21faf34879b78a3
+  evidence_ids:
+  - ald2-primary
+  - alla-primary
+  - pathway-search
+- check_id: native-check
+  name: Native gate
+  status: passed
+  required: true
+  summary: Native lint,14 record validation,232 source projection audit and141 tests
+    pass;3 empty command parameter cases skip.
+  command: just check
+  exit_code: 0
+  target_ids:
+  - CofactorMech:biotin
+  - CofactorMech:cobalamin
+  - CofactorMech:cobalt
+  - CofactorMech:coenzyme-a
+  - CofactorMech:coenzyme-m
+  - CofactorMech:copper
+  - CofactorMech:fad
+  - CofactorMech:fmn
+  - CofactorMech:manganese
+  - CofactorMech:nad
+  - CofactorMech:nickel
+  - CofactorMech:pyridoxal-phosphate
+  - CofactorMech:thiamine-diphosphate
+  - CofactorMech:zinc
+  - candidate-ee90f6fa3c70309b
+  - candidate-f0d0c59872b26b61
+  - candidate-6ad3cf8f490598d1
+  - candidate-24b128e21bd5079c
+  - candidate-36ba402a461281c5
+  - candidate-69ee94c77ad7ece9
+  - candidate-e9b3648170ca8260
+  - candidate-cf459abf24c1d0ae
+  - candidate-9fa8e3d2bfde3386
+  - candidate-3a90e79f74a45533
+  - candidate-05576c16ea52edad
+  - candidate-6fc193ae5a854a22
+  - candidate-dc2f661688317689
+  - candidate-3744546993318eba
+  - candidate-9b2dcfd7a3735c04
+  - candidate-7d94fef282a9db36
+  - candidate-ed8e2e0c812cde8e
+  - candidate-d2b9e3d9130bc906
+  - candidate-d675462d90274ebd
+  - candidate-d504846cee0b4a77
+  - candidate-3a3d3166b2faac3e
+  - candidate-a220ec1a5729adb6
+  - candidate-e06c987d8ce4121b
+  - candidate-519a491ff5cbc19d
+  - candidate-796a6ace4fb45575
+  - candidate-6cbe62046ff5e4c3
+  - candidate-762de7be4c229f0b
+  - candidate-f9db6fc3a8d2618f
+  - candidate-aa0894de29adcb5c
+  - candidate-e6bce3f910a889a5
+  - candidate-f7073b8138fa8e4e
+  - candidate-ee89ac5730b0d030
+  - candidate-04b99bf093c23316
+  - candidate-e5bf6680401f7d2c
+  - candidate-8676312e396cd528
+  - candidate-4e80df1ec775dd84
+  - candidate-3d0d09563c316e26
+  - candidate-0d11301b4e402fe3
+  - candidate-f06b20ef756002a1
+  - candidate-0ec03978bae241d4
+  - candidate-87f6576606d1c4ff
+  - candidate-f1f1d8955cf2c98a
+  - candidate-b73d8ea700a6b07d
+  - candidate-5b8ceb5e216ceae4
+  - candidate-0a2ba25c5a81e7a8
+  - candidate-4ff89eb991f78308
+  - candidate-257276526125ced0
+  - candidate-9122c364d42e8559
+  - candidate-797da68010f27377
+  - candidate-3aed449d9b4200ac
+  - candidate-53cca7998b1cb5bf
+  - candidate-7baa5feffa5690ec
+  - candidate-0342a970229031a5
+  - candidate-41f4535c09a79d8e
+  - candidate-efa8f3ce848e6134
+  - candidate-fc2f1c8e1973820c
+  - candidate-df97a65c35115640
+  - candidate-06cfe15b0880f8b6
+  - candidate-afdea23bff1509dd
+  - candidate-210cbb9879522b68
+  - candidate-b5b196e022fb02fc
+  - candidate-f3a8229a11e444a8
+  - candidate-c061f80d9a1b713d
+  - candidate-6e86be68514526f1
+  - candidate-235fa915e6835391
+  - candidate-6dfe51b0035d8b37
+  - candidate-af4eca52410fc28c
+  - candidate-563f15322b1ebf74
+  - candidate-538c2f8709942c4c
+  - candidate-bf272107d1740429
+  - candidate-062dbe4934b5bca6
+  - candidate-0e9cd469f9390561
+  - candidate-679b63fe887c224b
+  - candidate-3d1ab6b2c38d6965
+  - candidate-a4c3e9ae8efce8fa
+  - candidate-e5f54c96163d2705
+  - candidate-f57a467dbfb714a2
+  - candidate-d97584845be8a823
+  - candidate-8fe9ff348804a593
+  - candidate-b4a98a3100fb1fdb
+  - candidate-4508428623ecf316
+  - candidate-29aef4ebc57de03a
+  - candidate-8a0986b422795927
+  - candidate-4560fc6cc7fa4ad9
+  - candidate-b7cbc0048d090fd2
+  - candidate-6c3a726bdb81a718
+  - candidate-5a9e2f914dd48794
+  - candidate-1460ff9880c39741
+  - candidate-bf91a719f65368fc
+  - candidate-fa80b058812c8549
+  - candidate-37e19515a9bf6799
+  - candidate-80c090c120505e67
+  - candidate-d41203d614779c47
+  - candidate-e13ee66355bbb0cf
+  - candidate-f46d08e37ba3d370
+  - candidate-07f709f34ed0ea0a
+  - candidate-fd11327c1aa911c9
+  - candidate-72fc6ab22e3eb78d
+  - candidate-3caced37c68a8c8e
+  - candidate-2c4799e33df88fc4
+  - candidate-135734c948bce49a
+  - candidate-a5a4a1ff290df2c1
+  - candidate-3e71b213b68d6716
+  - candidate-77687c39e6747459
+  - candidate-b952cb59a98f5746
+  - candidate-3dcf9e2ccc32a7aa
+  - candidate-5f2d78dbe06a0f9d
+  - candidate-9cfedbb214901aee
+  - candidate-4c5453e4c4053d5c
+  - candidate-c648fe682ab04504
+  - candidate-2acc28cf88424a26
+  - candidate-5e4138c912ba3b4c
+  - candidate-19b63a6ad1ce6109
+  - candidate-f0957b4f878bad9c
+  - candidate-89fa0b81bc6b59ff
+  - candidate-72f1454e13a59047
+  - candidate-1c3e5b93c7b8ba06
+  - candidate-1bbf30e5cbec5335
+  - candidate-b5eae47b8dc1770f
+  - candidate-3b74e442106e38d0
+  - candidate-3702a926465dd764
+  - candidate-ab5a6786004592e6
+  - candidate-e807ce425b003386
+  - candidate-aa2be19f8423496d
+  - candidate-59776f859c41300d
+  - candidate-4989d071844b4403
+  - candidate-abd533b528463404
+  - candidate-edb69fb35eaf3b37
+  - candidate-5f6e83f9b42d5ad3
+  - candidate-38fd3e685f44b6cf
+  - candidate-dff17523de241273
+  - candidate-50d3d5c3c8b8e265
+  - candidate-615b0d99b5f72b86
+  - candidate-c375e99738c7374d
+  - candidate-f790d2e32ec35d95
+  - candidate-92372a0a8f9ff917
+  - candidate-b75b34c4ba40b278
+  - candidate-a8b003fd9b7bff0e
+  - candidate-4753354366bfc026
+  - candidate-78ea6a14a080dbf0
+  - candidate-02608edf7d339331
+  - candidate-1a9f0e0e728260f4
+  - candidate-f1ed5a2e1a362e7c
+  - candidate-76e70d675ccceba2
+  - candidate-83cbeeeafb19f31c
+  - candidate-c5452544f5171e8b
+  - candidate-f9ecdfe63885336a
+  - candidate-6f7461b8e7007457
+  - candidate-b3239724e22c2717
+  - candidate-1d75635b5f764a44
+  - candidate-75106bf5336176fe
+  - candidate-dd3b36dc9359254c
+  - candidate-44b6d3ce812240de
+  - candidate-4a445e71fe30bfaa
+  - candidate-eba48f413770a1fe
+  - candidate-367d576718228f0e
+  - candidate-a40e126a67bee709
+  - candidate-9aa86894462c89ae
+  - candidate-cf658bb0a67c7a74
+  - candidate-bdad169b1912c616
+  - candidate-98cb1d7d228701e5
+  - candidate-b21faf34879b78a3
+  evidence_ids:
+  - native-check
+- check_id: audit-adversarial-rereview
+  name: Independent re-review of audit findings
+  status: passed
+  required: true
+  summary: Original negative-pointer,wrong-conjugate-alias and other-pathway-source
+    probes all reject after fixes; unmodified baseline passes. Published issues 3,
+    4 and 6 retain the findings.
+  target_ids:
+  - CofactorMech:biotin
+  - CofactorMech:cobalamin
+  - CofactorMech:cobalt
+  - CofactorMech:coenzyme-a
+  - CofactorMech:coenzyme-m
+  - CofactorMech:copper
+  - CofactorMech:fad
+  - CofactorMech:fmn
+  - CofactorMech:manganese
+  - CofactorMech:nad
+  - CofactorMech:nickel
+  - CofactorMech:pyridoxal-phosphate
+  - CofactorMech:thiamine-diphosphate
+  - CofactorMech:zinc
+  evidence_ids:
+  - adversarial-rereview
+- check_id: nickel-provenance-rereview
+  name: Minor nickel evidence locator correction
+  status: passed
+  required: true
+  summary: All 3redundant unsupported parent ontology locators removed; existing explicit
+    +2 definition and hydrate edges preserved with appended native history.
+  target_ids:
+  - CofactorMech:nickel
+  evidence_ids:
+  - nickel-locator-rereview
+evidence:
+- evidence_id: source-001
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/02_Thiamine_Pyrophosphate.yaml
+  locator: data/provenance/seed_sources.json /sources/0/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: ab3662e22bd04c2d2a0e04a836d6d09f155b39bc0a00abab6a17d0c68e214c16
+- evidence_id: source-002
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/2-mercaptoethanesulfonate.yaml
+  locator: data/provenance/seed_sources.json /sources/1/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: e8f3c1d4d2fa4db30af58424d9f800054d41d1bf7d0531d0a53dad443f276bae
+- evidence_id: source-003
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/4-Pyridoxic_Acid.yaml
+  locator: data/provenance/seed_sources.json /sources/2/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 869bee2538e8475c7993a2582fbd83adaec8087b22c56f4286908beaa74dd4b3
+- evidence_id: source-004
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/4-aminobenzoate.yaml
+  locator: data/provenance/seed_sources.json /sources/3/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 927670adb571f96eaccb4f2f0d7da5b633cdf4f68a75cbd3b3faab0df18430b8
+- evidence_id: source-005
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/ATCC_Wolfes_Mineral_Mix.yaml
+  locator: data/provenance/seed_sources.json /sources/4/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: d1a3c0cd0b18a8df04ba988240ea929afbff4c94b0bad76ea348c12c9129ebf4
+- evidence_id: source-006
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/ATCC_Wolfes_Vitamin_Mix.yaml
+  locator: data/provenance/seed_sources.json /sources/5/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: e4acefec68bb48d0906b6fca5e7b72b48e25aac8551bcb666d1bc6ce2edc0e10
+- evidence_id: source-007
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Alcl3.yaml
+  locator: data/provenance/seed_sources.json /sources/6/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 05519748d1eb8db4bdb7f716fa00d259d5b03a986fd4452b14cf52f6be0ca03b
+- evidence_id: source-008
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Alcl3_X_6_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/7/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 7da7ef33c67786d9322853df6b6a7feb52686acfcd35149d7b08949d078cb829
+- evidence_id: source-009
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Algal_Trace_Elements_Solution.yaml
+  locator: data/provenance/seed_sources.json /sources/8/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 44d6579cade933d4544f51f7aadd20aef899337b28b5d55d50f8f07d47897d0f
+- evidence_id: source-010
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Alk_So42.yaml
+  locator: data/provenance/seed_sources.json /sources/9/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: eb7149b3301b2f405c59d0463b04bf6db774703bb3e914d125ffe9086ac717ed
+- evidence_id: source-011
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Alk_So42_X_12_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/10/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 70e4c49858df84bf7c5963f50d1dcd7f3a6c132ab1f29251f438d730af435e2f
+- evidence_id: source-012
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Ammonium_Molybdate_Tetrahydrate.yaml
+  locator: data/provenance/seed_sources.json /sources/11/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 8aa0782e111cd434c6337345cfe51234abda0233d56857fd7a34c75a5636bf15
+- evidence_id: source-013
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Ascorbic_Acid.yaml
+  locator: data/provenance/seed_sources.json /sources/12/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 0c75838e9b7ce6c20427ec7c433555d8f1a84fd499aec0c4416385b6e41fe7cf
+- evidence_id: source-014
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Bacl2.yaml
+  locator: data/provenance/seed_sources.json /sources/13/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 6897b00923cf7c3bdbb1294158605e9c7351bc5e574cf0507645397a0db55b45
+- evidence_id: source-015
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Beta-nad.yaml
+  locator: data/provenance/seed_sources.json /sources/14/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 0bd44bae290a7c70cac9a511ccd66088d2322ced90006f0dd02656e725c8652e
+- evidence_id: source-016
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Biotin.yaml
+  locator: data/provenance/seed_sources.json /sources/15/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 26056efadc5e57f081cde6e4ce0c2e25c03530c6d564ef0df25da3bcacb59c30
+- evidence_id: source-017
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Biotin_Vitamin_Solution.yaml
+  locator: data/provenance/seed_sources.json /sources/16/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 013bef115224a5848c7ff17e210c181a2a4f9313f49a59839df55000a40635e6
+- evidence_id: source-018
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Ca-folinate.yaml
+  locator: data/provenance/seed_sources.json /sources/17/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: e6077448154006195021c507f681b7a4bcf115979bdf0a3f3de69040dc73532f
+- evidence_id: source-019
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Ca-pantothenate.yaml
+  locator: data/provenance/seed_sources.json /sources/18/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 28f0ab7b03262a2fcb7013cfadc9c2b6f2d16078dd6d528f49452100c2cfe1e4
+- evidence_id: source-020
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Calcium_D-Pantothenate.yaml
+  locator: data/provenance/seed_sources.json /sources/19/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 998e92d031c051f86e367a28c7a8cde15478d31b4d9a56683c1fe755387a837b
+- evidence_id: source-021
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Calcium_Pantothenate.yaml
+  locator: data/provenance/seed_sources.json /sources/20/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: b5a2eb0063046ecb71d2e9a97285aaebbf5780075f0fb0b7b069b4362bf57121
+- evidence_id: source-022
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cecl3.yaml
+  locator: data/provenance/seed_sources.json /sources/21/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 22476283b23378e01e0c388acd5d0ee23721928bc71b122765370b8fb914e1f4
+- evidence_id: source-023
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cecl3_X_7_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/22/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 7293aa199365ae819f15505843572a2b96cab81f1b9249fe65127d478bf5279b
+- evidence_id: source-024
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Chalcopyrite.yaml
+  locator: data/provenance/seed_sources.json /sources/23/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: fe1d35f7e71b05362f82e0facdf4600730107b822d4f3c0278e32a603bfe169f
+- evidence_id: source-025
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Co_No32.yaml
+  locator: data/provenance/seed_sources.json /sources/24/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 40e67ba4d0760876255130f94d3f4d1ce89401b7bba78a36264b10adebd13b39
+- evidence_id: source-026
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Co_No32_X_6_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/25/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 8e7f1d2eacb03c665af878935add83bc686d9bd7dd1b3cd601b29a21af37caa4
+- evidence_id: source-027
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cobalamine.yaml
+  locator: data/provenance/seed_sources.json /sources/26/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 429d7aa526ebf5588de49fa68239a830b7e029c65f19efcf2ae75aa102e935f0
+- evidence_id: source-028
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cobalt_chloride_hexahydrate.yaml
+  locator: data/provenance/seed_sources.json /sources/27/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: f32ab49c0fa30ca998c07a039503ff4f943b1cb428fb994da6906be8349247dc
+- evidence_id: source-029
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cocl2.yaml
+  locator: data/provenance/seed_sources.json /sources/28/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: f77aab99efc51c1fd9a73bb2caec66ec36c4172ae1935a8a4515f84548c42414
+- evidence_id: source-030
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cocl2_X_2_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/29/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 24b8ad861360abceeeb29015a4c827efad6f304d987860139d6ce2450068fb24
+- evidence_id: source-031
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cocl2_X_4_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/30/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 51f325d79b0ce211d955a7748e06744d17f355be35ae03e138b5b8fcc08dcbac
+- evidence_id: source-032
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cocl2_X_6_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/31/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 1155e44909ee569b943117d26a240f072f7aea1fc0f0afcb705ce5edc14bed22
+- evidence_id: source-033
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Coenzyme_A.yaml
+  locator: data/provenance/seed_sources.json /sources/32/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 38a4c9f6bf0743e254be2eb1ae86a28b37e7bda3bc767421fb57fa241be67ce1
+- evidence_id: source-034
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Coso4.yaml
+  locator: data/provenance/seed_sources.json /sources/33/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 974a82461672cac1853cae05cdc6285a48f3e2b02619669b8b81067117c19fbd
+- evidence_id: source-035
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Coso4_X_7_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/34/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 3e14e4d57dab11eb3974f45db2894b12bd71aa7a761d823ae8ce401300ceba8d
+- evidence_id: source-036
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cr2_So43_X_N_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/35/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 0b7e77f7f4f3d09677a869564b459ba02dc82699ff142dfe20b7fc873c0a3504
+- evidence_id: source-037
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cucl.yaml
+  locator: data/provenance/seed_sources.json /sources/36/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: d10ad4a30ad5380d4f53569213173961d9a9deb373da6f5575a33f363ace9747
+- evidence_id: source-038
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cucl2.yaml
+  locator: data/provenance/seed_sources.json /sources/37/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 3af3e72dbcc28ff48e3ec4b266bc172de6b290923c3b094121cea09bee146420
+- evidence_id: source-039
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cucl2_X_2_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/38/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 8d736b21a7cf3780ffc26d47f0a24c2250d4bf06a078958aff3e8d6f36b9212e
+- evidence_id: source-040
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cucl2_X_5_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/39/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 3db43c36b1d2d842b155e916cf764cf2935fec0c93339cd4c898b4c18a6ea2d0
+- evidence_id: source-041
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cucl2_X_6_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/40/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 617a79e853967c008d7dc62783d291b4189d2d9b5955d9f71b59d6230621b15c
+- evidence_id: source-042
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cuso4.yaml
+  locator: data/provenance/seed_sources.json /sources/41/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: b9bf5be5f5c742db6ca22a93b7af7abb3f5006e8bb4f3378aad54dfbea7da769
+- evidence_id: source-043
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cuso4_X_2_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/42/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 40311900c245923649fbe0262a15586a91cbff9fabd62085be73b16090a66002
+- evidence_id: source-044
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cuso4_X_4_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/43/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 0f6074f4283f77e4f4766b53973aefa46c247551d4b6f27252471892bd953d7a
+- evidence_id: source-045
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cuso4_X_5_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/44/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 76cdfb2344f207d747e60376104e13e68f4bb4df79e33343a396810b5a61cf04
+- evidence_id: source-046
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cuso4_X_6_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/45/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 9d0491fe64b362cd74a62b5b72dce232233dd220584111dbd5956e45996170fe
+- evidence_id: source-047
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Cyanocobalamin.yaml
+  locator: data/provenance/seed_sources.json /sources/46/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: c5040ab3a4bc376296676ced54da7265cce36b34c573668be6e28592161d260c
+- evidence_id: source-048
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/DL_Vitamins.yaml
+  locator: data/provenance/seed_sources.json /sources/47/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 41a6ce40ee3f2a5a705f041f6d20d72ecd977a2dea42c477dc997191d1be44ad
+- evidence_id: source-049
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Desulfovibrio_Trace_Elements.yaml
+  locator: data/provenance/seed_sources.json /sources/48/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 93db08d82a87268e9c970192268b222cd7f518ef64f468aeceea672e329a20ea
+- evidence_id: source-050
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Diammonium_molybdate.yaml
+  locator: data/provenance/seed_sources.json /sources/49/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 04f56b6dd9464f2c7fcb63db2a055d507d9a4498224847ad841a78306a35e1a7
+- evidence_id: source-051
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Dl-alpha-lipoic_Acid.yaml
+  locator: data/provenance/seed_sources.json /sources/50/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 0ed895bde2be0c24acba5da9eb925485ebea8dd04b8058cce77270e1677629bc
+- evidence_id: source-052
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Fad.yaml
+  locator: data/provenance/seed_sources.json /sources/51/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 604aa537dff13b0a9b75ca69fb5a144473016a66aaddd5bfb0a271222edfe699
+- evidence_id: source-053
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Fe2_So43_X_N_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/52/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 5b98fed8eddbde07bfd8e8e4dd9263cd56d7ecb494691d4d5f55fedd3a405447
+- evidence_id: source-054
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Fe_Iii-edta.yaml
+  locator: data/provenance/seed_sources.json /sources/53/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 583095cb1c81bca99e71bd4be2d6d2c876b1ff8923b77820107e6968d10078a2
+- evidence_id: source-055
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Fe_Nh42_So42_X_7_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/54/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 2b8903a5c84016c972e3aae7778a54f6226f46a03ebbcf54cb8ac0dfcdad7b47
+- evidence_id: source-056
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Folic_Acid.yaml
+  locator: data/provenance/seed_sources.json /sources/55/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: df85938271ec8f32a6d756f5213ba9661c9a7530822f333d2e02493b9f92e615
+- evidence_id: source-057
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Folinic_Acid.yaml
+  locator: data/provenance/seed_sources.json /sources/56/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 73594fdf9ee220f89cbd97bdabab20b84dac0ac34ee30286818e38b88832153b
+- evidence_id: source-058
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/H2seo3.yaml
+  locator: data/provenance/seed_sources.json /sources/57/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 70884df864f67411a2584f7a759042fe3855f21a94835d9f7a3ad3c10f9b3907
+- evidence_id: source-059
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/H2wo4.yaml
+  locator: data/provenance/seed_sources.json /sources/58/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 5162692a22c6cf36b480f02a345435f477eee173a90b20bd2244d7423a1edadd
+- evidence_id: source-060
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/H3bo2.yaml
+  locator: data/provenance/seed_sources.json /sources/59/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 1141c711735d317d724886d440f3a3f8f533bd2ebebf1d00fec849bcf9fd80a2
+- evidence_id: source-061
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/H3bo3.yaml
+  locator: data/provenance/seed_sources.json /sources/60/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 9ba49752b7773e367ed46e4bcd6333e27ac444b797ba7d8ac0e32cf7baae1c15
+- evidence_id: source-062
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Haemin.yaml
+  locator: data/provenance/seed_sources.json /sources/61/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: f383f7f9be865a12a13e6d369a568b663eaddeefc5edbfd06bc5633006c99355
+- evidence_id: source-063
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Inositol.yaml
+  locator: data/provenance/seed_sources.json /sources/62/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 1500f6d290e5badee3d362b5f7f294a9cf15b02b47f77971ad00a3116f4d2951
+- evidence_id: source-064
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Kao_And_Michayluk_Vitamin_Solution.yaml
+  locator: data/provenance/seed_sources.json /sources/63/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 23900d5237c97ebb12b670a2734f96dc638e555562e4230f92a94626d590fb94
+- evidence_id: source-065
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/L-Carnitine.yaml
+  locator: data/provenance/seed_sources.json /sources/64/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 83717e970a478ac8248672c11d82a8d91f5732ea5e520bd388f2060e3632e754
+- evidence_id: source-066
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/L-ascorbic_Acid.yaml
+  locator: data/provenance/seed_sources.json /sources/65/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 866a8ca6ffa153dced292d1e47e4a5966964db7264219f52bae9d9a4569facb6
+- evidence_id: source-067
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/M-inositol.yaml
+  locator: data/provenance/seed_sources.json /sources/66/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: fae6c26a9a9d83b825e0196ea53a91c17bcd235fefd9aa08a506b27876d98ae3
+- evidence_id: source-068
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/MME_Trace_Minerals.yaml
+  locator: data/provenance/seed_sources.json /sources/67/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: b8226fe2e4c0fb817ea7ab046b7dc8eb314c61213dbd4dd903fba8ef88bf4720
+- evidence_id: source-069
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mc_trace_minerals.yaml
+  locator: data/provenance/seed_sources.json /sources/68/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 311da7a87975b99572f45f44d76173006762500cb524aadc7356c13da78047b2
+- evidence_id: source-070
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mc_trace_minerals_SO4free.yaml
+  locator: data/provenance/seed_sources.json /sources/69/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 016ab562c78ea825fe2feb264077503e8969f85267700a5f0f0129e9be54e416
+- evidence_id: source-071
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mc_vitamins.yaml
+  locator: data/provenance/seed_sources.json /sources/70/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 59c53dfe4e273ebfc7c3fe86fd4244978868ff1879dcde97af64bbeb61c07123
+- evidence_id: source-072
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Menadione.yaml
+  locator: data/provenance/seed_sources.json /sources/71/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 2ffe65c6d3f0029bc03ae633447b714b8d2421652aa76c9404dbac6fb9df18d0
+- evidence_id: source-073
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Menadione_Sodium_Bisulfate.yaml
+  locator: data/provenance/seed_sources.json /sources/72/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 10c7e15f9ad2d13812ea88958cc3783e458858657d787174e18d20b8689f2310
+- evidence_id: source-074
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mineral_3B_Solution.yaml
+  locator: data/provenance/seed_sources.json /sources/73/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: eff04f2159aaf8dbba19fdb7028199270bdadfdb0e9ea6d2bcdbbc98c43155e9
+- evidence_id: source-075
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mncl2.yaml
+  locator: data/provenance/seed_sources.json /sources/74/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 6efc4b6c0a60c00984eaa246754ca7174940c98a59e3f483cd42a2cabcd26a0e
+- evidence_id: source-076
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mncl2_X_2_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/75/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 9e38605be2e4e3efd447015efb67703002c295e408467e81fa66e9f224e1ff7b
+- evidence_id: source-077
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mncl2_X_4_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/76/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: ce248133b8c5721210c39858ac9b659912dd4ab067bd77d6fb95b5fcdf69cf0a
+- evidence_id: source-078
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mnso4.yaml
+  locator: data/provenance/seed_sources.json /sources/77/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 18004a608a6c1ffd4d3fd01f65fe8804b29d6b31b98d458d94e8bd222f4160cd
+- evidence_id: source-079
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mnso4_X_1_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/78/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: d68f0e14e5f19625ae1e8476c8dfa3de4932cdf9656a9e6ae58a0a1ec438332f
+- evidence_id: source-080
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mnso4_X_2_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/79/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: d04fb330a92fadc0116466870120fa51aae3d80a5bee1d1499c1c594dbe0c10d
+- evidence_id: source-081
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mnso4_X_4_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/80/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 40b92206d8497223f03cc179bb650f8234b65e7c52cd52ec44cae873821c9248
+- evidence_id: source-082
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mnso4_X_5_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/81/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 11848d08fa40ccc572e03e1c7104187334a3052253713dd059ea2535f2c9fec0
+- evidence_id: source-083
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mnso4_X_6_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/82/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: e00b6076b000228711864f2a5c8f2152a7a87434269b1d85b5adcbc855936c54
+- evidence_id: source-084
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mnso4_X_7_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/83/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 16fbe26057f3eb769a2054daa6aa374c72af193ac29382246cf26a7eaaaba852
+- evidence_id: source-085
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Mnso4_X_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/84/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: ef3f2be9b77f0b62db71ecc37aa161a45e3693208a6b3919d681b2fe6e23b57b
+- evidence_id: source-086
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Moo3.yaml
+  locator: data/provenance/seed_sources.json /sources/85/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 18df757732b6e43da4327c5694ab142d11c926c913bbb4966bb75e16b7f5dd1f
+- evidence_id: source-087
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Myo-inositol.yaml
+  locator: data/provenance/seed_sources.json /sources/86/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 4a6051984c639318d27bcee942175994e2f3f40beff5483130a4c17a9f5e3d53
+- evidence_id: source-088
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na-ascorbate.yaml
+  locator: data/provenance/seed_sources.json /sources/87/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 0783f68dffa179a9579250d7f8a131a96781f2189f4672b63c2408cc07ea7c5e
+- evidence_id: source-089
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2b4o7.yaml
+  locator: data/provenance/seed_sources.json /sources/88/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 34bf356859b056863af86bd7deb36301a6605958cb6a745704eaeebd652ce31a
+- evidence_id: source-090
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2moo4.yaml
+  locator: data/provenance/seed_sources.json /sources/89/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 61771cf9de80581a816c2747c7d83d51d58830b529096058b858104d98845277
+- evidence_id: source-091
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2moo42h2o.yaml
+  locator: data/provenance/seed_sources.json /sources/90/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 5a6b277f3274ca6a6ea7feaf988927939c51513fe63fd95e40b6f435ff0a8f17
+- evidence_id: source-092
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2moo4_X_2_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/91/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: d8ecba6c664d94d9d0f0da89410808b99c3d6ad4cfeb55f122b5df2d7d8b5612
+- evidence_id: source-093
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2moo4_X_7_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/92/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: c38475fd99369be070f4498f2fc6af0159695713a28ff1383a73e69d1e1fc6e8
+- evidence_id: source-094
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2seo3.yaml
+  locator: data/provenance/seed_sources.json /sources/93/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: de098711130ca209fe06ee2a3239125f2aabb60c554830f93b2b24b72cc12cab
+- evidence_id: source-095
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2seo35h2o.yaml
+  locator: data/provenance/seed_sources.json /sources/94/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 889d9d25040aba6b22659bbb6ef5cd372966b448997258423ce5aa8b1864966b
+- evidence_id: source-096
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2seo3_X_5_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/95/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 1b808f46bbf0b43885b37fbd0a3e46ce00c363d18d934110c4ff5d36bddcb911
+- evidence_id: source-097
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2seo4.yaml
+  locator: data/provenance/seed_sources.json /sources/96/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 5a4c0a17fa416848cd312592d9560417db3b1f54b858254b2e3a9cc28a1c24e0
+- evidence_id: source-098
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2wo4.yaml
+  locator: data/provenance/seed_sources.json /sources/97/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 3fe854c3fabbea1841a8ca55ce42dcc9ed82015af31d2e636d0e86a5a48ec25a
+- evidence_id: source-099
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Na2wo4_X_2_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/98/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: b66951aba30cde0c3efe3b5ae2080a8d3445aebdffbd04b748e554f28358ffa9
+- evidence_id: source-100
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Navo3.yaml
+  locator: data/provenance/seed_sources.json /sources/99/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 022bb56159ebab55f1511533a72e5549ff43bcdd09de227f1fb193df2475eb78
+- evidence_id: source-101
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Navo3_X_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/100/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: d4d3f05a57d260547b23249d5fb316600c7b5adb56887463394cbe3417dc57e4
+- evidence_id: source-102
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nh42ni_So42.yaml
+  locator: data/provenance/seed_sources.json /sources/101/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 3f2bbdbc092c00cfe0b0d1b82996dc7825db1c13b2f11477ea1da7bd56d3474a
+- evidence_id: source-103
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nh42ni_So42_X_6_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/102/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 95a9c8fd17541611183de192078aebab13e1d6ebdb9e77808d2800da711a7b47
+- evidence_id: source-104
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nickel_II_chloride_hexahydrate.yaml
+  locator: data/provenance/seed_sources.json /sources/103/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 3cb45355a45ad8622e58fc69f4b84253866042170493ed0eb4dc7597116a4724
+- evidence_id: source-105
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nickel_II_sulfate_hexahydrate.yaml
+  locator: data/provenance/seed_sources.json /sources/104/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 8f26668428e443d79043dc77ec798fb141837c249c0beaa76ad31b0722bc7e55
+- evidence_id: source-106
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nicl2.yaml
+  locator: data/provenance/seed_sources.json /sources/105/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 0c5e1111eb46006b0521c02d55e01c224783fdbebb368afd2fb749a305bc58ef
+- evidence_id: source-107
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nicl2_X_2_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/106/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 8c9d776dbb5998599503c6e645a4ad328cf19d1b1562784aba19906907934d25
+- evidence_id: source-108
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nicl2_X_5_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/107/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 278355fc84d3a50ebf93e4e8409b6bb468551626157ca6806faf5cbef46f1b9c
+- evidence_id: source-109
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nicl2_X_6_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/108/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: a158a358861299d5198cf288ba3f81f59acfc88c9cc3060fea4043f35729489e
+- evidence_id: source-110
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nicotinamide.yaml
+  locator: data/provenance/seed_sources.json /sources/109/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 724181418c9efc54cff5930bb942c07ed23e1417144bbc0c785caa58b5683325
+- evidence_id: source-111
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Nicotinic_Acid.yaml
+  locator: data/provenance/seed_sources.json /sources/110/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: ee74fdab88983c8dd5554b638d0b97623b9be4b5f389d6458cdf27713ae06b1b
+- evidence_id: source-112
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Niso4_X_6_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/111/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 98b56c307ba25d78a1cef9b0773c5b7aaece65b6d811e0130c706d90bcce2289
+- evidence_id: source-113
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Niso4_X_7_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/112/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 18aac3d02606aacb2241a62f07e243436a4aa616685b826333d87f04caee75ff
+- evidence_id: source-114
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/P-aminobenzoic_Acid.yaml
+  locator: data/provenance/seed_sources.json /sources/113/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 088498308b47b9a01c45baa4bfbb3a7a367949a08bb85b11cdfbc89f1a8ca91f
+- evidence_id: source-115
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/P-iv_Metal_Solution.yaml
+  locator: data/provenance/seed_sources.json /sources/114/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 8c16f6bcf88314fbcb9f56cd23d89d20a86435a61d8fdeff9a5dc3c6b3836399
+- evidence_id: source-116
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pantothenate.yaml
+  locator: data/provenance/seed_sources.json /sources/115/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: be6e14f4aa70dd9de9dab6c1e75780dc2c53b92740294ee31fc9f71b25f7a354
+- evidence_id: source-117
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pantothenic_Acid.yaml
+  locator: data/provenance/seed_sources.json /sources/116/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 81cad65307e45904d42106d96913301119bd95bcf0d4955b74538867d312dedc
+- evidence_id: source-118
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pyridoxal_Hydrochloride.yaml
+  locator: data/provenance/seed_sources.json /sources/117/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: c1650476ac9b84e061cc836ecc99b7e380625b95afd2c70b643bfb575512df27
+- evidence_id: source-119
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pyridoxal_Phosphate.yaml
+  locator: data/provenance/seed_sources.json /sources/118/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 4b7cd670bd92e4c071960d0b1c148e68950b3919bef897a95f4f4096691261c9
+- evidence_id: source-120
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pyridoxamine.yaml
+  locator: data/provenance/seed_sources.json /sources/119/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: cc63b72566591eaf229291363c92ac36de3efdaf833693bce792e594437cd4e0
+- evidence_id: source-121
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pyridoxamine_Dihydrochloride.yaml
+  locator: data/provenance/seed_sources.json /sources/120/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: d97e1bbd539d4a11745b52b374c7bb7429ae2c3e5e252bd3c7d2a9abdf560d28
+- evidence_id: source-122
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pyridoxamine_Hydrochloride.yaml
+  locator: data/provenance/seed_sources.json /sources/121/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 514274672f33d217f51cece85c9cc953d72b77021152cfc6e8b9dba6c5300526
+- evidence_id: source-123
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pyridoxine.yaml
+  locator: data/provenance/seed_sources.json /sources/122/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 49fdccccd2f7e20ea18baeb37688aab3a0e97876e06fc8d5f0fe7bb35508ccb8
+- evidence_id: source-124
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Pyridoxine_Hydrochloride.yaml
+  locator: data/provenance/seed_sources.json /sources/123/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 26ea82b1c3e173c0695085ce08a4143db32a702dae3295702d60a61e944d0a40
+- evidence_id: source-125
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Riboflavin.yaml
+  locator: data/provenance/seed_sources.json /sources/124/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: b79fe5e134e627e7c95d6190e54c52b04f9d81a61ad381cb136b986430d80644
+- evidence_id: source-126
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Sncl2_X_2_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/125/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 6199140cd2ce0054744323025aefe0630c013c756d464387460845fb92699991
+- evidence_id: source-127
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Srcl2.yaml
+  locator: data/provenance/seed_sources.json /sources/126/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 97e15594b9b3a08b7f52fd3eb7d520e83ee084e21ac2389c72de11f3af9e24fa
+- evidence_id: source-128
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Srcl2_X_6_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/127/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 2a0c4904c8905c7d5fad50026359115047f4132963cdbf77758399649085cd91
+- evidence_id: source-129
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thauers_Vitamin_Mix.yaml
+  locator: data/provenance/seed_sources.json /sources/128/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 6f26792c1adf5d2342d0a46faf9f65b9967167d3d5f69f83793c27752c65a90e
+- evidence_id: source-130
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thauers_Vitamin_Mix_No_Biotin.yaml
+  locator: data/provenance/seed_sources.json /sources/129/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: feddbf49d142ddedc7db088c420351c686a69696ba1d4faf8609f3031d437429
+- evidence_id: source-131
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thiamin_Pyrophosphate.yaml
+  locator: data/provenance/seed_sources.json /sources/130/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: db23730b8e0c69f8f3711697b971f39a2203f5105ba91610992f925df8bc07bf
+- evidence_id: source-132
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thiamine-hcl_X_2_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/131/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 482d71b94bd51f56bf1cb9ec5ced824709d7f99e0e849749b124b366864574b3
+- evidence_id: source-133
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thiamine.yaml
+  locator: data/provenance/seed_sources.json /sources/132/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 8a72b4399b922c430e3a33792b3e8b0c2efb26f647d5f78fa4c7a6c4f42ff52e
+- evidence_id: source-134
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thiamine_Hcl.yaml
+  locator: data/provenance/seed_sources.json /sources/133/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 8e7d3802dc19872e85d753b6c7a0e1fb34c552311e69c450e697d9f1e55b2732
+- evidence_id: source-135
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thiamine_Vitamin_Solution.yaml
+  locator: data/provenance/seed_sources.json /sources/134/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 4c48be23fcd0f01a354028889258574c342481c16d92fa546d3d10eb9bab6d8c
+- evidence_id: source-136
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thiamine_pyrophosphate.yaml
+  locator: data/provenance/seed_sources.json /sources/135/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 627c0ae9eea1d8845c5165172edeea792c8b32c6d4d4cc00974d1f7ad90704ad
+- evidence_id: source-137
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Thioctic_Acid.yaml
+  locator: data/provenance/seed_sources.json /sources/136/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 1e895ea0095d831e1c9d89b7ead8f658a800f5d7eec639af6388e535c57dbbca
+- evidence_id: source-138
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Trace_Element_Solution.yaml
+  locator: data/provenance/seed_sources.json /sources/137/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 1f63952b447ff70460ccd928683ee93881f136c77625a81ed16354bc049b6d30
+- evidence_id: source-139
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Trace_Element_Solution_SL-10.yaml
+  locator: data/provenance/seed_sources.json /sources/138/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 0ac2119212b970aeef50cc4a921bb0bfd95fb83a4f8279bae5bc5c0ffcd44be5
+- evidence_id: source-140
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Trace_Metal_Mix_A5.yaml
+  locator: data/provenance/seed_sources.json /sources/139/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 5982838d016b9e668006fa6cd8108c3930358970b2156b2a1596425af3ab4ef2
+- evidence_id: source-141
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Tungstate.yaml
+  locator: data/provenance/seed_sources.json /sources/140/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 6e8a3fd17004e527f23f3e2f86ad2d9feefb28ef1d8b122377db7b9d31363443
+- evidence_id: source-142
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/UW_Concentrated_Base.yaml
+  locator: data/provenance/seed_sources.json /sources/141/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: e676b9237eadf613f04db4121c47cf5b273cf3e8322c1f01e367b9eb5d83b427
+- evidence_id: source-143
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/UW_Concentrated_Base_No_Mo.yaml
+  locator: data/provenance/seed_sources.json /sources/142/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: daa15aae2de103e20e4916c105333d51581a8da24616ef312ba0b6a98d05fb0c
+- evidence_id: source-144
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/UW_Concentrated_Base_No_Sulfur.yaml
+  locator: data/provenance/seed_sources.json /sources/143/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: ab68055139180f35162d25ad6f43160fbad7e09838d653419b10967c3558a28f
+- evidence_id: source-145
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Vanadium_Chloride.yaml
+  locator: data/provenance/seed_sources.json /sources/144/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: c8aea81224aa456d3adaba2c0b09192b067bb612d45878774d3d6cab981aaa36
+- evidence_id: source-146
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Vitamin_B12.yaml
+  locator: data/provenance/seed_sources.json /sources/145/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 9ee0b669c9ef90950273ea3755e02d960efbfdef7252c13edf180bd70b3fad6c
+- evidence_id: source-147
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Vitamin_K1.yaml
+  locator: data/provenance/seed_sources.json /sources/146/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: b1b4d7e83be0bbefa3d6100a34159db0c6806253cad60ee2c121be58357fb94a
+- evidence_id: source-148
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Vitamin_Solution.yaml
+  locator: data/provenance/seed_sources.json /sources/147/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 305d7f69b9a02684450fd10df96c558cc1d7828a306bc661a9d3887fb4e57d7e
+- evidence_id: source-149
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Vitamin_Solution_See_Medium_No_403.yaml
+  locator: data/provenance/seed_sources.json /sources/148/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 32345a69b68f891ceae2da28db7a4840648823327726b4ad3bb645569060ca48
+- evidence_id: source-150
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Vitamin_Solution_Thermophilic_Formulation.yaml
+  locator: data/provenance/seed_sources.json /sources/149/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 5c1ff126d499e61de9ee263e569b9c967994ced7f604fbbc5cade893dc2c6ab2
+- evidence_id: source-151
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Voso4_X_2_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/150/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 6f07aa7907ded0ba08a20bb6cff5a76b7350a17aa52925346eae9163d5a5d1ee
+- evidence_id: source-152
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Voso4_X_5_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/151/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 2903645ba0ba6c7c0455dc876db9b88bb355d72e0f8a818e269fdfb39800b192
+- evidence_id: source-153
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Voso4_X_N_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/152/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: bd15f57d4e547908edcffa874470f4cc2adfe672002fe3532be67c30e63caeaf
+- evidence_id: source-154
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Wc_Trace_Elements_Solution.yaml
+  locator: data/provenance/seed_sources.json /sources/153/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: cc5326c0fa7ef1d0d5245cbd151a8f0c7a8ff6f92a061a3c112a1df415e3e480
+- evidence_id: source-155
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Wolfes_Mineral_Mix.yaml
+  locator: data/provenance/seed_sources.json /sources/154/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 8c3a73cfa1887197e1e795b7dc99195b2072f4688ac4404f0db83b00e3e95a89
+- evidence_id: source-156
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Wolfes_Vitamin_Mix.yaml
+  locator: data/provenance/seed_sources.json /sources/155/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 709749bd7c83c38a09400fc1893885ead753847ff9d1cbbe4ec76b431d349738
+- evidence_id: source-157
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Zeikus_Trace_Element_Solution.yaml
+  locator: data/provenance/seed_sources.json /sources/156/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: d62e9aa0c9a42cbbb78b44a3b86f91aecad2a3f00ecbf056d48b73efd7db0850
+- evidence_id: source-158
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Zinc_Sulfate.yaml
+  locator: data/provenance/seed_sources.json /sources/157/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 708627087f2d1a0a1fa1f7dea4e53d62a0730075f098b32606828a58605ef996
+- evidence_id: source-159
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Zncl2.yaml
+  locator: data/provenance/seed_sources.json /sources/158/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 9b97dc28fa87441be44422c8d86bab2c2e6defcf8e9057c2104648f94bee60ca
+- evidence_id: source-160
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Znso4_X_6_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/159/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: aa1fbbd60156312d8858cf52a265aad27fd57a754634f015297650a67ff79066
+- evidence_id: source-161
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Znso4_X_7_H2o.yaml
+  locator: data/provenance/seed_sources.json /sources/160/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 2a8b07050006f6d9d0d167997107fbb3b3c453657c98c0b512276e182f4bc791
+- evidence_id: source-162
+  kind: database
+  reference: https://github.com/CultureBotAI/MediaIngredientMech/blob/0529fc6bc065bfa04aba0aed234f6b0cfad6a142/data/ingredients/mapped/Α-lipoic_Acid.yaml
+  locator: data/provenance/seed_sources.json /sources/161/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: f7326359f69a4022a6d6399f272109180611423bcd3debc2defccae8fc1ae7b6
+- evidence_id: source-163
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:53542
+  locator: data/provenance/seed_sources.json /sources/162/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 31c0111f476a98b69e7bed39839e5b5319bb94b2278137a85d84459c60b751ff
+- evidence_id: source-164
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:53503
+  locator: data/provenance/seed_sources.json /sources/163/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 67b873d29ddef7c0cb09e1d1764bb1a12c69aaabcb563e9a7e02c12f0ea223e6
+- evidence_id: source-165
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:86360
+  locator: data/provenance/seed_sources.json /sources/164/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 4962f79dbdc3b2cb40c70a97d0ef2b61c9fea64b863b94dad171b43b5a097858
+- evidence_id: source-166
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:29105
+  locator: data/provenance/seed_sources.json /sources/165/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: d9476ebef66bce0653bcf9c00ab751c9630adc2074d72006d859038db3977c2e
+- evidence_id: source-167
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:86356
+  locator: data/provenance/seed_sources.json /sources/166/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 5d2323ef6faa87b245cc995767912126917415c4de421c4ef5bd025cbdf92e81
+- evidence_id: source-168
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:58210
+  locator: data/provenance/seed_sources.json /sources/167/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: ac01849a5f8e1474a827c768ebe374c2c1441dc9e20e4e617ab3a0e4b4fe024b
+- evidence_id: source-169
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:49786
+  locator: data/provenance/seed_sources.json /sources/168/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 2b90a1b46fef2d20d801b455862eb9570194e9c2b01aada42a69b16c654be2c6
+- evidence_id: source-170
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:49553
+  locator: data/provenance/seed_sources.json /sources/169/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: b79999b5e09f6285defcd6cb63fdf1ab32c14185c3f291d1e31ca4ec4df00241
+- evidence_id: source-171
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:45931
+  locator: data/provenance/seed_sources.json /sources/170/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: cdc760090aa0113d4c48f6dac945b1c8f83731d9f0338919ffcd351013d81618
+- evidence_id: source-172
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:597326
+  locator: data/provenance/seed_sources.json /sources/171/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 41fc86e2fece81488d3ea77586c618aa6380e0a79f806a4bdc490c247cca6bfa
+- evidence_id: source-173
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:29036
+  locator: data/provenance/seed_sources.json /sources/172/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: d761d72250da005dd2c9167e4c09fb6ba28e554c30a63168f98bb1a6570fe76a
+- evidence_id: source-174
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:34887
+  locator: data/provenance/seed_sources.json /sources/173/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 4c291e175da8ea3aabe946040e0007b208e862d04f9405fd05899db631c66a2a
+- evidence_id: source-175
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:30411
+  locator: data/provenance/seed_sources.json /sources/174/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 6416ad6aed0fec4ef68eb3090ec5cea7fe151ba88c4112ad3ce60f0214139dcc
+- evidence_id: source-176
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:17905
+  locator: data/provenance/seed_sources.json /sources/175/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: bbe82fd3150fffc35d6f2588b2826eecabacb74a7d231c11c2bbe630fb19d661
+- evidence_id: source-177
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:57287
+  locator: data/provenance/seed_sources.json /sources/176/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 7cede4652a877f78adbe9254fa4a4047470cca8b037059c87914c788b5ecb5de
+- evidence_id: source-178
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:35696
+  locator: data/provenance/seed_sources.json /sources/177/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 96092e09993b43b259de000692d61970fc40f2dedbd32a2f9600f4c9e25debde
+- evidence_id: source-179
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:18405
+  locator: data/provenance/seed_sources.json /sources/178/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 84a91c1efabfa23d3d54312ba20b33e0fab7b7b920ed3ebc15497605e53015c0
+- evidence_id: source-180
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:17621
+  locator: data/provenance/seed_sources.json /sources/179/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 87457923562fa9909be6f0c953b1b686d925faa13e58b4ba2f739bdee62bd4f0
+- evidence_id: source-181
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:32312
+  locator: data/provenance/seed_sources.json /sources/180/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 45f40295f3f292774dc6778bc4bfe23a408dee4cd78e8da9ea872573f8a63e31
+- evidence_id: source-182
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:15846
+  locator: data/provenance/seed_sources.json /sources/181/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 148f191b44230278ae898f69b27123d623502fd7e9c8ec66270ed91dca308f7d
+- evidence_id: source-183
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:35176
+  locator: data/provenance/seed_sources.json /sources/182/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: c3144cf2ae3e5fe75772af54e652d2240751d7f77003ec5b28fba63f5c34569e
+- evidence_id: source-184
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:48828
+  locator: data/provenance/seed_sources.json /sources/183/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 7e031f2f1f89ce8088834778457244af1fdae06bfec8174437d52fc11168f3ad
+- evidence_id: source-185
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:86364
+  locator: data/provenance/seed_sources.json /sources/184/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 10bac9ec4409153d3fc5c915d5bbbb07a8cb9fb50645758f8160ec7cb4defe05
+- evidence_id: source-186
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:9532
+  locator: data/provenance/seed_sources.json /sources/185/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 7ccce7a4d41b90c24d8bd6461f2609de43896dfb1bc8687c82200c0c551566d6
+- evidence_id: source-187
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:57586
+  locator: data/provenance/seed_sources.json /sources/186/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: c7fe99ee6e05e4a8f42b9122fcaeb8c8528ee409c9c1c1702b185dc003594c0e
+- evidence_id: source-188
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:57986
+  locator: data/provenance/seed_sources.json /sources/187/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: a3243475284b6526aa25eab8a20180cf425c8986280b410ad1b299a814a4d013
+- evidence_id: source-189
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:131524
+  locator: data/provenance/seed_sources.json /sources/188/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 20d7650e227c43921fd4fc603df703d6dd1c12a75903db2686f8ed0692b28586
+- evidence_id: source-190
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:58937
+  locator: data/provenance/seed_sources.json /sources/189/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 56ef08d585fca4068ad71dfc261561c405a01d2b0b40eb1955475e24fe0c75c6
+- evidence_id: source-191
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:132762
+  locator: data/provenance/seed_sources.json /sources/190/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: e2551986e0045308546deeb23bba48d8d6f5316249aac0d28fea36a6b893ff9a
+- evidence_id: source-192
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:15346
+  locator: data/provenance/seed_sources.json /sources/191/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 82b8380fba348c708b9ee95ed229f13812fbcc482a60b28e1225aa305ff4d6af
+- evidence_id: source-193
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:91245
+  locator: data/provenance/seed_sources.json /sources/192/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 76cba03d87c8f870d7101baf83dddbef0ab052b8fb7754d03754c6f57802ad25
+- evidence_id: source-194
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:15956
+  locator: data/provenance/seed_sources.json /sources/193/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 85838ace23503a713bf416fdb426920f159c934ee78dfb495d9f6cafaa9598ea
+- evidence_id: source-195
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:29035
+  locator: data/provenance/seed_sources.json /sources/194/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 74a2d5482c8756c88dfa7167ffb0b8cde80b6d62fa718f69089e8b02d068eeaa
+- evidence_id: source-196
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:57692
+  locator: data/provenance/seed_sources.json /sources/195/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 5a546732ac75f7af3bdc1a5aa066c1157128415bc4efb006a1887aef8e9a4a7c
+- evidence_id: source-197
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:131523
+  locator: data/provenance/seed_sources.json /sources/196/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 9724d275470ae14dbde5b196ed2576197451f1cec5a3052887c9a908d835111f
+- evidence_id: source-198
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:86358
+  locator: data/provenance/seed_sources.json /sources/197/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: f1bf67a3e384a22558666a071aebef0d80a6d4fa1293463fd99e0cc48fbc97a0
+- evidence_id: source-199
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:16238
+  locator: data/provenance/seed_sources.json /sources/198/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 0d97999b97092f6a2b08345ab34b479e50c7b82acebf68f5be9111eb239e3113
+- evidence_id: source-200
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:17015
+  locator: data/provenance/seed_sources.json /sources/199/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: 38a7980dd8ff6a8c74155e0bd90404c770d9773b4f5d3d235316eb00d1aa4ce7
+- evidence_id: source-201
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:86318
+  locator: data/provenance/seed_sources.json /sources/200/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct ChEBI retrieval confirmed identity, chemical data and ontology relations.
+    Chemical composition and conjugate-form assertions were read as such, without
+    inferring cellular uptake or universal enzyme requirements.
+  snapshot_sha256: a6309bd0078d497ebd580b6eb70b3e1e89e5db9c748e7f83b8a27ce3639204c2
+- evidence_id: source-202
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/coenzyme-m-chebi17905.yaml
+  locator: data/provenance/seed_sources.json /sources/201/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 783fe8e93153f7167657f005776b25d8430a9aa6b26ec42c1129bf0ac3b20241
+- evidence_id: source-203
+  kind: database
+  reference: https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/methanogenesis-from-h2-and-co2.yaml
+  locator: data/provenance/seed_sources.json /sources/202/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 553922ede0ecdb12ebe569dbb9d8af1c70d4aa190e4fd60e69a9bc7ea0cf8e1e
+- evidence_id: source-204
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/nad-chebi15846.yaml
+  locator: data/provenance/seed_sources.json /sources/203/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 47d692cdcd5f4c3434b4cd6969471e7421e63ff3782dd213a2b96a3b3a37c643
+- evidence_id: source-205
+  kind: database
+  reference: https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/nad-salvage-pathway-v.yaml
+  locator: data/provenance/seed_sources.json /sources/204/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 6f1e3a5883d8c6fba1aa10c90d089d3d8c19a54a6b7b9e1b1b0a4e24c2a0fdf8
+- evidence_id: source-206
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/coenzyme-a-chebi15346.yaml
+  locator: data/provenance/seed_sources.json /sources/205/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 25584038516c8df53a5484d5f9d06bd0ebf68cbf23c9c1dfe1a0375035eb702a
+- evidence_id: source-207
+  kind: database
+  reference: https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/coenzyme-a-biosynthesis-i-prokaryotic.yaml
+  locator: data/provenance/seed_sources.json /sources/206/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 19f656fe537a0de97ae8f75964b2de2e54b7e396e30cc56826497201226cd52e
+- evidence_id: source-208
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/fad-chebi16238.yaml
+  locator: data/provenance/seed_sources.json /sources/207/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 320c15beb20ea2f3c59d70ed3958ac42c82c2672475c4cf6838f43bf7aab5028
+- evidence_id: source-209
+  kind: database
+  reference: https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/flavin-biosynthesis-i.yaml
+  locator: data/provenance/seed_sources.json /sources/208/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 9f89b3813fe7db7b32ef674f7163a512ebe7840c0803852614401404931e5b8d
+- evidence_id: source-210
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/fmn-chebi17621.yaml
+  locator: data/provenance/seed_sources.json /sources/209/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: f174e2f17f1dcbe8737d6fcdd0868a3014f1be0314fc1271a3c099e11d799e22
+- evidence_id: source-211
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/biotin-chebi15956.yaml
+  locator: data/provenance/seed_sources.json /sources/210/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 6901fc51e851f688c5a8c6aee6c8c1b30e5b05488c3ab479070b1800a95508d1
+- evidence_id: source-212
+  kind: database
+  reference: https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/biotin-biosynthesis-i.yaml
+  locator: data/provenance/seed_sources.json /sources/211/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 2bb360670be1cacab32bb01c5c225b8a3001e7884639382dfdeed47dac161239
+- evidence_id: source-213
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/pyridoxal-5-phosphate-chebi18405.yaml
+  locator: data/provenance/seed_sources.json /sources/212/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 6457dd82d1eace9fec1065ae074e9f970e5ba735eda4af42189c22f2143eff2b
+- evidence_id: source-214
+  kind: database
+  reference: https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/pyridoxal-5-phosphate-biosynthesis-i.yaml
+  locator: data/provenance/seed_sources.json /sources/213/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 906f461ec90b7b2806f1d8e7a4a36504b98c92e26646e3cb830019f26d82cd1d
+- evidence_id: source-215
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/thiamine-1-diphosphate-chebi9532.yaml
+  locator: data/provenance/seed_sources.json /sources/214/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: e2f068bdaeb61232889f6f1180544d400b5cc10408ed73e9c70692041a9f790e
+- evidence_id: source-216
+  kind: database
+  reference: https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/thiamine-diphosphate-biosynthesis-i.yaml
+  locator: data/provenance/seed_sources.json /sources/215/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 7efcdbf561c66b1ef1d3601b9516375757a8572b544df0eadc619af169f5737b
+- evidence_id: source-217
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/cobalamin-chebi30411.yaml
+  locator: data/provenance/seed_sources.json /sources/216/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 3611e767fc778a2ca1b224696367fcf37b1829676d02b9944f63bdcf11479d90
+- evidence_id: source-218
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/zinc-2-chebi29105.yaml
+  locator: data/provenance/seed_sources.json /sources/217/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 6768410e558bd9e627255d625de8bdb6dbba8f79608f57a337408c5e66b2fd57
+- evidence_id: source-219
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/manganese-2-chebi29035.yaml
+  locator: data/provenance/seed_sources.json /sources/218/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: d9a119c67f22fccc427bc256bdb45293ec8331835f60da40b5076e4888f3e34a
+- evidence_id: source-220
+  kind: database
+  reference: https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/superoxide-radicals-degradation.yaml
+  locator: data/provenance/seed_sources.json /sources/219/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: f55995b9eac815491d9b7f5a57daa252e6111c9680612188fb1ff09a7a8698b9
+- evidence_id: source-221
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/nickel-2-chebi49786.yaml
+  locator: data/provenance/seed_sources.json /sources/220/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: e0a495eada801ee6c9470676b46a32d99de8c24ca9f2353eff772f4315eef7cc
+- evidence_id: source-222
+  kind: database
+  reference: https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/allantoin-degradation-to-glyoxylate-iii.yaml
+  locator: data/provenance/seed_sources.json /sources/221/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 46d7361452387c017e0a66460ea2cce8edbfa5a7ddad17333890b9fc47482bd0
+- evidence_id: source-223
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/cobalt-2-chebi48828.yaml
+  locator: data/provenance/seed_sources.json /sources/222/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: f820f989c3e4a4f3eb05be40c53cd7e1d879b180f6bd87f983c6ca762e083dee
+- evidence_id: source-224
+  kind: database
+  reference: https://github.com/CultureBotAI/PathwayMech/blob/9584009d49579267233124f4a1057b9425a007d9/data/pathways/5-prime-deoxyadenosine-degradation-i.yaml
+  locator: data/provenance/seed_sources.json /sources/223/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: e46d6bb469af398c42278603eb02a68deecee7bb99d4b97a31114854300c7948
+- evidence_id: source-225
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/cofactor_requirement/chebi/copper-2-chebi29036.yaml
+  locator: data/provenance/seed_sources.json /sources/224/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 58eb69a5e3e89c80f47e9be14117b42f1316f0d541cab51ce76680fe4639dec8
+- evidence_id: source-226
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/enzymatic_activity/ec/1-3-5-1-ec1-3-5-1.yaml
+  locator: data/provenance/seed_sources.json /sources/225/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: f952b0da0957f59d659b8ca19881e69b945dff690da6d34122755f8dfcc4d1ad
+- evidence_id: source-227
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P00363.json
+  locator: data/provenance/seed_sources.json /sources/226/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct issuing-database retrieval confirmed entry version 230, named protein identity
+    and selected cofactor annotation; the record preserves its annotation evidence
+    tier.
+  snapshot_sha256: 7a0055176a3846ff13ec561260e31d285c26cb05937056a65c1ada3e8575fb64
+- evidence_id: source-228
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/enzymatic_activity/ec/1-4-3-5-ec1-4-3-5.yaml
+  locator: data/provenance/seed_sources.json /sources/227/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 02b96b407fa75629e6a67a3621feae4b82abd08a53ed61fa48df10e1e01f7990
+- evidence_id: source-229
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P38075.json
+  locator: data/provenance/seed_sources.json /sources/228/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct issuing-database retrieval confirmed entry version 208, named protein identity
+    and selected cofactor annotation; the record preserves its annotation evidence
+    tier.
+  snapshot_sha256: f52ef3cb6a55edbac3f4ec0a0395697f224cf50739396fdfe07d3ca3ece0c027
+- evidence_id: source-230
+  kind: database
+  reference: https://github.com/CultureBotAI/proteintraitsmech/blob/8d08b33cfbee1e9d1c2fdb2211b82b49dd0c8b1f/data/traits/function/enzymatic_activity/ec/4-1-1-1-ec4-1-1-1.yaml
+  locator: data/provenance/seed_sources.json /sources/229/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The original
+    Git blob SHA-256 and every retained field/value/list position were independently
+    checked against the exact source commit; selected fields do not reproduce the
+    full upstream record.
+  snapshot_sha256: 739a8dee95cef81991ceaf03ca3c292460730a3b7fd5faf4e6b25ab0d039b7ff
+- evidence_id: source-231
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P83779.json
+  locator: data/provenance/seed_sources.json /sources/230/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. Independent
+    direct issuing-database retrieval confirmed entry version 94, named protein identity
+    and selected cofactor annotation; the record preserves its annotation evidence
+    tier.
+  snapshot_sha256: 373e3fde5a7eb8b4e1353bec33993113879429f9bb0c8af813d6b81c6e9e2602
+- evidence_id: source-232
+  kind: database
+  reference: https://rest.uniprot.org/keywords/KW-0786.json
+  locator: data/provenance/seed_sources.json /sources/231/data
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Inspected the retained factual projection and its claim scope. The retained
+    UniProt keyword definition and identifier provide bounded coenzyme context; this
+    is an authority annotation, not an organism experiment.
+  snapshot_sha256: 7c3f03db785222a4fc80e30b323b83fe11cc5d14ec0eecb7c336c20b789c9f82
+- evidence_id: inventory
+  kind: validation
+  reference: data/provenance/seed_sources.json
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: 'Recomputed the published MIM candidate set from all 2957 ingredient YAML
+    source files: 162 unique current-role paths, four cofactor-provider records, 57
+    vitamin records with 58 assertions, and 101 trace-element records. All 162 disposition
+    rows were inspected; historical role text was excluded deliberately.'
+- evidence_id: pathway-search
+  kind: search
+  reference: https://github.com/CultureBotAI/PathwayMech/tree/9584009d49579267233124f4a1057b9425a007d9/data/pathways
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: The complete untruncated published tree contains 282 pathway YAMLs. Exact
+    Cu(2+) occurrences concern activation/inhibition rather than a cofactor edge;
+    SOD1 cites broader copper cation. Specific methyl/adenosylcobalamin endpoints
+    do not establish the unspecified generic cobalamin endpoint.
+  search_scope: Complete immutable published Git tree a08e1f799714161cbffff9b5204269845c3e3344,
+    truncated=false, all282 tracked YAMLs under data/pathways; identifiers and selected
+    edge predicates were inspected. This is a published-source search, not an assertion
+    about ignored local files or unpublished pathways.
+- evidence_id: native-check
+  kind: validation
+  reference: just check
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Independent execution at the reviewed source revision passed native lint,
+    all 14 records, the source audit and 141 tests; three empty command-contract parameter
+    cases were skipped.
+- evidence_id: adversarial-rereview
+  kind: validation
+  reference: https://github.com/CultureBotAI/CofactorMech/pull/5
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Independent in-memory probes against published audit source reject the
+    original invalid negative pointer, ambiguous conjugate MetaCyc alias and unrelated
+    pathway source examples; the unmodified 14-record/162-row/232-source baseline
+    passes. These are implementation acceptance boundaries, not proof of scientific
+    truth.
+- evidence_id: nickel-locator-rereview
+  kind: validation
+  reference: https://github.com/CultureBotAI/CofactorMech/issues/8
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: Read all three corrected nickel supplier evidence lists against retained
+    ChEBI source fields. The parent definition explicitly establishes Ni(II); hydrate-to-parent
+    edges are retained. The redundant unsupported parent relation locators were removed
+    through native history.
+- evidence_id: ald2-primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC7237333/
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: 'Independent chemical reviewer read the official NCBI BioC article: recombinant
+    Rhodospirillum rubrum Ald2 was separately reconstituted with cobalt or nickel
+    after metal depletion. The seed limits cobalt support to alternative in vitro
+    reconstitution.'
+- evidence_id: alla-primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3793230/
+  accessed_at: '2026-11-09T01:52:21Z'
+  support: supports
+  summary: 'Independent chemical reviewer read the official NCBI BioC article: purified
+    AllA activity was lost after EDTA and restored by Ni(II). The seed restricts nickel
+    context to the retained assay and does not infer general stoichiometry.'
+assessments:
+- assessment_id: record-biotin
+  area: evidence
+  topic: Chemical identity, cofactor context, supplier form and scoped cross-corpus
+    links
+  outcome: supported
+  summary: Exact biotin ingredient and PTM concept identifiers agree. The pathway
+    produces biotinate CHEBI:57586, recorded explicitly as a distinct conjugate form
+    rather than identical charge state. The prosthetic-group context is supported;
+    a named enzyme remains an explicit research gap.
+  target_ids:
+  - CofactorMech:biotin
+  evidence_ids:
+  - source-016
+  - source-194
+  - source-211
+  - source-212
+  dimensions:
+  - name: mim-link-status
+    value: PROVISIONAL
+    definition: Source ingredient ID and immutable path are retained pending the actual
+      published MIM identifier migration.
+    evidence_ids:
+    - source-016
+    - source-194
+    - source-211
+    - source-212
+  - name: scientific-scope
+    value: chemical-context seed
+    definition: Evidence supports annotated identity/composition and source-scoped
+      relations, not universal uptake, physiological occupancy, whole-pathway flux
+      or all enzyme-class members.
+    evidence_ids:
+    - source-016
+    - source-194
+    - source-211
+    - source-212
+- assessment_id: record-cobalamin
+  area: evidence
+  topic: Chemical identity, cofactor context, supplier form and scoped cross-corpus
+    links
+  outcome: supported
+  summary: The generic cobalamin identity and exact ingredient/PTM concept links are
+    supported. Specific methyl- or adenosylcobalamin forms are not substituted for
+    the generic entity. Missing pathway and named-enzyme links are honestly bounded
+    research gaps.
+  target_ids:
+  - CofactorMech:cobalamin
+  evidence_ids:
+  - source-027
+  - source-175
+  - source-217
+  - pathway-search
+  dimensions:
+  - name: mim-link-status
+    value: PROVISIONAL
+    definition: Source ingredient ID and immutable path are retained pending the actual
+      published MIM identifier migration.
+    evidence_ids:
+    - source-027
+    - source-175
+    - source-217
+    - pathway-search
+  - name: scientific-scope
+    value: chemical-context seed
+    definition: Evidence supports annotated identity/composition and source-scoped
+      relations, not universal uptake, physiological occupancy, whole-pathway flux
+      or all enzyme-class members.
+    evidence_ids:
+    - source-027
+    - source-175
+    - source-217
+    - pathway-search
+- assessment_id: record-cobalt
+  area: evidence
+  topic: Chemical identity, cofactor context, supplier form and scoped cross-corpus
+    links
+  outcome: supported
+  summary: Three chemically specified cobalt(II) salt suppliers are supported by their
+    ChEBI composition chain. Ald2 cobalt support is correctly restricted to alternative
+    in vitro reconstitution; it does not assert physiological occupancy or joint cobalt/nickel
+    dependence.
+  target_ids:
+  - CofactorMech:cobalt
+  evidence_ids:
+  - source-028
+  - source-029
+  - source-032
+  - source-164
+  - source-178
+  - source-184
+  - source-223
+  - source-224
+  - ald2-primary
+  dimensions:
+  - name: mim-link-status
+    value: PROVISIONAL
+    definition: Source ingredient ID and immutable path are retained pending the actual
+      published MIM identifier migration.
+    evidence_ids:
+    - source-028
+    - source-029
+    - source-032
+    - source-164
+    - source-178
+    - source-184
+    - source-223
+    - source-224
+    - ald2-primary
+  - name: scientific-scope
+    value: chemical-context seed
+    definition: Evidence supports annotated identity/composition and source-scoped
+      relations, not universal uptake, physiological occupancy, whole-pathway flux
+      or all enzyme-class members.
+    evidence_ids:
+    - source-028
+    - source-029
+    - source-032
+    - source-164
+    - source-178
+    - source-184
+    - source-223
+    - source-224
+    - ald2-primary
+- assessment_id: record-coenzyme-a
+  area: evidence
+  topic: Chemical identity, cofactor context, supplier form and scoped cross-corpus
+    links
+  outcome: supported
+  summary: Exact coenzyme A supplier and PTM concept agree. The biosynthetic endpoint
+    CHEBI:57287 is a separate conjugate form with retained ChEBI relationships, not
+    identical protonation to the seed entity.
+  target_ids:
+  - CofactorMech:coenzyme-a
+  evidence_ids:
+  - source-033
+  - source-192
+  - source-206
+  - source-207
+  dimensions:
+  - name: mim-link-status
+    value: PROVISIONAL
+    definition: Source ingredient ID and immutable path are retained pending the actual
+      published MIM identifier migration.
+    evidence_ids:
+    - source-033
+    - source-192
+    - source-206
+    - source-207
+  - name: scientific-scope
+    value: chemical-context seed
+    definition: Evidence supports annotated identity/composition and source-scoped
+      relations, not universal uptake, physiological occupancy, whole-pathway flux
+      or all enzyme-class members.
+    evidence_ids:
+    - source-033
+    - source-192
+    - source-206
+    - source-207
+- assessment_id: record-coenzyme-m
+  area: evidence
+  topic: Chemical identity, cofactor context, supplier form and scoped cross-corpus
+    links
+  outcome: supported
+  summary: The exact source supplies coenzyme M. Its ChEBI cross-reference supports
+    the native MetaCyc:CoM consumed edge. The linked route ends at methyl-CoM and
+    does not itself claim methane formation.
+  target_ids:
+  - CofactorMech:coenzyme-m
+  evidence_ids:
+  - source-002
+  - source-176
+  - source-202
+  - source-203
+  dimensions:
+  - name: mim-link-status
+    value: PROVISIONAL
+    definition: Source ingredient ID and immutable path are retained pending the actual
+      published MIM identifier migration.
+    evidence_ids:
+    - source-002
+    - source-176
+    - source-202
+    - source-203
+  - name: scientific-scope
+    value: chemical-context seed
+    definition: Evidence supports annotated identity/composition and source-scoped
+      relations, not universal uptake, physiological occupancy, whole-pathway flux
+      or all enzyme-class members.
+    evidence_ids:
+    - source-002
+    - source-176
+    - source-202
+    - source-203
+- assessment_id: record-copper
+  area: evidence
+  topic: Chemical identity, cofactor context, supplier form and scoped cross-corpus
+    links
+  outcome: supported
+  summary: The three copper(II) salt suppliers support chemical composition. Cu(II)
+    is not collapsed into the broader copper-cation SOD1 cofactor; exact activation/inhibition
+    occurrences do not become cofactor-use links. The pathway gap is appropriate.
+  target_ids:
+  - CofactorMech:copper
+  evidence_ids:
+  - source-038
+  - source-039
+  - source-040
+  - source-170
+  - source-173
+  - source-193
+  - source-201
+  - source-225
+  - pathway-search
+  dimensions:
+  - name: mim-link-status
+    value: PROVISIONAL
+    definition: Source ingredient ID and immutable path are retained pending the actual
+      published MIM identifier migration.
+    evidence_ids:
+    - source-038
+    - source-039
+    - source-040
+    - source-170
+    - source-173
+    - source-193
+    - source-201
+    - source-225
+    - pathway-search
+  - name: scientific-scope
+    value: chemical-context seed
+    definition: Evidence supports annotated identity/composition and source-scoped
+      relations, not universal uptake, physiological occupancy, whole-pathway flux
+      or all enzyme-class members.
+    evidence_ids:
+    - source-038
+    - source-039
+    - source-040
+    - source-170
+    - source-173
+    - source-193
+    - source-201
+    - source-225
+    - pathway-search
+- assessment_id: record-fad
+  area: evidence
+  topic: Chemical identity, cofactor context, supplier form and scoped cross-corpus
+    links
+  outcome: supported
+  summary: Exact FAD supplier and concept links are supported. Biosynthesis and the
+    named P00363 exemplar concern the declared FAD conjugate CHEBI:57692. P00363 is
+    a retained microbial exemplar in PTM EC:1.3.5.1; UniProt experimental-note evidence
+    is scoped to it, not every enzyme class member.
+  target_ids:
+  - CofactorMech:fad
+  evidence_ids:
+  - source-052
+  - source-199
+  - source-208
+  - source-209
+  - source-226
+  - source-227
+  dimensions:
+  - name: mim-link-status
+    value: PROVISIONAL
+    definition: Source ingredient ID and immutable path are retained pending the actual
+      published MIM identifier migration.
+    evidence_ids:
+    - source-052
+    - source-199
+    - source-208
+    - source-209
+    - source-226
+    - source-227
+  - name: scientific-scope
+    value: chemical-context seed
+    definition: Evidence supports annotated identity/composition and source-scoped
+      relations, not universal uptake, physiological occupancy, whole-pathway flux
+      or all enzyme-class members.
+    evidence_ids:
+    - source-052
+    - source-199
+    - source-208
+    - source-209
+    - source-226
+    - source-227
+- assessment_id: record-fmn
+  area: evidence
+  topic: Chemical identity, cofactor context, supplier form and scoped cross-corpus
+    links
+  outcome: supported
+  summary: Riboflavin is correctly typed as a precursor supplier rather than FMN itself.
+    The riboflavin-kinase pathway supports conversion to the declared FMN conjugate.
+    P38075 supports an issuing-database cofactor annotation without an explicit experimental
+    evidence code.
+  target_ids:
+  - CofactorMech:fmn
+  evidence_ids:
+  - source-125
+  - source-180
+  - source-200
+  - source-209
+  - source-210
+  - source-228
+  - source-229
+  dimensions:
+  - name: mim-link-status
+    value: PROVISIONAL
+    definition: Source ingredient ID and immutable path are retained pending the actual
+      published MIM identifier migration.
+    evidence_ids:
+    - source-125
+    - source-180
+    - source-200
+    - source-209
+    - source-210
+    - source-228
+    - source-229
+  - name: scientific-scope
+    value: chemical-context seed
+    definition: Evidence supports annotated identity/composition and source-scoped
+      relations, not universal uptake, physiological occupancy, whole-pathway flux
+      or all enzyme-class members.
+    evidence_ids:
+    - source-125
+    - source-180
+    - source-200
+    - source-209
+    - source-210
+    - source-228
+    - source-229
+- assessment_id: record-manganese
+  area: evidence
+  topic: Chemical identity, cofactor context, supplier form and scoped cross-corpus
+    links
+  outcome: supported
+  summary: Seven specified manganese(II) salts/hydrates supply the chemically grounded
+    ion. The retained SOD2 cofactor annotation is by similarity; the record does not
+    inflate it into a newly verified direct metal assay.
+  target_ids:
+  - CofactorMech:manganese
+  evidence_ids:
+  - source-078
+  - source-079
+  - source-080
+  - source-081
+  - source-082
+  - source-083
+  - source-085
+  - source-165
+  - source-167
+  - source-185
+  - source-189
+  - source-195
+  - source-197
+  - source-198
+  - source-219
+  - source-220
+  dimensions:
+  - name: mim-link-status
+    value: PROVISIONAL
+    definition: Source ingredient ID and immutable path are retained pending the actual
+      published MIM identifier migration.
+    evidence_ids:
+    - source-078
+    - source-079
+    - source-080
+    - source-081
+    - source-082
+    - source-083
+    - source-085
+    - source-165
+    - source-167
+    - source-185
+    - source-189
+    - source-195
+    - source-197
+    - source-198
+    - source-219
+    - source-220
+  - name: scientific-scope
+    value: chemical-context seed
+    definition: Evidence supports annotated identity/composition and source-scoped
+      relations, not universal uptake, physiological occupancy, whole-pathway flux
+      or all enzyme-class members.
+    evidence_ids:
+    - source-078
+    - source-079
+    - source-080
+    - source-081
+    - source-082
+    - source-083
+    - source-085
+    - source-165
+    - source-167
+    - source-185
+    - source-189
+    - source-195
+    - source-197
+    - source-198
+    - source-219
+    - source-220
+- assessment_id: record-nad
+  area: evidence
+  topic: Chemical identity, cofactor context, supplier form and scoped cross-corpus
+    links
+  outcome: supported
+  summary: The source and PTM concept identify the same NAD+ entity. The selected
+    WikiPathways edge produces the exact identifier. The link denotes source-scoped
+    reaction production, not complete pathway flux or organism uptake.
+  target_ids:
+  - CofactorMech:nad
+  evidence_ids:
+  - source-015
+  - source-182
+  - source-204
+  - source-205
+  dimensions:
+  - name: mim-link-status
+    value: PROVISIONAL
+    definition: Source ingredient ID and immutable path are retained pending the actual
+      published MIM identifier migration.
+    evidence_ids:
+    - source-015
+    - source-182
+    - source-204
+    - source-205
+  - name: scientific-scope
+    value: chemical-context seed
+    definition: Evidence supports annotated identity/composition and source-scoped
+      relations, not universal uptake, physiological occupancy, whole-pathway flux
+      or all enzyme-class members.
+    evidence_ids:
+    - source-015
+    - source-182
+    - source-204
+    - source-205
+- assessment_id: record-nickel
+  area: evidence
+  topic: Chemical identity, cofactor context, supplier form and scoped cross-corpus
+    links
+  outcome: supported
+  summary: Three nickel(II) suppliers retain the verified hydrate-to-parent composition
+    chain and explicit parent definition for oxidation state +2. The corrected locators
+    support each claim. The AllA pathway assertion is restricted to the reported nickel-dependent
+    purified-enzyme assay.
+  target_ids:
+  - CofactorMech:nickel
+  evidence_ids:
+  - source-104
+  - source-106
+  - source-109
+  - source-163
+  - source-169
+  - source-174
+  - source-221
+  - source-222
+  - alla-primary
+  - nickel-locator-rereview
+  dimensions:
+  - name: mim-link-status
+    value: PROVISIONAL
+    definition: Source ingredient ID and immutable path are retained pending the actual
+      published MIM identifier migration.
+    evidence_ids:
+    - source-104
+    - source-106
+    - source-109
+    - source-163
+    - source-169
+    - source-174
+    - source-221
+    - source-222
+    - alla-primary
+    - nickel-locator-rereview
+  - name: scientific-scope
+    value: chemical-context seed
+    definition: Evidence supports annotated identity/composition and source-scoped
+      relations, not universal uptake, physiological occupancy, whole-pathway flux
+      or all enzyme-class members.
+    evidence_ids:
+    - source-104
+    - source-106
+    - source-109
+    - source-163
+    - source-169
+    - source-174
+    - source-221
+    - source-222
+    - alla-primary
+    - nickel-locator-rereview
+- assessment_id: record-pyridoxal-phosphate
+  area: evidence
+  topic: Chemical identity, cofactor context, supplier form and scoped cross-corpus
+    links
+  outcome: supported
+  summary: The exact pyridoxal phosphate supplier and conceptual requirement are supported.
+    Biosynthesis refers to the explicitly distinct conjugate CHEBI:597326, backed
+    by retained conjugate relationships.
+  target_ids:
+  - CofactorMech:pyridoxal-phosphate
+  evidence_ids:
+  - source-119
+  - source-179
+  - source-213
+  - source-214
+  dimensions:
+  - name: mim-link-status
+    value: PROVISIONAL
+    definition: Source ingredient ID and immutable path are retained pending the actual
+      published MIM identifier migration.
+    evidence_ids:
+    - source-119
+    - source-179
+    - source-213
+    - source-214
+  - name: scientific-scope
+    value: chemical-context seed
+    definition: Evidence supports annotated identity/composition and source-scoped
+      relations, not universal uptake, physiological occupancy, whole-pathway flux
+      or all enzyme-class members.
+    evidence_ids:
+    - source-119
+    - source-179
+    - source-213
+    - source-214
+- assessment_id: record-thiamine-diphosphate
+  area: evidence
+  topic: Chemical identity, cofactor context, supplier form and scoped cross-corpus
+    links
+  outcome: supported
+  summary: Exact thiamine diphosphate supplier and concept identifiers are supported.
+    The pathway and P83779 exemplar use the explicit conjugate CHEBI:58937. The enzyme
+    evidence is honestly by similarity to P06169 rather than a direct Candida albicans
+    assay.
+  target_ids:
+  - CofactorMech:thiamine-diphosphate
+  evidence_ids:
+  - source-136
+  - source-171
+  - source-186
+  - source-215
+  - source-216
+  - source-230
+  - source-231
+  - source-232
+  dimensions:
+  - name: mim-link-status
+    value: PROVISIONAL
+    definition: Source ingredient ID and immutable path are retained pending the actual
+      published MIM identifier migration.
+    evidence_ids:
+    - source-136
+    - source-171
+    - source-186
+    - source-215
+    - source-216
+    - source-230
+    - source-231
+    - source-232
+  - name: scientific-scope
+    value: chemical-context seed
+    definition: Evidence supports annotated identity/composition and source-scoped
+      relations, not universal uptake, physiological occupancy, whole-pathway flux
+      or all enzyme-class members.
+    evidence_ids:
+    - source-136
+    - source-171
+    - source-186
+    - source-215
+    - source-216
+    - source-230
+    - source-231
+    - source-232
+- assessment_id: record-zinc
+  area: evidence
+  topic: Chemical identity, cofactor context, supplier form and scoped cross-corpus
+    links
+  outcome: supported
+  summary: Three specified zinc(II) suppliers support composition. The retained riboflavin-biosynthesis
+    pathway edge uses the exact zinc ion. Supply and conceptual requirement links
+    remain separate from organism bioavailability.
+  target_ids:
+  - CofactorMech:zinc
+  evidence_ids:
+  - source-158
+  - source-160
+  - source-161
+  - source-166
+  - source-181
+  - source-183
+  - source-191
+  - source-209
+  - source-218
+  dimensions:
+  - name: mim-link-status
+    value: PROVISIONAL
+    definition: Source ingredient ID and immutable path are retained pending the actual
+      published MIM identifier migration.
+    evidence_ids:
+    - source-158
+    - source-160
+    - source-161
+    - source-166
+    - source-181
+    - source-183
+    - source-191
+    - source-209
+    - source-218
+  - name: scientific-scope
+    value: chemical-context seed
+    definition: Evidence supports annotated identity/composition and source-scoped
+      relations, not universal uptake, physiological occupancy, whole-pathway flux
+      or all enzyme-class members.
+    evidence_ids:
+    - source-158
+    - source-160
+    - source-161
+    - source-166
+    - source-181
+    - source-183
+    - source-191
+    - source-209
+    - source-218
+- assessment_id: disposition-deferred-mixture
+  area: scope
+  topic: Candidate disposition and boundary of promotion
+  outcome: supported
+  summary: All 30 formulations/mixtures remain deferred because their named mixture
+    alone cannot establish a single exact active cofactor species. Deferral makes
+    no claim that the mixture lacks biological activity.
+  target_ids:
+  - candidate-ee90f6fa3c70309b
+  - candidate-36ba402a461281c5
+  - candidate-69ee94c77ad7ece9
+  - candidate-9fa8e3d2bfde3386
+  - candidate-ed8e2e0c812cde8e
+  - candidate-9122c364d42e8559
+  - candidate-797da68010f27377
+  - candidate-6e86be68514526f1
+  - candidate-563f15322b1ebf74
+  - candidate-538c2f8709942c4c
+  - candidate-bf272107d1740429
+  - candidate-062dbe4934b5bca6
+  - candidate-3d1ab6b2c38d6965
+  - candidate-89fa0b81bc6b59ff
+  - candidate-5f6e83f9b42d5ad3
+  - candidate-38fd3e685f44b6cf
+  - candidate-f790d2e32ec35d95
+  - candidate-a8b003fd9b7bff0e
+  - candidate-4753354366bfc026
+  - candidate-78ea6a14a080dbf0
+  - candidate-1a9f0e0e728260f4
+  - candidate-f1ed5a2e1a362e7c
+  - candidate-76e70d675ccceba2
+  - candidate-6f7461b8e7007457
+  - candidate-b3239724e22c2717
+  - candidate-1d75635b5f764a44
+  - candidate-4a445e71fe30bfaa
+  - candidate-eba48f413770a1fe
+  - candidate-367d576718228f0e
+  - candidate-a40e126a67bee709
+  evidence_ids:
+  - inventory
+  - source-001
+  - source-005
+  - source-006
+  - source-009
+  - source-017
+  - source-048
+  - source-049
+  - source-064
+  - source-068
+  - source-069
+  - source-070
+  - source-071
+  - source-074
+  - source-115
+  - source-129
+  - source-130
+  - source-135
+  - source-138
+  - source-139
+  - source-140
+  - source-142
+  - source-143
+  - source-144
+  - source-148
+  - source-149
+  - source-150
+  - source-154
+  - source-155
+  - source-156
+  - source-157
+- assessment_id: disposition-curated-supplier-link
+  area: scope
+  topic: Candidate disposition and boundary of promotion
+  outcome: supported
+  summary: All 28 promoted candidate paths correspond to actual source-matched supplier
+    links. Direct chemical identities, the riboflavin precursor relation, and specified
+    metal salt/hydrate composition are kept distinct; no organism uptake is inferred.
+  target_ids:
+  - candidate-f0d0c59872b26b61
+  - candidate-9b2dcfd7a3735c04
+  - candidate-7d94fef282a9db36
+  - candidate-762de7be4c229f0b
+  - candidate-f9db6fc3a8d2618f
+  - candidate-aa0894de29adcb5c
+  - candidate-ee89ac5730b0d030
+  - candidate-04b99bf093c23316
+  - candidate-0d11301b4e402fe3
+  - candidate-f06b20ef756002a1
+  - candidate-0ec03978bae241d4
+  - candidate-7baa5feffa5690ec
+  - candidate-d97584845be8a823
+  - candidate-8fe9ff348804a593
+  - candidate-b4a98a3100fb1fdb
+  - candidate-4508428623ecf316
+  - candidate-29aef4ebc57de03a
+  - candidate-8a0986b422795927
+  - candidate-b7cbc0048d090fd2
+  - candidate-77687c39e6747459
+  - candidate-3dcf9e2ccc32a7aa
+  - candidate-4c5453e4c4053d5c
+  - candidate-b5eae47b8dc1770f
+  - candidate-59776f859c41300d
+  - candidate-92372a0a8f9ff917
+  - candidate-9aa86894462c89ae
+  - candidate-bdad169b1912c616
+  - candidate-98cb1d7d228701e5
+  evidence_ids:
+  - inventory
+  - source-002
+  - source-015
+  - source-016
+  - source-027
+  - source-028
+  - source-029
+  - source-032
+  - source-033
+  - source-038
+  - source-039
+  - source-040
+  - source-052
+  - source-078
+  - source-079
+  - source-080
+  - source-081
+  - source-082
+  - source-083
+  - source-085
+  - source-104
+  - source-106
+  - source-109
+  - source-119
+  - source-125
+  - source-136
+  - source-158
+  - source-160
+  - source-161
+- assessment_id: disposition-deferred-vitamin-or-precursor
+  area: scope
+  topic: Candidate disposition and boundary of promotion
+  outcome: supported
+  summary: All 38 vitamin/precursor candidates remain a research backlog. A nutritional
+    role or precursor name alone does not establish the active cofactor entity or
+    its exact biosynthetic relation.
+  target_ids:
+  - candidate-6ad3cf8f490598d1
+  - candidate-24b128e21bd5079c
+  - candidate-dc2f661688317689
+  - candidate-d2b9e3d9130bc906
+  - candidate-d675462d90274ebd
+  - candidate-d504846cee0b4a77
+  - candidate-3a3d3166b2faac3e
+  - candidate-257276526125ced0
+  - candidate-53cca7998b1cb5bf
+  - candidate-fc2f1c8e1973820c
+  - candidate-df97a65c35115640
+  - candidate-c061f80d9a1b713d
+  - candidate-235fa915e6835391
+  - candidate-6dfe51b0035d8b37
+  - candidate-af4eca52410fc28c
+  - candidate-0e9cd469f9390561
+  - candidate-679b63fe887c224b
+  - candidate-5a9e2f914dd48794
+  - candidate-1460ff9880c39741
+  - candidate-c648fe682ab04504
+  - candidate-2acc28cf88424a26
+  - candidate-f0957b4f878bad9c
+  - candidate-72f1454e13a59047
+  - candidate-1c3e5b93c7b8ba06
+  - candidate-1bbf30e5cbec5335
+  - candidate-3b74e442106e38d0
+  - candidate-3702a926465dd764
+  - candidate-ab5a6786004592e6
+  - candidate-e807ce425b003386
+  - candidate-aa2be19f8423496d
+  - candidate-dff17523de241273
+  - candidate-50d3d5c3c8b8e265
+  - candidate-615b0d99b5f72b86
+  - candidate-c375e99738c7374d
+  - candidate-b75b34c4ba40b278
+  - candidate-c5452544f5171e8b
+  - candidate-f9ecdfe63885336a
+  - candidate-b21faf34879b78a3
+  evidence_ids:
+  - inventory
+  - source-003
+  - source-004
+  - source-013
+  - source-018
+  - source-019
+  - source-020
+  - source-021
+  - source-047
+  - source-051
+  - source-056
+  - source-057
+  - source-063
+  - source-065
+  - source-066
+  - source-067
+  - source-072
+  - source-073
+  - source-087
+  - source-088
+  - source-110
+  - source-111
+  - source-114
+  - source-116
+  - source-117
+  - source-118
+  - source-120
+  - source-121
+  - source-122
+  - source-123
+  - source-124
+  - source-131
+  - source-132
+  - source-133
+  - source-134
+  - source-137
+  - source-146
+  - source-147
+  - source-162
+- assessment_id: disposition-deferred-metal-or-nonmetal
+  area: scope
+  topic: Candidate disposition and boundary of promotion
+  outcome: supported
+  summary: All 53 metal/nonmetal candidates remain a research backlog; elemental or
+    trace-nutrient assignment alone does not establish ion speciation and cofactor
+    function.
+  target_ids:
+  - candidate-e9b3648170ca8260
+  - candidate-cf459abf24c1d0ae
+  - candidate-3a90e79f74a45533
+  - candidate-05576c16ea52edad
+  - candidate-6fc193ae5a854a22
+  - candidate-3744546993318eba
+  - candidate-a220ec1a5729adb6
+  - candidate-519a491ff5cbc19d
+  - candidate-796a6ace4fb45575
+  - candidate-6cbe62046ff5e4c3
+  - candidate-e5bf6680401f7d2c
+  - candidate-8676312e396cd528
+  - candidate-3d0d09563c316e26
+  - candidate-f1f1d8955cf2c98a
+  - candidate-0a2ba25c5a81e7a8
+  - candidate-4ff89eb991f78308
+  - candidate-3aed449d9b4200ac
+  - candidate-41f4535c09a79d8e
+  - candidate-efa8f3ce848e6134
+  - candidate-06cfe15b0880f8b6
+  - candidate-afdea23bff1509dd
+  - candidate-210cbb9879522b68
+  - candidate-b5b196e022fb02fc
+  - candidate-a4c3e9ae8efce8fa
+  - candidate-e5f54c96163d2705
+  - candidate-f57a467dbfb714a2
+  - candidate-6c3a726bdb81a718
+  - candidate-bf91a719f65368fc
+  - candidate-fa80b058812c8549
+  - candidate-37e19515a9bf6799
+  - candidate-80c090c120505e67
+  - candidate-d41203d614779c47
+  - candidate-e13ee66355bbb0cf
+  - candidate-f46d08e37ba3d370
+  - candidate-07f709f34ed0ea0a
+  - candidate-fd11327c1aa911c9
+  - candidate-72fc6ab22e3eb78d
+  - candidate-3caced37c68a8c8e
+  - candidate-2c4799e33df88fc4
+  - candidate-135734c948bce49a
+  - candidate-a5a4a1ff290df2c1
+  - candidate-3e71b213b68d6716
+  - candidate-b952cb59a98f5746
+  - candidate-5e4138c912ba3b4c
+  - candidate-19b63a6ad1ce6109
+  - candidate-4989d071844b4403
+  - candidate-abd533b528463404
+  - candidate-edb69fb35eaf3b37
+  - candidate-02608edf7d339331
+  - candidate-75106bf5336176fe
+  - candidate-dd3b36dc9359254c
+  - candidate-44b6d3ce812240de
+  - candidate-cf658bb0a67c7a74
+  evidence_ids:
+  - inventory
+  - source-007
+  - source-008
+  - source-010
+  - source-011
+  - source-012
+  - source-014
+  - source-022
+  - source-024
+  - source-025
+  - source-026
+  - source-034
+  - source-035
+  - source-037
+  - source-042
+  - source-045
+  - source-046
+  - source-050
+  - source-054
+  - source-055
+  - source-058
+  - source-059
+  - source-060
+  - source-061
+  - source-075
+  - source-076
+  - source-077
+  - source-086
+  - source-089
+  - source-090
+  - source-091
+  - source-092
+  - source-093
+  - source-094
+  - source-095
+  - source-096
+  - source-097
+  - source-098
+  - source-099
+  - source-100
+  - source-101
+  - source-102
+  - source-103
+  - source-105
+  - source-112
+  - source-113
+  - source-126
+  - source-127
+  - source-128
+  - source-141
+  - source-151
+  - source-152
+  - source-153
+  - source-159
+- assessment_id: disposition-deferred-chemical-identity
+  area: scope
+  topic: Candidate disposition and boundary of promotion
+  outcome: supported
+  summary: All 12 candidates retain a registry or provisional identity rather than
+    a verified exact salt/hydrate/material ontology mapping. Deferral preserves uncertainty
+    and does not silently infer speciation from a name.
+  target_ids:
+  - candidate-e06c987d8ce4121b
+  - candidate-e6bce3f910a889a5
+  - candidate-f7073b8138fa8e4e
+  - candidate-4e80df1ec775dd84
+  - candidate-87f6576606d1c4ff
+  - candidate-b73d8ea700a6b07d
+  - candidate-5b8ceb5e216ceae4
+  - candidate-0342a970229031a5
+  - candidate-4560fc6cc7fa4ad9
+  - candidate-5f2d78dbe06a0f9d
+  - candidate-9cfedbb214901aee
+  - candidate-83cbeeeafb19f31c
+  evidence_ids:
+  - inventory
+  - source-023
+  - source-030
+  - source-031
+  - source-036
+  - source-041
+  - source-043
+  - source-044
+  - source-053
+  - source-084
+  - source-107
+  - source-108
+  - source-145
+- assessment_id: disposition-deferred-cofactor-chemistry
+  area: scope
+  topic: Candidate disposition and boundary of promotion
+  outcome: supported
+  summary: 'The hemin candidate is appropriately deferred: chloridoiron(III) identity
+    is not substituted for ferroheme, ferriheme or a generic heme requirement.'
+  target_ids:
+  - candidate-f3a8229a11e444a8
+  evidence_ids:
+  - inventory
+  - source-062
+findings: []
+actions: []
+limitations:
+- 'The requested eight COFACTOR_PROVIDER ingredients were not reproduced: the pinned
+  source has four current-role records. Vitamin-source 57 records contain 58 assertions;162
+  unique candidates are fully accounted for.'
+- The 134 deferred candidates remain an explicit research backlog; their dispositions
+  are not negative claims about biological activity and this 14-record seed is not
+  complete cofactor coverage.
+- All MIM links remain provisional pending actual publication of the MIM stable-ID
+  migration; source commit,path and legacy identifier preserve the reviewed identity.
+- PTM requirement concepts are conceptual coverage, not organism measurements. The
+  three named enzyme examples do not establish universal EC-class dependence; FMN
+  is annotation-only and thiamine is by similarity.
+- Database role annotations, chemical composition and selected pathway edges do not
+  prove uptake, bioavailability, physiological occupancy, complete pathway flux or
+  all organism requirements.
+- The review checked original corpus hashes/projections and issuing-database annotations;
+  it did not independently reanalyse every cited primary study. Two scoped metal-enzyme
+  contexts received supplemental primary-paper review.
+- Source projections retain selected facts rather than whole upstream documents; their
+  original-source digests are integrity references, not cryptographic authenticity
+  attestations.
+- The 3 skipped tests are empty command-contract parameter cases, not missing scientific
+  assessments. Remote CI/release governance and merge decisions remain separate from
+  this scientific verdict.
+notes:
+- 'Three implementation acceptance-boundary findings (#3,#4,#6) were filed, fixed
+  with regression/mutation controls and independently re-tested; the actual initial
+  record links were correct. The minor record evidence-locator finding #8 was fixed
+  by native history. These pre-bundle issue records are documented here without inventing
+  earlier governed finding lineage.'
+- This immutable review assesses source.state=git_commit at the recorded revision.
+  A later commit adding this review changes repository HEAD but not the reviewed scientific
+  input bytes.
+links:
+- https://github.com/CultureBotAI/CofactorMech/pull/5
+- https://github.com/CultureBotAI/CofactorMech/issues/3
+- https://github.com/CultureBotAI/CofactorMech/issues/4
+- https://github.com/CultureBotAI/CofactorMech/issues/6
+- https://github.com/CultureBotAI/CofactorMech/issues/8
+tags:
+- initial-seed
+- independent-review
+- chemical-speciation
+- full-candidate-ledger
+```

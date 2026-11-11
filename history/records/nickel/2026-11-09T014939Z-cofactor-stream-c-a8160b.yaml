@@ -1,0 +1,27 @@
+{
+  "history_version": 1,
+  "target": {
+    "kind": "record",
+    "path": "data/cofactors/nickel.yaml",
+    "slug": "nickel"
+  },
+  "session": {
+    "id": "2026-11-09T014939Z-cofactor-stream-c-a8160b",
+    "timestamp": "2026-11-09T01:49:39Z",
+    "actors": [
+      {
+        "type": "ai_agent",
+        "name": "cofactor-stream-c",
+        "agent_tool": "codex"
+      }
+    ]
+  },
+  "events": [
+    {
+      "type": "EDIT",
+      "outcome": "changed",
+      "summary": "Correct nickel supplier evidence locators after independent review",
+      "details": "Addresses CofactorMech issue8. Removed three redundant CHEBI34887 ontology_relations citations that did not themselves establish nickel oxidation state +2. Retained the exact nickel-dichloride definition supporting +2 and the hexahydrate53542 has-part34887 relationship. Chemical identities and supply links are unchanged."
+    }
+  ]
+}
