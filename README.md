@@ -36,3 +36,12 @@ No automatic merge is authorized by this scaffold. Independent review, fixes, re
 Original code and schemas are offered under CC0. Curated scientific records are CC-BY-4.0, retaining upstream attribution and source licences; imported or vendored files retain their original notices. External sources are cited rather than copied wholesale. The history command emits deterministic JSON, a strict subset of YAML, as this repository's native record format.
 
 Shared `kg_microbe_write.dump_record` intentionally refuses this corpus while its fleet serialization profile is unverified. Native authoring owns the JSON-as-YAML representation; it is not a general cross-corpus serializer.
+
+## Static catalogue
+
+Run `just build-site` and `just check-site` to produce the complete catalogue and
+record pages in `build/site/`. Open it through a local HTTP server. No JavaScript
+is needed to read records; search and category filters progressively enhance the
+complete table. See [site development and deployment](docs/site.md) for source
+ownership, reproducibility, browser verification, and the separately approved
+Pages configuration and rollback procedure. This PR does not enable or deploy Pages.

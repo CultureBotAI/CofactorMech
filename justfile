@@ -6,7 +6,7 @@ default:
 check: lint validate audit-seed test
 
 lint:
-    uv run --locked ruff check src tests/test_native.py scripts/check_review_event_base.py tests/test_review_event_base.py tests/test_seed_evidence.py
+    uv run --locked ruff check src tests/test_native.py scripts/check_review_event_base.py tests/test_review_event_base.py tests/test_seed_evidence.py tests/test_site.py scripts/adhoc/verify_site_browser.py
 
 validate:
     uv run --locked cofactormech validate
@@ -35,3 +35,10 @@ check-review-event-base:
 
 audit-seed:
     uv run --locked python -m cofactormech.seed_audit
+
+# Deterministic generated output stays under ignored build/site.
+build-site:
+    uv run --locked python -m cofactormech.site
+
+check-site:
+    uv run --locked python -m cofactormech.site --check

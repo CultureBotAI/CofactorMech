@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Evidence-backed microbial cofactors, source records and scoped cross-corpus relationships.">
+  <title>{% block title %}{{ project }}{% endblock %}</title>
+  <link rel="icon" type="image/svg+xml" href="{{ prefix }}assets/icon.svg">
+  <link rel="stylesheet" href="{{ prefix }}assets/site.css">
+  {% if catalogue %}<script src="{{ prefix }}assets/catalogue.js" defer></script>{% endif %}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="shell"><nav aria-label="Main navigation"><a class="brand" href="{{ prefix }}index.html">{{ project }}</a><a href="https://culturebotai.github.io/mechs/">All Mech projects</a><a href="{{ github }}">Repository</a></nav></header>
+<main id="main" class="shell" tabindex="-1">{% block content %}{% endblock %}</main>
+<footer class="shell">
+  <p>Curated records: CC-BY-4.0, with upstream attribution. Code and schemas: CC0. <a href="{{ prefix }}LICENSE.txt">Licence and notices</a>.</p>
+  <p><a href="{{ prefix }}schema/{{ schema_name }}">LinkML schema</a> · <a href="{{ prefix }}site-manifest.json">Corpus manifest</a> · <a href="{{ github }}/blob/{{ revision }}/data/provenance/README.md">Seed provenance and limitations</a></p>
+  <p class="stamp">Corpus: {{ count }} records · SHA-256 <code>{{ corpus_stamp }}</code><br>Schema SHA-256 <code>{{ schema_hash }}</code><br>Repository revision <a href="{{ github }}/commit/{{ revision }}"><code>{{ revision }}</code></a></p>
+</footer>
+</body>
+</html>

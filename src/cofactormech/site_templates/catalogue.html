@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Cofactor catalogue | {{ project }}{% endblock %}
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">Microbial chemistry · curated sources</p>
+  <h1>Cofactors, with their context</h1>
+  <p>Explore {{ count }} coenzymes, prosthetic groups and metal ions, with evidence attached to their chemical identities and cross-corpus relationships.</p>
+  <p class="notice">An ingredient supply link does not establish uptake, bioavailability or a requirement for every organism. Provisional ingredient relationships remain explicitly labelled.</p>
+</section>
+<section aria-labelledby="categories-title">
+  <h2 id="categories-title">Browse categories</h2>
+  <ul class="category-grid">{% for category, total in categories.items() %}<li><strong>{{ category|label }}</strong><span>{{ total }} records</span></li>{% endfor %}</ul>
+  <p class="muted">Category counts can overlap when a record has more than one category.</p>
+</section>
+<section aria-labelledby="catalogue-title">
+  <h2 id="catalogue-title">Record catalogue</h2>
+  <div id="controls" hidden>
+    <form id="search-form" role="search">
+      <div><label for="query">Search names or identifiers</label><input id="query" name="q" type="search" placeholder="FAD, CofactorMech:fad, CHEBI:16238" aria-describedby="search-help"></div>
+      <div><label for="category">Category</label><select id="category" name="category"><option value="">All categories</option>{% for category in categories %}<option value="{{ category }}">{{ category|label }}</option>{% endfor %}</select></div>
+      <button type="reset">Reset filters</button>
+    </form>
+    <p id="search-help">Matches record names, CofactorMech identifiers and chemical identifiers in this complete catalogue.</p>
+  </div>
+  <noscript><p class="notice">All {{ count }} records are shown below. Use your browser’s Find command to search this page; every record and source link works without JavaScript.</p></noscript>
+  <p id="result-count" role="status" aria-live="polite">Showing {{ count }} of {{ count }} records.</p>
+  <p id="no-results" hidden>No matching records. Change your search or reset the filters.</p>
+  <div class="table-scroll" role="region" aria-label="Cofactor catalogue table" tabindex="0">
+    <table><caption>Complete CofactorMech catalogue</caption><thead><tr><th scope="col">Name and record</th><th scope="col">Chemical identifier</th><th scope="col">Categories</th><th scope="col">Relationships and gaps</th></tr></thead>
+      <tbody id="records">{% for record in records %}
+      <tr data-record data-search="{{ record.name }} {{ record.id }} {{ record.chemical_id }}" data-categories="{{ record.categories|join('|') }}">
+        <th scope="row"><a href="records/{{ record.slug }}/index.html">{{ record.name }}</a><small>{{ record.id }}</small></th>
+        <td><code>{{ record.chemical_id }}</code></td><td>{% for category in record.categories %}<span class="badge">{{ category|label }}</span>{% endfor %}</td>
+        <td>{{ record.related_records|default([])|length }} links · {{ record.research_gaps|default([])|length }} recorded gaps</td>
+      </tr>{% endfor %}</tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}
