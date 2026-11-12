@@ -145,3 +145,12 @@ def test_deleted_record_cannot_claim_full_committed_corpus(built):
     finally:
         for path, raw in originals.items():
             path.write_bytes(raw)
+
+
+def test_review_artifact_includes_only_the_complete_generated_site():
+    workflow = yaml.safe_load((ROOT / ".github/workflows/pages.yaml").read_text())
+    upload = next(step for step in workflow["jobs"]["build-site"]["steps"]
+                  if step.get("uses", "").startswith("actions/upload-artifact@"))
+    assert upload["with"]["path"] == "build/site"
+    assert upload["with"]["include-hidden-files"] is True
+    assert upload["with"]["if-no-files-found"] == "error"
