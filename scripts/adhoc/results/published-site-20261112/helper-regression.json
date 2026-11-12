@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-12T06:06:56.431176+00:00",
+  "tracking_issue": "https://github.com/CultureBotAI/CofactorMech/issues/19",
+  "helper_sha256": "680972eafcbc4851cc90c430bb0e41ff2c22768b3a9df2f3078f07dbc13976ba",
+  "fixture_source_revision": "b2fa7dd55e391f71841105cce4941588b8718730",
+  "noop_filter_mutation": {
+    "fixture": "selected category with no-op filtering; all rows remain visible",
+    "selected": "COENZYME",
+    "visible": 14,
+    "expected": 6,
+    "previous_weak_predicate_accepts": true,
+    "corrected_guard_rejects": true
+  },
+  "restored_category_check": {
+    "selected": "COENZYME",
+    "expected": 6,
+    "visible": 6,
+    "all_visible_records_belong": true
+  },
+  "empty_selection_rejected": true,
+  "wrong_membership_rejected": true,
+  "archive_pair_valid": true,
+  "review_files": 39,
+  "pages_files": 37,
+  "changed_pages_byte_rejected": true,
+  "missing_pages_file_rejected": true,
+  "restored_archive_pair_passes": true
+}

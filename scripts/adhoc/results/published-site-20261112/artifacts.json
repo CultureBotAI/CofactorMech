@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-12T06:16:28.026641+00:00",
+  "run_id": 43166403192,
+  "head_sha": "89a8ca3b37b4cd3607fdbb0b74b7b73c5c539fee",
+  "artifacts": [
+    {
+      "id": 13920312209,
+      "name": "github-pages",
+      "api_digest": "sha256:7c5df813954a68294598be8c77122fced72f2a809f2e59a82d124b64cbab8248",
+      "zip_sha256": "7c5df813954a68294598be8c77122fced72f2a809f2e59a82d124b64cbab8248",
+      "zip_bytes": 33922,
+      "zip_entries": 1
+    },
+    {
+      "id": 13919963554,
+      "name": "catalogue-site",
+      "api_digest": "sha256:b7788be33945b0220abc2f63d4e72382a5ee626d17fe1315dcc45d2422c140ff",
+      "zip_sha256": "b7788be33945b0220abc2f63d4e72382a5ee626d17fe1315dcc45d2422c140ff",
+      "zip_bytes": 88247,
+      "zip_entries": 39
+    }
+  ],
+  "pages_tar_sha256": "eed530a2953a38ad556050eab28297365475be9181cfc91389f6b5cd0d3ef370",
+  "review_file_count": 39,
+  "pages_file_count": 37,
+  "manifest_sha256": "7fdd40c68748a76271fd8867a01e21f00077508191b516cfed24192f1f221ae6",
+  "record_count": 14,
+  "all_deployed_bytes_equal_review": true
+}

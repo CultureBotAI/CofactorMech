@@ -1,0 +1,563 @@
+{
+  "archive_inventory_proof": {
+    "all_pages_bytes_equal_review": true,
+    "excluded_review_markers": [
+      ".nojekyll",
+      ".site-generated"
+    ],
+    "packager_exclusion": "--exclude=\".[^/]*\"",
+    "pages_files": [
+      "LICENSE.txt",
+      "assets/catalogue.js",
+      "assets/icon.svg",
+      "assets/site.css",
+      "index.html",
+      "records/biotin/index.html",
+      "records/cobalamin/index.html",
+      "records/cobalt/index.html",
+      "records/coenzyme-a/index.html",
+      "records/coenzyme-m/index.html",
+      "records/copper/index.html",
+      "records/fad/index.html",
+      "records/fmn/index.html",
+      "records/manganese/index.html",
+      "records/nad/index.html",
+      "records/nickel/index.html",
+      "records/pyridoxal-phosphate/index.html",
+      "records/thiamine-diphosphate/index.html",
+      "records/zinc/index.html",
+      "schema/cofactormech.yaml",
+      "schema/history.yaml",
+      "schema/mech_shared.yaml",
+      "site-manifest.json",
+      "sources/biotin.yaml",
+      "sources/cobalamin.yaml",
+      "sources/cobalt.yaml",
+      "sources/coenzyme-a.yaml",
+      "sources/coenzyme-m.yaml",
+      "sources/copper.yaml",
+      "sources/fad.yaml",
+      "sources/fmn.yaml",
+      "sources/manganese.yaml",
+      "sources/nad.yaml",
+      "sources/nickel.yaml",
+      "sources/pyridoxal-phosphate.yaml",
+      "sources/thiamine-diphosphate.yaml",
+      "sources/zinc.yaml"
+    ],
+    "pages_files_sha256": {
+      "LICENSE.txt": "f8939ef6e5bebae0bb1c06845fd97a0af36906b054d378ae21e217597e2d43c7",
+      "assets/catalogue.js": "c305b4eb92c45c22d196e3afa8880b9a2705baf9d24e1b2e38ab4cf89eb663cd",
+      "assets/icon.svg": "f9dd9363d6fed10ba30352f327407be9dc718d640de35f74d0dcc06e950f0b43",
+      "assets/site.css": "7a94c9d6c4abd1b762aea70b31528645c1ddc4cef8aae0f81b3ecc166774e3f6",
+      "index.html": "59080eafe63c84db33fd54fb759b59bb07d5410ec95e7596ef7f075980b2b39a",
+      "records/biotin/index.html": "f6b63d2f7976bbaa9a06a2be975fc8b8c14fffd4f163764b2871cb166a16b831",
+      "records/cobalamin/index.html": "84c03afd00e4a874bb4f3c9f8aa2da114aac73e6510931dd3ce95688c06dae80",
+      "records/cobalt/index.html": "036e65b4a30062d3bcf2c34968a83e52001bcad973682e41496b25114efd0306",
+      "records/coenzyme-a/index.html": "423fd3cad81cbaa4908484731602d2d6bb1b0d691841f0ef5742a49f708fe169",
+      "records/coenzyme-m/index.html": "f7a6cb87e17f26c0e24e0da679f3800735c21ca9f3f24f70f356fde362ae3436",
+      "records/copper/index.html": "607fb7dc22f4b8ff004ebe8a54eb4cc4f3e3f9396f7a73328b4a59020f047839",
+      "records/fad/index.html": "18dceeed331c840e8d60c2dabb9834b875f7a21097d9c57460017e202826617b",
+      "records/fmn/index.html": "5f42fbbb3e718c1827ea65774b0641aa15b5b91eaecfbe48a3d1eafe701cd7d0",
+      "records/manganese/index.html": "dc2c5b155b93d4ffdad180b7380ecc71d644ba199fd059028afb22bb7fa1b215",
+      "records/nad/index.html": "3a101850e1993f48008cc0ece4ff0fd4352bead9a2c6681a2ff97a59f5575890",
+      "records/nickel/index.html": "a441f853c432000e85c467dd882d9071a8cac8183a478f766153c7ebdbc8c297",
+      "records/pyridoxal-phosphate/index.html": "3ef7c6210d1913753d3859c25c30982e5ddb5c1701bd93968a77b59b42c7621d",
+      "records/thiamine-diphosphate/index.html": "66627c3ecda2721798645fd12d17df57e11e4b5d29bd128d7ee984c47a3efa30",
+      "records/zinc/index.html": "fec8ae37c7214a77ec43149851e5a854f2038720c9c9afb055a8cb9beeba3f4b",
+      "schema/cofactormech.yaml": "0714d6d23acda08f70e4292799be5ec65946c92fc1ca786dc4d89053e17f9ceb",
+      "schema/history.yaml": "b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d",
+      "schema/mech_shared.yaml": "c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895",
+      "site-manifest.json": "7fdd40c68748a76271fd8867a01e21f00077508191b516cfed24192f1f221ae6",
+      "sources/biotin.yaml": "4aa3fa6820fc5f69c9557e102bdc445ceac0341fd39103f126e5d7d5c37f0e49",
+      "sources/cobalamin.yaml": "c8099553de2fb6439ef61e5d35857ed6bc6e5de13643a966ea95ef92dd107185",
+      "sources/cobalt.yaml": "f63ba23c5d1d5b9a5e2b0c995b375031af4921b857081c7ba1d1189e976ada7a",
+      "sources/coenzyme-a.yaml": "72f037345d8b641dfde95aaaef72c1f5d4ed87415382e1f91ddf39bf26935762",
+      "sources/coenzyme-m.yaml": "68e6d35eadfd54caa192b2ef558c5ae9f986a9adf56f854b16ff21e5030a2d29",
+      "sources/copper.yaml": "ce23ed55ba8b03986b37c90a6f72c03d26011f8fedbffd008bf5435f5305df05",
+      "sources/fad.yaml": "aacef1736905d6f16a39dfffb16b73be914ba2db52019efc7078548e936c4608",
+      "sources/fmn.yaml": "c11408916e5f00244286303b602a309cc80196bfad2ab6a04ec02e66edcb8e4f",
+      "sources/manganese.yaml": "d5d68a8b55dc106d0a73f3ca7b2afb3d0e46b4094d702bcbaa067836591536fd",
+      "sources/nad.yaml": "b4517bf1676e9dc3e2eec38085925418c3427eedfd16e468966dea900b3b247b",
+      "sources/nickel.yaml": "eb80016cac7b53994c6d36bdaef05eb8ad30de0a908f8ca7947632a10b2108b6",
+      "sources/pyridoxal-phosphate.yaml": "b79b1de956fe68047ea6085aed48eedf05ea5eb134fba4d67120e331178c7311",
+      "sources/thiamine-diphosphate.yaml": "6f5d50161f226c9bfc4c88947ba6b6144ae3f4a9c8ff74f58bd0865818743d23",
+      "sources/zinc.yaml": "5a58b9b607e4332693081a5af5a43cc7a06a1a539d2cc0421c2e001f18366ae8"
+    },
+    "pages_packager_revision": "7b1f4a764d45c48632c6b24a0339c27f5614fb0b",
+    "review_files": [
+      ".nojekyll",
+      ".site-generated",
+      "LICENSE.txt",
+      "assets/catalogue.js",
+      "assets/icon.svg",
+      "assets/site.css",
+      "index.html",
+      "records/biotin/index.html",
+      "records/cobalamin/index.html",
+      "records/cobalt/index.html",
+      "records/coenzyme-a/index.html",
+      "records/coenzyme-m/index.html",
+      "records/copper/index.html",
+      "records/fad/index.html",
+      "records/fmn/index.html",
+      "records/manganese/index.html",
+      "records/nad/index.html",
+      "records/nickel/index.html",
+      "records/pyridoxal-phosphate/index.html",
+      "records/thiamine-diphosphate/index.html",
+      "records/zinc/index.html",
+      "schema/cofactormech.yaml",
+      "schema/history.yaml",
+      "schema/mech_shared.yaml",
+      "site-manifest.json",
+      "sources/biotin.yaml",
+      "sources/cobalamin.yaml",
+      "sources/cobalt.yaml",
+      "sources/coenzyme-a.yaml",
+      "sources/coenzyme-m.yaml",
+      "sources/copper.yaml",
+      "sources/fad.yaml",
+      "sources/fmn.yaml",
+      "sources/manganese.yaml",
+      "sources/nad.yaml",
+      "sources/nickel.yaml",
+      "sources/pyridoxal-phosphate.yaml",
+      "sources/thiamine-diphosphate.yaml",
+      "sources/zinc.yaml"
+    ]
+  },
+  "at": "2026-11-12T06:23:51.524598+00:00",
+  "browser_version": "157.0.8103.51",
+  "category_guard_fixture": {
+    "corrected_guard_rejects": true,
+    "expected": 6,
+    "fixture": "selected category with no-op filtering; all rows remain visible",
+    "previous_weak_predicate_accepts": true,
+    "selected": "COENZYME",
+    "visible": 14
+  },
+  "category_keyboard_sequence": [
+    "c",
+    "Enter"
+  ],
+  "category_selection": {
+    "all_visible_records_belong": true,
+    "expected": 6,
+    "selected": "COENZYME",
+    "visible": 6
+  },
+  "checks": [
+    "complete desktop/mobile catalogue",
+    "identifier/name search",
+    "category/reset",
+    "literal query and zero results",
+    "keyboard skip/focus/scroll",
+    "nested catalogue/detail/YAML/evidence links",
+    "no-JS catalogue/detail",
+    "no viewport overflow",
+    "computed text contrast >= 4.5",
+    "no JS/no-JS page, console, HTTP or request errors",
+    "published manifest and public files match deployment artifact",
+    "exact review/Pages archive inventory and byte comparison",
+    "explicit generated-dotfile review-artifact-only exceptions",
+    "category count and membership; no-op mutation rejected"
+  ],
+  "contrast_probes": [
+    {
+      "background": "rgb(245, 248, 250)",
+      "foreground": "rgb(24, 44, 61)",
+      "ratio": 13.426488596987378,
+      "selector": "body"
+    },
+    {
+      "background": "rgb(220, 239, 233)",
+      "foreground": "rgb(24, 44, 61)",
+      "ratio": 11.978469133761003,
+      "selector": ".hero h1"
+    },
+    {
+      "background": "rgb(245, 248, 250)",
+      "foreground": "rgb(24, 44, 61)",
+      "ratio": 13.426488596987378,
+      "selector": "#search-help"
+    },
+    {
+      "background": "rgb(245, 248, 250)",
+      "foreground": "rgb(20, 94, 84)",
+      "ratio": 7.137002809125883,
+      "selector": ".brand"
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "foreground": "rgb(20, 94, 84)",
+      "ratio": 7.611882166715252,
+      "selector": "table a"
+    },
+    {
+      "background": "rgb(220, 239, 233)",
+      "foreground": "rgb(24, 44, 61)",
+      "ratio": 11.978469133761003,
+      "selector": "button"
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "foreground": "rgb(66, 90, 109)",
+      "ratio": 7.204261837917761,
+      "selector": "small"
+    },
+    {
+      "background": "rgb(237, 244, 241)",
+      "foreground": "rgb(24, 44, 61)",
+      "ratio": 12.827421880633601,
+      "selector": ".badge"
+    }
+  ],
+  "external_reference_http_status": 200,
+  "failed_requests": [],
+  "http_errors": [],
+  "manifest_sha256": "7fdd40c68748a76271fd8867a01e21f00077508191b516cfed24192f1f221ae6",
+  "page_errors": [],
+  "passed": true,
+  "project": "CofactorMech",
+  "public_files": [
+    {
+      "artifact_sha256": "7fdd40c68748a76271fd8867a01e21f00077508191b516cfed24192f1f221ae6",
+      "bytes": 5828,
+      "path": "site-manifest.json",
+      "served_sha256": "7fdd40c68748a76271fd8867a01e21f00077508191b516cfed24192f1f221ae6",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": ".nojekyll",
+      "reason": "Pinned upload-pages-artifact excludes this generated dotfile",
+      "status": 404,
+      "verification": "review_artifact_only"
+    },
+    {
+      "artifact_sha256": "fe95f281b2ee98147ea85f08dcc78f6ee5e10e759ae5ff2bf90745bbc09c745b",
+      "path": ".site-generated",
+      "reason": "Pinned upload-pages-artifact excludes this generated dotfile",
+      "status": 404,
+      "verification": "review_artifact_only"
+    },
+    {
+      "artifact_sha256": "f8939ef6e5bebae0bb1c06845fd97a0af36906b054d378ae21e217597e2d43c7",
+      "bytes": 570,
+      "path": "LICENSE.txt",
+      "served_sha256": "f8939ef6e5bebae0bb1c06845fd97a0af36906b054d378ae21e217597e2d43c7",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "c305b4eb92c45c22d196e3afa8880b9a2705baf9d24e1b2e38ab4cf89eb663cd",
+      "bytes": 1531,
+      "path": "assets/catalogue.js",
+      "served_sha256": "c305b4eb92c45c22d196e3afa8880b9a2705baf9d24e1b2e38ab4cf89eb663cd",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "f9dd9363d6fed10ba30352f327407be9dc718d640de35f74d0dcc06e950f0b43",
+      "bytes": 268,
+      "path": "assets/icon.svg",
+      "served_sha256": "f9dd9363d6fed10ba30352f327407be9dc718d640de35f74d0dcc06e950f0b43",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "7a94c9d6c4abd1b762aea70b31528645c1ddc4cef8aae0f81b3ecc166774e3f6",
+      "bytes": 3557,
+      "path": "assets/site.css",
+      "served_sha256": "7a94c9d6c4abd1b762aea70b31528645c1ddc4cef8aae0f81b3ecc166774e3f6",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "59080eafe63c84db33fd54fb759b59bb07d5410ec95e7596ef7f075980b2b39a",
+      "bytes": 9478,
+      "path": "index.html",
+      "served_sha256": "59080eafe63c84db33fd54fb759b59bb07d5410ec95e7596ef7f075980b2b39a",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "f6b63d2f7976bbaa9a06a2be975fc8b8c14fffd4f163764b2871cb166a16b831",
+      "bytes": 8259,
+      "path": "records/biotin/index.html",
+      "served_sha256": "f6b63d2f7976bbaa9a06a2be975fc8b8c14fffd4f163764b2871cb166a16b831",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "84c03afd00e4a874bb4f3c9f8aa2da114aac73e6510931dd3ce95688c06dae80",
+      "bytes": 7031,
+      "path": "records/cobalamin/index.html",
+      "served_sha256": "84c03afd00e4a874bb4f3c9f8aa2da114aac73e6510931dd3ce95688c06dae80",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "036e65b4a30062d3bcf2c34968a83e52001bcad973682e41496b25114efd0306",
+      "bytes": 12170,
+      "path": "records/cobalt/index.html",
+      "served_sha256": "036e65b4a30062d3bcf2c34968a83e52001bcad973682e41496b25114efd0306",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "423fd3cad81cbaa4908484731602d2d6bb1b0d691841f0ef5742a49f708fe169",
+      "bytes": 8321,
+      "path": "records/coenzyme-a/index.html",
+      "served_sha256": "423fd3cad81cbaa4908484731602d2d6bb1b0d691841f0ef5742a49f708fe169",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "f7a6cb87e17f26c0e24e0da679f3800735c21ca9f3f24f70f356fde362ae3436",
+      "bytes": 8429,
+      "path": "records/coenzyme-m/index.html",
+      "served_sha256": "f7a6cb87e17f26c0e24e0da679f3800735c21ca9f3f24f70f356fde362ae3436",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "607fb7dc22f4b8ff004ebe8a54eb4cc4f3e3f9396f7a73328b4a59020f047839",
+      "bytes": 10831,
+      "path": "records/copper/index.html",
+      "served_sha256": "607fb7dc22f4b8ff004ebe8a54eb4cc4f3e3f9396f7a73328b4a59020f047839",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "18dceeed331c840e8d60c2dabb9834b875f7a21097d9c57460017e202826617b",
+      "bytes": 10152,
+      "path": "records/fad/index.html",
+      "served_sha256": "18dceeed331c840e8d60c2dabb9834b875f7a21097d9c57460017e202826617b",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "5f42fbbb3e718c1827ea65774b0641aa15b5b91eaecfbe48a3d1eafe701cd7d0",
+      "bytes": 11412,
+      "path": "records/fmn/index.html",
+      "served_sha256": "5f42fbbb3e718c1827ea65774b0641aa15b5b91eaecfbe48a3d1eafe701cd7d0",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "dc2c5b155b93d4ffdad180b7380ecc71d644ba199fd059028afb22bb7fa1b215",
+      "bytes": 19171,
+      "path": "records/manganese/index.html",
+      "served_sha256": "dc2c5b155b93d4ffdad180b7380ecc71d644ba199fd059028afb22bb7fa1b215",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "3a101850e1993f48008cc0ece4ff0fd4352bead9a2c6681a2ff97a59f5575890",
+      "bytes": 7755,
+      "path": "records/nad/index.html",
+      "served_sha256": "3a101850e1993f48008cc0ece4ff0fd4352bead9a2c6681a2ff97a59f5575890",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "a441f853c432000e85c467dd882d9071a8cac8183a478f766153c7ebdbc8c297",
+      "bytes": 12370,
+      "path": "records/nickel/index.html",
+      "served_sha256": "a441f853c432000e85c467dd882d9071a8cac8183a478f766153c7ebdbc8c297",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "3ef7c6210d1913753d3859c25c30982e5ddb5c1701bd93968a77b59b42c7621d",
+      "bytes": 8474,
+      "path": "records/pyridoxal-phosphate/index.html",
+      "served_sha256": "3ef7c6210d1913753d3859c25c30982e5ddb5c1701bd93968a77b59b42c7621d",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "66627c3ecda2721798645fd12d17df57e11e4b5d29bd128d7ee984c47a3efa30",
+      "bytes": 11482,
+      "path": "records/thiamine-diphosphate/index.html",
+      "served_sha256": "66627c3ecda2721798645fd12d17df57e11e4b5d29bd128d7ee984c47a3efa30",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "fec8ae37c7214a77ec43149851e5a854f2038720c9c9afb055a8cb9beeba3f4b",
+      "bytes": 11688,
+      "path": "records/zinc/index.html",
+      "served_sha256": "fec8ae37c7214a77ec43149851e5a854f2038720c9c9afb055a8cb9beeba3f4b",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "0714d6d23acda08f70e4292799be5ec65946c92fc1ca786dc4d89053e17f9ceb",
+      "bytes": 3942,
+      "path": "schema/cofactormech.yaml",
+      "served_sha256": "0714d6d23acda08f70e4292799be5ec65946c92fc1ca786dc4d89053e17f9ceb",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d",
+      "bytes": 9649,
+      "path": "schema/history.yaml",
+      "served_sha256": "b01b06f1b9a37db205c26c31ec0fd910690848507c7e1bfb73b424ac0829c52d",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895",
+      "bytes": 16106,
+      "path": "schema/mech_shared.yaml",
+      "served_sha256": "c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "4aa3fa6820fc5f69c9557e102bdc445ceac0341fd39103f126e5d7d5c37f0e49",
+      "bytes": 5448,
+      "path": "sources/biotin.yaml",
+      "served_sha256": "4aa3fa6820fc5f69c9557e102bdc445ceac0341fd39103f126e5d7d5c37f0e49",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "c8099553de2fb6439ef61e5d35857ed6bc6e5de13643a966ea95ef92dd107185",
+      "bytes": 4185,
+      "path": "sources/cobalamin.yaml",
+      "served_sha256": "c8099553de2fb6439ef61e5d35857ed6bc6e5de13643a966ea95ef92dd107185",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "f63ba23c5d1d5b9a5e2b0c995b375031af4921b857081c7ba1d1189e976ada7a",
+      "bytes": 9508,
+      "path": "sources/cobalt.yaml",
+      "served_sha256": "f63ba23c5d1d5b9a5e2b0c995b375031af4921b857081c7ba1d1189e976ada7a",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "72f037345d8b641dfde95aaaef72c1f5d4ed87415382e1f91ddf39bf26935762",
+      "bytes": 5498,
+      "path": "sources/coenzyme-a.yaml",
+      "served_sha256": "72f037345d8b641dfde95aaaef72c1f5d4ed87415382e1f91ddf39bf26935762",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "68e6d35eadfd54caa192b2ef558c5ae9f986a9adf56f854b16ff21e5030a2d29",
+      "bytes": 5611,
+      "path": "sources/coenzyme-m.yaml",
+      "served_sha256": "68e6d35eadfd54caa192b2ef558c5ae9f986a9adf56f854b16ff21e5030a2d29",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "ce23ed55ba8b03986b37c90a6f72c03d26011f8fedbffd008bf5435f5305df05",
+      "bytes": 8168,
+      "path": "sources/copper.yaml",
+      "served_sha256": "ce23ed55ba8b03986b37c90a6f72c03d26011f8fedbffd008bf5435f5305df05",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "aacef1736905d6f16a39dfffb16b73be914ba2db52019efc7078548e936c4608",
+      "bytes": 7317,
+      "path": "sources/fad.yaml",
+      "served_sha256": "aacef1736905d6f16a39dfffb16b73be914ba2db52019efc7078548e936c4608",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "c11408916e5f00244286303b602a309cc80196bfad2ab6a04ec02e66edcb8e4f",
+      "bytes": 8667,
+      "path": "sources/fmn.yaml",
+      "served_sha256": "c11408916e5f00244286303b602a309cc80196bfad2ab6a04ec02e66edcb8e4f",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "d5d68a8b55dc106d0a73f3ca7b2afb3d0e46b4094d702bcbaa067836591536fd",
+      "bytes": 16796,
+      "path": "sources/manganese.yaml",
+      "served_sha256": "d5d68a8b55dc106d0a73f3ca7b2afb3d0e46b4094d702bcbaa067836591536fd",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "b4517bf1676e9dc3e2eec38085925418c3427eedfd16e468966dea900b3b247b",
+      "bytes": 4925,
+      "path": "sources/nad.yaml",
+      "served_sha256": "b4517bf1676e9dc3e2eec38085925418c3427eedfd16e468966dea900b3b247b",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "eb80016cac7b53994c6d36bdaef05eb8ad30de0a908f8ca7947632a10b2108b6",
+      "bytes": 9654,
+      "path": "sources/nickel.yaml",
+      "served_sha256": "eb80016cac7b53994c6d36bdaef05eb8ad30de0a908f8ca7947632a10b2108b6",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "b79b1de956fe68047ea6085aed48eedf05ea5eb134fba4d67120e331178c7311",
+      "bytes": 5609,
+      "path": "sources/pyridoxal-phosphate.yaml",
+      "served_sha256": "b79b1de956fe68047ea6085aed48eedf05ea5eb134fba4d67120e331178c7311",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "6f5d50161f226c9bfc4c88947ba6b6144ae3f4a9c8ff74f58bd0865818743d23",
+      "bytes": 8654,
+      "path": "sources/thiamine-diphosphate.yaml",
+      "served_sha256": "6f5d50161f226c9bfc4c88947ba6b6144ae3f4a9c8ff74f58bd0865818743d23",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    },
+    {
+      "artifact_sha256": "5a58b9b607e4332693081a5af5a43cc7a06a1a539d2cc0421c2e001f18366ae8",
+      "bytes": 9032,
+      "path": "sources/zinc.yaml",
+      "served_sha256": "5a58b9b607e4332693081a5af5a43cc7a06a1a539d2cc0421c2e001f18366ae8",
+      "status": 200,
+      "verification": "public_bytes_identical"
+    }
+  ],
+  "public_root": {
+    "sha256": "59080eafe63c84db33fd54fb759b59bb07d5410ec95e7596ef7f075980b2b39a",
+    "status": 200,
+    "url": "https://culturebotai.github.io/CofactorMech/"
+  },
+  "public_url": "https://culturebotai.github.io/CofactorMech/",
+  "record_count": 14,
+  "representative_evidence_href": "https://www.ebi.ac.uk/chebi/CHEBI:15956",
+  "revision": "89a8ca3b37b4cd3607fdbb0b74b7b73c5c539fee",
+  "screenshots_sha256": {
+    "catalogue-desktop.png": "36d92870907e8f6a5688cd9b1db2161f6cc101cd304048d958a6e1c11590cc25",
+    "catalogue-mobile.png": "52ff5eda552768c5c6d1c295c6a5e6d9cb78571c311f1367e37e31a8dd7f7567",
+    "record-desktop.png": "7652d1ceea9dc6d66b603ed577d7a4f824e30dc58b88d565b111c0357491f87d",
+    "record-mobile.png": "9455edb1839f573b31c69689de4f1b7b5c5fe8b3726778e5b665e44224750454",
+    "record-nojs-mobile.png": "9455edb1839f573b31c69689de4f1b7b5c5fe8b3726778e5b665e44224750454"
+  },
+  "viewport_probes": [
+    {
+      "headings": [],
+      "scroll": 390,
+      "width": 390
+    },
+    {
+      "headings": [],
+      "scroll": 390,
+      "width": 390
+    }
+  ]
+}

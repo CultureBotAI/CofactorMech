@@ -1,0 +1,17 @@
+{
+  "repository": "CultureBotAI/CofactorMech",
+  "pr": 16,
+  "approved_head": "b2fa7dd55e391f71841105cce4941588b8718730",
+  "merge_sha": "89a8ca3b37b4cd3607fdbb0b74b7b73c5c539fee",
+  "deployment_id": 7729964604,
+  "run_id": 43166403192,
+  "run_url": "https://github.com/CultureBotAI/CofactorMech/actions/runs/43166403192",
+  "url": "https://culturebotai.github.io/CofactorMech/",
+  "environment_policy": "main branch only; new environment has no designated reviewer; no existing protections removed",
+  "published_source_changed_by_verification": false,
+  "helpers_sha256": {
+    "verify_published_site.py": "43dded560b016b5dcc79719d2981663962ced1eb9c12bd536f3aee4a5f1af2cd",
+    "diagnose_category_keyboard.py": "3eb390c2c6a4b1c3098b02ddefa0b68d30090ce5277243dc223ae46908ee7818"
+  },
+  "tracking_issue": 19
+}
