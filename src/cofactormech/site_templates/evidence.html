@@ -1,0 +1,6 @@
+{% macro evidence(items) %}
+<ul class="evidence">{% for item in items %}<li>
+  <p><strong>{{ item.title }}</strong> — {{ item.claim }}</p>
+  <p>{% if item.reference|safe_url %}<a href="{{ item.reference }}">Source reference</a>{% else %}<span>{{ item.reference }}</span>{% endif %} · <span>{{ item.locator }}</span> · Source licence: {{ item.source_license }}</p>
+</li>{% endfor %}</ul>
+{% endmacro %}

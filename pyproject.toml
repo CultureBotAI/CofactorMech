@@ -5,7 +5,7 @@ description = "Evidence-backed microbial cofactors and cross-corpus dependencies
 readme = "README.md"
 requires-python = ">=3.11,<3.15"
 license = "CC0-1.0"
-dependencies = ["linkml>=1.10", "linkml-runtime>=1.10", "jsonschema>=4", "pyyaml>=6", "kg-microbe-orchestration"]
+dependencies = ["linkml>=1.10", "linkml-runtime>=1.10", "jsonschema>=4", "pyyaml>=6", "jinja2>=3.1", "kg-microbe-orchestration"]
 
 [project.scripts]
 cofactormech = "cofactormech.cli:main"
@@ -24,7 +24,7 @@ build-backend = "setuptools.build_meta"
 where = ["src"]
 
 [tool.setuptools.package-data]
-cofactormech = ["schema/*.yaml"]
+cofactormech = ["schema/*.yaml", "site_templates/*.html", "site_assets/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

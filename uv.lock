@@ -418,6 +418,7 @@ name = "cofactormech"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "jinja2" },
     { name = "jsonschema" },
     { name = "kg-microbe-orchestration" },
     { name = "linkml" },
@@ -433,6 +434,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "jinja2", specifier = ">=3.1" },
     { name = "jsonschema", specifier = ">=4" },
     { name = "kg-microbe-orchestration", git = "https://github.com/CultureBotAI/culturebotai-claw.git?rev=5790569efd881bd8bca82a04ea278cc462c0c2c8" },
     { name = "linkml", specifier = ">=1.10" },
@@ -996,8 +998,8 @@ name = "httpcore2"
 version = "2.16.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "h11" },
-    { name = "truststore" },
+    { name = "h11", marker = "sys_platform != 'emscripten'" },
+    { name = "truststore", marker = "sys_platform != 'emscripten'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/c0/61/afa9d6b7452f9eca73f73d45324eb0bb52f098fd5e6049bf6b8263be9b4e/httpcore2-2.16.0.tar.gz", hash = "sha256:c72cd0413563b17e1cd8354677dff887466f8ec2551679759e93126534428643", size = 69886 }
 wheels = [

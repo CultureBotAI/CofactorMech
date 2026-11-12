@@ -1,0 +1,24 @@
+{% extends "base.html" %}{% from "evidence.html" import evidence %}
+{% block title %}{{ record.name }} | {{ project }}{% endblock %}
+{% block content %}
+<p><a href="../../index.html">← Cofactor catalogue</a></p>
+<section class="hero"><p class="eyebrow">{% for category in record.categories %}{{ category|label }}{% if not loop.last %} · {% endif %}{% endfor %}</p>
+<h1>{{ record.name }}</h1><p class="identifiers"><code>{{ record.id }}</code> · <code>{{ record.chemical_id }}</code></p><p>{{ record.description }}</p>
+<p><a href="../../sources/{{ record.slug }}.yaml">Download source YAML</a> · <a href="{{ github }}/blob/{{ revision }}/{{ record.source_path }}">View source at this revision</a></p></section>
+<section aria-labelledby="identity-evidence"><h2 id="identity-evidence">Chemical identity evidence</h2>{{ evidence(record.evidence) }}</section>
+<section aria-labelledby="relationships"><h2 id="relationships">Scoped relationships</h2>
+<p class="notice">Provisional links retain upstream ingredient identifiers. Verified links describe the cited source context, not universal organism requirements. Conjugate forms and precursor supply are distinct relationships.</p>
+{% for link in record.related_records|default([]) %}<article class="relation {% if link.status == 'PROVISIONAL' %}provisional{% endif %}">
+<h3>{{ link.relation|label }} · {{ link.identifier }}</h3>
+<p><span class="badge status">{{ link.status }}</span> · {{ link.corpus }}</p>
+<p>{{ link.basis }}</p>
+{% if link.target_chemical_id is defined %}<p>Target chemical: <code>{{ link.target_chemical_id }}</code></p>{% endif %}
+<p><a href="{{ link.source_url|safe_url }}">Linked source record</a>: <code>{{ link.source_path }}</code><br>Source revision: <code>{{ link.source_version }}</code></p>
+{{ evidence(link.evidence) }}</article>{% else %}<p>No relationships recorded.</p>{% endfor %}
+</section>
+<section aria-labelledby="gaps"><h2 id="gaps">Research gaps</h2>
+<ul>{% for gap in record.research_gaps|default([]) %}<li><strong>{{ gap.corpus }}</strong>: {{ gap.reason }}</li>{% else %}<li>No research gaps recorded. This does not establish complete evidence coverage.</li>{% endfor %}</ul></section>
+<section aria-labelledby="history"><h2 id="history">Curation provenance</h2>
+<div class="table-scroll" role="region" aria-label="Curation history table" tabindex="0"><table><caption>Recorded curation events</caption><thead><tr><th scope="col">UTC timestamp</th><th scope="col">Action and curator</th><th scope="col">Summary</th></tr></thead><tbody>{% for event in record.curation_history %}<tr><td><time>{{ event.timestamp }}</time></td><td>{{ event.action }} · {{ event.curator }}</td><td>{{ event.summary }}<br><a href="{{ github }}/blob/{{ revision }}/{{ event.history_file }}">History source</a></td></tr>{% endfor %}</tbody></table></div>
+</section>
+{% endblock %}

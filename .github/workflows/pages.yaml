@@ -1,0 +1,73 @@
+name: Catalogue site
+on:
+  pull_request: {}
+  push:
+    branches: [main]
+  merge_group:
+    types: [checks_requested]
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: Deploy approved main after Pages configuration and environment approval
+        type: boolean
+        required: true
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: catalogue-pages-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+jobs:
+  build-site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install uv
+        uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4
+        with:
+          version: "0.12.5"
+          python-version: "3.13"
+          enable-cache: true
+      - name: Install locked dependencies
+        run: uv sync --locked
+      - name: Build and validate nonempty catalogue
+        run: |
+          uv run --locked python -m cofactormech.site
+          uv run --locked python -m cofactormech.site --check
+          uv run --locked pytest -q tests/test_site.py
+      - name: Preserve reviewable site artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: catalogue-site
+          path: build/site
+          if-no-files-found: error
+          retention-days: 14
+      - name: Package separately authorized Pages artifact
+        if: >-
+          vars.PAGES_DEPLOYMENT_ENABLED == 'true' && github.ref == 'refs/heads/main' &&
+          (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.deploy))
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b
+        with:
+          path: build/site
+  deploy:
+    if: >-
+      vars.PAGES_DEPLOYMENT_ENABLED == 'true' && github.ref == 'refs/heads/main' &&
+      (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.deploy))
+    needs: build-site
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy approved main artifact
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e
