@@ -3,7 +3,7 @@
 Purpose: verify the generated catalogue at a nested route on desktop/mobile and
 without JavaScript. Inputs: --site, --evidence (durable empty output directory),
 optional --executable browser binary. Outputs: screenshots and browser.json.
-Tracking: CofactorMech issues #13 (mobile overflow) and #15 (failure receipts).
+Tracking: CofactorMech #13 (mobile), #15 (receipts), #18 (console/icon).
 Requires Playwright 1.65.1; the site itself has no browser-library dependency.
 """
 from __future__ import annotations
@@ -67,6 +67,7 @@ def main():
             context = browser.new_context(viewport={"width": 1365, "height": 900})
             page = context.new_page()
             page.on("pageerror", lambda e: errors.append(str(e)))
+            page.on("console", lambda message: errors.append(f"{message.text} ({message.location})") if message.type == "error" else None)
             page.on("requestfailed", lambda r: failures.append(r.url))
             page.goto(url, wait_until="networkidle")
             assert page.locator("[data-record]:visible").count() == total

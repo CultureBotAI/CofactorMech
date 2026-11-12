@@ -154,3 +154,11 @@ def test_review_artifact_includes_only_the_complete_generated_site():
     assert upload["with"]["path"] == "build/site"
     assert upload["with"]["include-hidden-files"] is True
     assert upload["with"]["if-no-files-found"] == "error"
+
+
+def test_local_icon_is_linked_from_catalogue_and_nested_records(built):
+    _, output = built
+    assert 'href="assets/icon.svg"' in (output / "index.html").read_text()
+    for path in (output / "records").glob("*/index.html"):
+        assert 'href="../../assets/icon.svg"' in path.read_text()
+    assert (output / "assets/icon.svg").is_file()
